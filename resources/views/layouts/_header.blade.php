@@ -8,18 +8,25 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse justify-content-between">
       <!-- Left Side Of Navbar -->
       <ul class="navbar-nav">
 
       </ul>
-
       <!-- Right Side Of Navbar -->
       <ul class="navbar-nav navbar-right">
         <!-- Authentication Links -->
         <li class="nav-item"><a class="nav-link" href="#">帮助中心</a></li>
+        <li class="nav-item"><a class="nav-link" href="javascript:;">|</a></li>
         <li class="nav-item"><a class="nav-link" href="#">登录</a></li>
+        <li class="nav-item"><a class="nav-link" href="javascript:;">|</a></li>
         <li class="nav-item"><a class="nav-link" href="#">注册</a></li>
+      </ul>
+    </div>
+    <div class="" id="navbarSupportedContent">
+      <!-- Left Side Of Navbar -->
+      <ul class="navbar-nav">
+
       </ul>
     </div>
   </div>
