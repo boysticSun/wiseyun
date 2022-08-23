@@ -7,6 +7,9 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// swiper
+// @import '~swiper/swiper';
+
 // Fontawesome
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~@fortawesome/fontawesome-free/scss/regular';
@@ -28,9 +31,34 @@ body {
   padding-top: 1.125rem;
 }
 
+.navbar-static-bottom {
+  background-color: #ffffff !important;
+  margin-top: 0px;
+  .container-fluid {
+    padding: 0;
+    .navbar-brand {
+      --bs-navbar-brand-margin-end: 2.875rem;
+      float: left;
+      a {
+        color: #000000;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
 @media (min-width: 1400px) {
   .container {
     max-width: 1200px;
+  }
+
+  .banner {
+    max-width: 100%;
+    max-height: 500px;
+    position: relative;
+    img {
+      max-width: 100%;
+    }
   }
 }
 
@@ -47,11 +75,11 @@ body {
 
 .footer {
   position: absolute;
-  bottom: 0;
+  bottom: 60px;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #000;
+  padding-top: 60px;
+  background: #0195d7;
 
   .container {
     padding-right: 15px;
@@ -59,11 +87,77 @@ body {
 
     p {
       margin: 19px 0;
-      color: #c1c1c1;
+      color: #ffffff;
+      text-align: center;
 
       a {
         color: inherit;
       }
     }
   }
+}
+
+.footer-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #000000;
+
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+
+    p {
+      margin: 16px 0;
+      color: #ffffff;
+      text-align: center;
+      font-size: 18px;
+
+      a {
+        color: inherit;
+      }
+    }
+  }
+}
+
+/* swiper */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-wrapper {
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

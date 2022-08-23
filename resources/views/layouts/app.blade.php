@@ -13,6 +13,7 @@
 
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+  <link href="/css/swiper-bundle.css" rel="stylesheet">
 
 </head>
 
@@ -20,6 +21,10 @@
   <div id="app" class="{{ route_class() }}-page">
 
     @include('layouts._header')
+
+    <div class="banner">
+      @yield('banner')
+    </div>
 
     <div class="container">
 
@@ -34,6 +39,22 @@
 
   <!-- Scripts -->
   <script src="{{ mix('js/app.js') }}"></script>
+  <script src="{{ mix('js/manifest.js') }}"></script>
+  <script src="{{ mix('js/vendor.js') }}"></script>
+  <script>
+    var swiper = new swiper(".bannerSwiper", {
+      autoHeight: true,
+      autoplay: {
+        delay: 5000,
+        stopOnLastSlide: false,
+        disableOnInteraction: false,
+      },
+      speed: 1000,
+      loop: true,
+      observer:true,
+      observeParents:true
+    });
+  </script>
 </body>
 
 </html>

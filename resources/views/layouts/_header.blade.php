@@ -2,7 +2,7 @@
   <div class="container">
     <!-- Branding Image -->
     <a class="navbar-brand " href="{{ url('/') }}">
-      webwiseYun
+      <img src="/images/logo.png">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -18,15 +18,56 @@
         <!-- Authentication Links -->
         <li class="nav-item"><a class="nav-link" href="#">帮助中心</a></li>
         <li class="nav-item"><a class="nav-link" href="javascript:;">|</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">登录</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">登录</a></li>
         <li class="nav-item"><a class="nav-link" href="javascript:;">|</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">注册</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">注册</a></li>
       </ul>
     </div>
-    <div class="" id="navbarSupportedContent">
+  </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-static-bottom">
+  <div class="container">
+    <div class="navbar navbar-light" id="navbarSupportedContent">
       <!-- Left Side Of Navbar -->
       <ul class="navbar-nav">
-
+        <div class="container-fluid">
+          <li class="navbar-brand">
+            <a href="#">首页</a>
+            <em></em>
+          </li>
+          <li class="navbar-brand">
+            <a href="#">应用软件市场</a>
+            <em></em>
+          </li>
+          <li class="navbar-brand">
+            <a href="#">特色云市场</a>
+            <em></em>
+          </li>
+          <li class="navbar-brand">
+            <a href="#">标识解析</a>
+            <em></em>
+          </li>
+          <li class="navbar-brand">
+            <a href="#">需求市场</a>
+            <em></em>
+          </li>
+          <li class="navbar-brand">
+            <a href="#">资源库</a>
+            <em></em>
+          </li>
+          <li class="navbar-brand">
+            <a href="#">平台服务</a>
+            <em></em>
+          </li>
+          <li class="navbar-brand">
+            <a href="#">政策解读</a>
+            <em></em>
+          </li>
+          <li class="navbar-brand">
+            <a href="#">新闻资讯</a>
+            <em></em>
+          </li>
+        </div>
       </ul>
     </div>
   </div>
