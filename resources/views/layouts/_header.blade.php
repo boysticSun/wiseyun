@@ -31,40 +31,40 @@
       <!-- Left Side Of Navbar -->
       <ul class="navbar-nav">
         <div class="container-fluid">
-          <li class="navbar-brand">
-            <a href="#">首页</a>
+          <li class="navbar-brand nav-item {{ active_class(if_uri('/')) }}">
+            <a class="nav-link" href="/">首页</a>
             <em></em>
           </li>
-          <li class="navbar-brand">
-            <a href="#">应用软件市场</a>
+          <li class="navbar-brand nav-item">
+            <a class="nav-link" href="#">应用软件市场</a>
             <em></em>
           </li>
-          <li class="navbar-brand">
-            <a href="#">特色云市场</a>
+          <li class="navbar-brand nav-item">
+            <a class="nav-link" href="#">特色云市场</a>
             <em></em>
           </li>
-          <li class="navbar-brand">
-            <a href="#">标识解析</a>
+          <li class="navbar-brand nav-item">
+            <a class="nav-link" href="#">标识解析</a>
             <em></em>
           </li>
-          <li class="navbar-brand">
-            <a href="#">需求市场</a>
+          <li class="navbar-brand nav-item">
+            <a class="nav-link" href="#">需求市场</a>
             <em></em>
           </li>
-          <li class="navbar-brand">
-            <a href="#">资源库</a>
+          <li class="navbar-brand nav-item">
+            <a class="nav-link" href="#">资源库</a>
             <em></em>
           </li>
-          <li class="navbar-brand">
-            <a href="#">平台服务</a>
+          <li class="navbar-brand nav-item">
+            <a class="nav-link" href="#">平台服务</a>
             <em></em>
           </li>
-          <li class="navbar-brand">
-            <a href="#">政策解读</a>
+          <li class="navbar-brand nav-item">
+            <a class="nav-link" href="#">政策解读</a>
             <em></em>
           </li>
-          <li class="navbar-brand">
-            <a href="#">新闻资讯</a>
+          <li class="navbar-brand nav-item">
+            <a class="nav-link" href="#">新闻资讯</a>
             <em></em>
           </li>
         </div>

@@ -21336,12 +21336,27 @@ body {
   padding: 0;
 }
 .navbar-static-bottom .container-fluid .navbar-brand, .navbar-static-bottom .container-sm .navbar-brand, .navbar-static-bottom .container-md .navbar-brand, .navbar-static-bottom .container-lg .navbar-brand, .navbar-static-bottom .container-xl .navbar-brand, .navbar-static-bottom .container-xxl .navbar-brand {
-  --bs-navbar-brand-margin-end: 2.875rem;
+  --bs-navbar-brand-margin-end: 2.075rem;
   float: left;
 }
 .navbar-static-bottom .container-fluid .navbar-brand a, .navbar-static-bottom .container-sm .navbar-brand a, .navbar-static-bottom .container-md .navbar-brand a, .navbar-static-bottom .container-lg .navbar-brand a, .navbar-static-bottom .container-xl .navbar-brand a, .navbar-static-bottom .container-xxl .navbar-brand a {
   color: #000000;
   text-decoration: none;
+}
+.navbar-static-bottom .container-fluid .navbar-brand em, .navbar-static-bottom .container-sm .navbar-brand em, .navbar-static-bottom .container-md .navbar-brand em, .navbar-static-bottom .container-lg .navbar-brand em, .navbar-static-bottom .container-xl .navbar-brand em, .navbar-static-bottom .container-xxl .navbar-brand em {
+  display: block;
+  margin: auto;
+  width: 32px;
+  height: 3px;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+.navbar-static-bottom .container-fluid .navbar-brand.active a, .navbar-static-bottom .container-sm .navbar-brand.active a, .navbar-static-bottom .container-md .navbar-brand.active a, .navbar-static-bottom .container-lg .navbar-brand.active a, .navbar-static-bottom .container-xl .navbar-brand.active a, .navbar-static-bottom .container-xxl .navbar-brand.active a {
+  color: #0195d7;
+  font-weight: 600;
+}
+.navbar-static-bottom .container-fluid .navbar-brand.active em, .navbar-static-bottom .container-sm .navbar-brand.active em, .navbar-static-bottom .container-md .navbar-brand.active em, .navbar-static-bottom .container-lg .navbar-brand.active em, .navbar-static-bottom .container-xl .navbar-brand.active em, .navbar-static-bottom .container-xxl .navbar-brand.active em {
+  background: #0195d7;
 }
 
 @media (min-width: 1400px) {

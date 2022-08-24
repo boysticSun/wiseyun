@@ -37,11 +37,31 @@ body {
   .container-fluid {
     padding: 0;
     .navbar-brand {
-      --bs-navbar-brand-margin-end: 2.875rem;
+      --bs-navbar-brand-margin-end: 2.075rem;
       float: left;
       a {
         color: #000000;
         text-decoration: none;
+      }
+
+      em {
+        display: block;
+        margin: auto;
+        width: 32px;
+        height: 3px;
+        background: #FFFFFF;
+        border-radius: 5px;
+      }
+    }
+
+    .navbar-brand.active {
+      a {
+        color: #0195d7;
+        font-weight: 600;
+      }
+
+      em {
+        background: #0195d7;
       }
     }
   }
