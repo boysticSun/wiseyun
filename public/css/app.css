@@ -22098,6 +22098,7 @@ body {
   padding: 0 10px;
 }
 
+/* users-edit-page */
 .users-edit-page .navbar-nav .container-fluid .navbar-brand, .users-edit-page .navbar-nav .container-sm .navbar-brand, .users-edit-page .navbar-nav .container-md .navbar-brand, .users-edit-page .navbar-nav .container-lg .navbar-brand, .users-edit-page .navbar-nav .container-xl .navbar-brand, .users-edit-page .navbar-nav .container-xxl .navbar-brand {
   display: none;
 }
@@ -22136,4 +22137,9 @@ body {
 }
 .users-edit-page .footer {
   display: none;
+}
+
+/* users-show-page */
+.users-show-page .user-profile-show {
+  padding-top: 40px;
 }
