@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container user-profile">
   <div class="col-md-8 offset-md-2">
 
     <div class="card">
@@ -31,8 +31,8 @@
             <label for="introduction-field">个人简介</label>
             <textarea name="introduction" id="introduction-field" class="form-control" rows="3">{{ old('introduction', $user->introduction) }}</textarea>
           </div>
-          <div class="well well-sm">
-            <button type="submit" class="btn btn-primary">保存</button>
+          <div class="well well-sm row">
+            <button type="submit" class="btn btn-primary btn-block">保存</button>
           </div>
         </form>
       </div>

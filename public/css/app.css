@@ -22097,3 +22097,43 @@ body {
   color: #0195d7;
   padding: 0 10px;
 }
+
+.users-edit-page .navbar-nav .container-fluid .navbar-brand, .users-edit-page .navbar-nav .container-sm .navbar-brand, .users-edit-page .navbar-nav .container-md .navbar-brand, .users-edit-page .navbar-nav .container-lg .navbar-brand, .users-edit-page .navbar-nav .container-xl .navbar-brand, .users-edit-page .navbar-nav .container-xxl .navbar-brand {
+  display: none;
+}
+.users-edit-page .user-profile {
+  padding-top: 40px;
+}
+.users-edit-page .user-profile .card {
+  border: 0;
+  padding: 0 60px;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.12);
+}
+.users-edit-page .user-profile .card .card-header {
+  padding: 35px 0 20px;
+  background: #ffffff;
+}
+.users-edit-page .user-profile .card .card-header h4, .users-edit-page .user-profile .card .card-header .h4 {
+  color: #0195d7;
+}
+.users-edit-page .user-profile .card .card-body {
+  padding: 30px 0;
+}
+.users-edit-page .user-profile .card .card-body label {
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+.users-edit-page .user-profile .card .card-body button {
+  background: #0195d7;
+  border-color: #0195d7;
+  font-size: 18px;
+}
+.users-edit-page .user-profile .card .card-body .row {
+  margin: 0;
+}
+.users-edit-page .content-container {
+  padding-bottom: 60px;
+}
+.users-edit-page .footer {
+  display: none;
+}
