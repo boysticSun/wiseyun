@@ -1,5 +1,25 @@
 {
     "Login": "登录",
+    "Account": "账号",
+    "Account Login": "账号登录",
     "Password": "密码",
-    "Remember Me": "记住我"
+    "Set Password": "设置密码",
+    "Remember Me": "记住我",
+    "Register Title": "账号密码注册",
+    "Mobile": "手机号码",
+    "Mobile Code": "短信验证码",
+    "QQ": "QQ",
+    "Register Agreement Words": "我已阅读并同意",
+    "Already Has Account": "已经拥有账号？",
+    "Please enter your mobile phone number": "请输入手机号码",
+    "Please enter SMS verification code": "请输入短信验证码",
+    "Send SMS verification code": "发送短信验证码",
+    "Please input a password": "请输入密码",
+    "Please enter the password again": "请再次输入密码",
+    "Please enter your QQ number": "请输入您的QQ号码",
+    "Login Account Placeholder": "手机号/已认证邮箱",
+    "Login Password Placeholder": "登录密码",
+    "Next automatic login": "下次自动登录",
+    "Register Button Words": "还没有账号？立即",
+    "Free Register": "免费注册"
 }

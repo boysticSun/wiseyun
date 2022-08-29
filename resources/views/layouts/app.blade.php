@@ -22,8 +22,12 @@
 
     @include('layouts._header')
 
-    <div class="banner">
-      @yield('banner')
+    @yield('banner')
+
+    <div class="bg-white">
+      <div class="container">
+        @yield('statistics')
+      </div>
     </div>
 
     <div class="container">
@@ -31,6 +35,18 @@
       @include('shared._messages')
 
       @yield('content')
+
+    </div>
+
+    <div class="bg-white root-floor-snd">
+      @yield('cloudindex')
+    </div>
+
+    <div class="root-floor-thd">
+      @yield('news')
+    </div>
+
+    <div class="content-container">
 
     </div>
 
@@ -42,7 +58,8 @@
   <script src="{{ mix('js/manifest.js') }}"></script>
   <script src="{{ mix('js/vendor.js') }}"></script>
   <script>
-    var swiper = new swiper(".bannerSwiper", {
+
+    var bannerSwiper = new swiper(".bannerSwiper", {
       autoHeight: true,
       autoplay: {
         delay: 5000,
@@ -51,9 +68,32 @@
       },
       speed: 1000,
       loop: true,
+      pagination: {
+        el: ".bannerSwiper .swiper-pagination",
+        clickable: true,
+      },
       observer:true,
       observeParents:true
     });
+
+    var newSwiper = new swiper(".newsSwiper", {
+      autoHeight: true,
+      autoplay: {
+        delay: 5000,
+        stopOnLastSlide: false,
+        disableOnInteraction: false,
+      },
+      speed: 1000,
+      loop: true,
+      pagination: {
+        el: ".newsSwiper .swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+      observer:true,
+      observeParents:true
+    });
+
   </script>
 </body>
 
