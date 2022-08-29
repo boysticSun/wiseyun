@@ -26,5 +26,6 @@ class AppServiceProvider extends ServiceProvider
         //
         \App\Models\User::observe(\App\Observers\UserObserver::class);
 		\App\Models\News::observe(\App\Observers\NewsObserver::class);
+        \Illuminate\Pagination\Paginator::useBootstrap();
     }
 }

@@ -1,60 +1,36 @@
 @extends('layouts.app')
 
+@section('title', '新闻资讯列表')
+
 @section('content')
-<div class="container">
-  <div class="col-md-10 offset-md-1">
+
+<div class="row mb-5">
+  <div class="col-lg-9 col-md-9 news-list">
     <div class="card ">
-      <div class="card-header">
-        <h1>
-          News
-          <a class="btn btn-success float-xs-right" href="{{ route('news.create') }}">Create</a>
-        </h1>
+
+      <div class="card-header bg-transparent">
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a class="nav-link active" href="#">最新资讯</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">今日热点</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">行业动态</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">政策发布</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">疫情资讯</a></li>
+        </ul>
       </div>
 
       <div class="card-body">
-        @if($news->count())
-          <table class="table table-sm table-striped">
-            <thead>
-              <tr>
-                <th class="text-xs-center">#</th>
-                <th>Title</th> <th>Body</th> <th>User_id</th> <th>Category_id</th> <th>Reply_count</th> <th>View_count</th> <th>Last_reply_user_id</th> <th>Order</th> <th>Excerpt</th> <th>Slug</th>
-                <th class="text-xs-right">OPTIONS</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              @foreach($news as $news)
-              <tr>
-                <td class="text-xs-center"><strong>{{$news->id}}</strong></td>
-
-                <td>{{$news->title}}</td> <td>{{$news->body}}</td> <td>{{$news->user_id}}</td> <td>{{$news->category_id}}</td> <td>{{$news->reply_count}}</td> <td>{{$news->view_count}}</td> <td>{{$news->last_reply_user_id}}</td> <td>{{$news->order}}</td> <td>{{$news->excerpt}}</td> <td>{{$news->slug}}</td>
-
-                <td class="text-xs-right">
-                  <a class="btn btn-sm btn-primary" href="{{ route('news.show', $news->id) }}">
-                    V
-                  </a>
-
-                  <a class="btn btn-sm btn-warning" href="{{ route('news.edit', $news->id) }}">
-                    E
-                  </a>
-
-                  <form action="{{ route('news.destroy', $news->id) }}" method="POST" style="display: inline;" onsubmit="return confirm('Delete? Are you sure?');">
-                    {{csrf_field()}}
-                    <input type="hidden" name="_method" value="DELETE">
-
-                    <button type="submit" class="btn btn-sm btn-danger">D </button>
-                  </form>
-                </td>
-              </tr>
-              @endforeach
-            </tbody>
-          </table>
-          {!! $news->render() !!}
-        @else
-          <h3 class="text-xs-center alert alert-info">Empty!</h3>
-        @endif
+        {{-- 话题列表 --}}
+        @include('news._news_list', ['news' => $news])
+        {{-- 分页 --}}
+        <div class="mt-5">
+          {!! $news->appends(Request::except('page'))->render() !!}
+        </div>
       </div>
     </div>
+  </div>
+
+  <div class="col-lg-3 col-md-3 sidebar">
+    @include('news._sidebar')
   </div>
 </div>
 
