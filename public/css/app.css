@@ -21330,6 +21330,10 @@ body {
 .navbar-static-top form.row {
   margin: 0;
 }
+.navbar-static-top .navbar-right a {
+  height: 46px;
+  line-height: 30px;
+}
 
 .navbar-static-bottom {
   background-color: #ffffff !important;

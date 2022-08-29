@@ -9,7 +9,7 @@ class NewsTableSeeder extends Seeder
 {
     public function run()
     {
-        News::factory()->count(10)->create();
+        News::factory()->count(100)->create();
     }
 }
 

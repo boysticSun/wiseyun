@@ -86,7 +86,7 @@
             <em></em>
           </li>
           <li class="navbar-brand nav-item">
-            <a class="nav-link" href="#">新闻资讯</a>
+            <a class="nav-link" href="{{ route('news.index') }}">新闻资讯</a>
             <em></em>
           </li>
         </div>

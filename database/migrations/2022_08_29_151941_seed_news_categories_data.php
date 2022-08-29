@@ -45,6 +45,6 @@ return new class extends Migration
     public function down()
     {
         //
-        DB::table('categories')->truncate();
+        DB::table('news_categories')->truncate();
     }
 };

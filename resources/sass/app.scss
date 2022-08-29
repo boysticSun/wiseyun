@@ -33,6 +33,13 @@ body {
   form.row {
     margin: 0;
   }
+  .navbar-right {
+
+    a {
+      height: 46px;
+      line-height: 30px;
+    }
+  }
 }
 
 .navbar-static-bottom {
