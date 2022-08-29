@@ -21327,6 +21327,9 @@ body {
   margin-top: 0px;
   padding-top: 1.125rem;
 }
+.navbar-static-top form.row {
+  margin: 0;
+}
 
 .navbar-static-bottom {
   background-color: #ffffff !important;
@@ -22145,4 +22148,7 @@ body {
 }
 .users-show-page .user-profile-show .card .card-img-top {
   padding: 10px;
+}
+.users-show-page .flash-message {
+  margin-top: 40px;
 }

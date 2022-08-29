@@ -29,6 +29,10 @@ body {
   background-color: #ffffff !important;
   margin-top: 0px;
   padding-top: 1.125rem;
+
+  form.row {
+    margin: 0;
+  }
 }
 
 .navbar-static-bottom {
@@ -1046,5 +1050,8 @@ body {
         padding: 10px;
       }
     }
+  }
+  .flash-message {
+    margin-top: 40px;
   }
 }
