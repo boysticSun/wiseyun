@@ -11,6 +11,7 @@
         <img class="card-img-top"
           src="{{ $user->avatar }}"
           alt="{{ $user->name }}">
+        <hr>
         <div class="card-body">
           <h5><strong>个人简介</strong></h5>
           <p>{{ $user->introduction }}</p>

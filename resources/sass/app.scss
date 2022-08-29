@@ -1039,5 +1039,12 @@ body {
 
   .user-profile-show {
     padding-top: 40px;
+
+    .card {
+
+      .card-img-top {
+        padding: 10px;
+      }
+    }
   }
 }
