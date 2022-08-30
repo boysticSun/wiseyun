@@ -1066,6 +1066,70 @@ body {
 /* Topic Index Page */
 .news-index-page {
   .news-list {
+    padding: 0;
+
+    .card {
+      border: 0;
+      border-top-right-radius: 0;
+
+      .card-header {
+        padding: 30px 30px 0;
+
+        .nav {
+          margin-bottom: 15px;
+
+          .nav-link {
+            color: #666666;
+            font-size: 16px;
+          }
+          .nav-link.active {
+            color: #333333;
+            background: none;
+            border-bottom: 2px solid #0195d7;
+            border-radius: 0;
+          }
+        }
+      }
+      .card-body {
+        padding: 30px 0 30px 30px;
+
+        .news-title-box {
+          overflow: auto;
+
+          .news-title {
+            max-width: 600px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #222222;
+            -webkit-line-clamp: 1;
+            overflow : hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            float: left;
+          }
+
+          .reply-count {
+            padding-top: 5px;
+          }
+        }
+        .news-excerpt {
+          height: 65px;
+          max-width: 600px;
+          color: #999999;
+          padding-top: 15px;
+          margin-bottom: 15px;
+          -webkit-line-clamp: 2;
+          overflow : hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+        }
+        .new-category {
+          color: #333333 !important;
+        }
+      }
+    }
     .nav>li>a {
       position: relative;
       display: block;
@@ -1074,7 +1138,6 @@ body {
     }
 
     a {
-      color: #444444;
       text-decoration: none;
     }
 
@@ -1096,6 +1159,23 @@ body {
       margin-bottom: 12px;
       border: 0;
       border-top: 1px solid #979da0;
+    }
+
+    .img-thumbnail {
+      padding: 0;
+      background: none;
+      border: none;
+      border-radius: 0;
+    }
+  }
+
+  .sidebar {
+    padding: 0;
+
+    .card {
+      border: 0;
+      border-top-left-radius: 0;
+      height: 100%;
     }
   }
 }

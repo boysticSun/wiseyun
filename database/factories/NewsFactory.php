@@ -16,6 +16,7 @@ class NewsFactory extends Factory
 
         return [
             'title' => $sentence,
+            'thumb' => "/images/news-demo.jpg",
             'body' => "新闻资讯内容新闻资讯内容新闻资讯内容新闻资讯内容新闻资讯内容新闻资讯内容新闻资讯内容新闻资讯内容新闻资讯内容新闻资讯内容",// $this->faker->text(),
             'excerpt' => $sentence,
             'user_id' => $this->faker->randomElement([1]),

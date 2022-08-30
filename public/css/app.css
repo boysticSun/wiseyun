@@ -22158,6 +22158,65 @@ body {
 }
 
 /* Topic Index Page */
+.news-index-page .news-list {
+  padding: 0;
+}
+.news-index-page .news-list .card {
+  border: 0;
+  border-top-right-radius: 0;
+}
+.news-index-page .news-list .card .card-header {
+  padding: 30px 30px 0;
+}
+.news-index-page .news-list .card .card-header .nav {
+  margin-bottom: 15px;
+}
+.news-index-page .news-list .card .card-header .nav .nav-link {
+  color: #666666;
+  font-size: 16px;
+}
+.news-index-page .news-list .card .card-header .nav .nav-link.active {
+  color: #333333;
+  background: none;
+  border-bottom: 2px solid #0195d7;
+  border-radius: 0;
+}
+.news-index-page .news-list .card .card-body {
+  padding: 30px 0 30px 30px;
+}
+.news-index-page .news-list .card .card-body .news-title-box {
+  overflow: auto;
+}
+.news-index-page .news-list .card .card-body .news-title-box .news-title {
+  max-width: 600px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #222222;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  float: left;
+}
+.news-index-page .news-list .card .card-body .news-title-box .reply-count {
+  padding-top: 5px;
+}
+.news-index-page .news-list .card .card-body .news-excerpt {
+  height: 65px;
+  max-width: 600px;
+  color: #999999;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.news-index-page .news-list .card .card-body .new-category {
+  color: #333333 !important;
+}
 .news-index-page .news-list .nav > li > a {
   position: relative;
   display: block;
@@ -22165,7 +22224,6 @@ body {
   font-size: 0.9em;
 }
 .news-index-page .news-list a {
-  color: #444444;
   text-decoration: none;
 }
 .news-index-page .news-list .meta {
@@ -22183,4 +22241,18 @@ body {
   margin-bottom: 12px;
   border: 0;
   border-top: 1px solid #979da0;
+}
+.news-index-page .news-list .img-thumbnail {
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+.news-index-page .sidebar {
+  padding: 0;
+}
+.news-index-page .sidebar .card {
+  border: 0;
+  border-top-left-radius: 0;
+  height: 100%;
 }
