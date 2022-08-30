@@ -18,10 +18,10 @@
           <hr>
 
           @if ($news->id)
-            <form action="{{ route('news.update', $news->id) }}" method="POST" accept-charset="UTF-8">
+            <form action="{{ route('news.update', $news->id) }}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
               <input type="hidden" name="_method" value="PUT">
             @else
-              <form action="{{ route('news.store') }}" method="POST" accept-charset="UTF-8">
+              <form action="{{ route('news.store') }}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
           @endif
 
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -40,6 +40,15 @@
                 <option value="{{ $value->id }}">{{ $value->name }}</option>
               @endforeach
             </select>
+          </div>
+
+          <div class="mb-4">
+            <label for="" class="avatar-label form-label">缩略图</label>
+            <input type="file" name="thumb" class="form-control">
+            @if($news->thumb)
+              <br>
+              <img class="thumbnail img-responsive" src="{{ $news->thumb }}" width="200" />
+            @endif
           </div>
 
           <div class="mb-3">

@@ -19,7 +19,7 @@ class NewsController extends Controller
 
 	public function index()
 	{
-		$news = News::with('user', 'category')->paginate();
+		$news = News::with('user', 'category')->orderBy('created_at', 'desc')->paginate();
 		return view('news.index', compact('news'));
 	}
 
@@ -34,10 +34,18 @@ class NewsController extends Controller
         return view('news.create_and_edit', compact('news', 'categories'));
 	}
 
-	public function store(NewsRequest $request, News $news)
+	public function store(NewsRequest $request, ImageUploadHandler $uploader, News $news)
 	{
 		$news->fill($request->all());
         $news->user_id = Auth::id();
+
+        if ($request->thumb) {
+            $result = $uploader->save($request->thumb, 'thumbs', $news->user_id,200);
+            if ($result) {
+                $news->thumb = $result['path'];
+            }
+        }
+
         $news->save();
 
 		return redirect()->route('news.show', $news->id)->with('success', '新闻资讯发布成功');
@@ -49,12 +57,21 @@ class NewsController extends Controller
 		return view('news.create_and_edit', compact('news'));
 	}
 
-	public function update(NewsRequest $request, News $news)
+	public function update(NewsRequest $request, ImageUploadHandler $uploader, News $news)
 	{
 		$this->authorize('update', $news);
-		$news->update($request->all());
 
-		return redirect()->route('news.show', $news->id)->with('message', 'Updated successfully.');
+        $data = $request->all();
+        if ($request->thumb) {
+            $result = $uploader->save($request->thumb, 'thumbs', $news->user_id,200);
+            if ($result) {
+                $data['thumb'] = $result['path'];
+            }
+        }
+
+		$news->update($data);
+
+		return redirect()->route('news.show', $news->id)->with('message', '新闻资讯修改成功');
 	}
 
 	public function destroy(News $news)

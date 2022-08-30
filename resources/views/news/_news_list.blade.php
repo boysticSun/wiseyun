@@ -3,8 +3,8 @@
     @foreach ($news as $list)
       <li class="d-flex">
         <div class="">
-          <a href="{{ route('users.show', [$list->user_id]) }}">
-            <img class="media-object img-thumbnail mr-3" style="width: 200px; height: 135px;" src="{{ $list->thumb }}" title="{{ $list->title }}">
+          <a href="{{ route('news.show', [$list->id]) }}">
+            <img class="media-object img-thumbnail mr-3" style="width: 200px; height: 135px;" src="@if($list->thumb){{ $list->thumb }}@else /images/news-demo.jpg @endif" title="{{ $list->title }}">
           </a>
         </div>
 

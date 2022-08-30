@@ -18,19 +18,19 @@ return new class extends Migration
         $newscategories = [
             [
                 'name'        => '今日热点',
-                'description' => '今日热点新闻资讯',
+                'description' => '今日最热点、热门、实时新闻资讯',
             ],
             [
                 'name'        => '行业动态',
-                'description' => '行业动态新闻资讯',
+                'description' => '行业内最新动态新闻资讯',
             ],
             [
                 'name'        => '政策发布',
-                'description' => '政策发布新闻资讯',
+                'description' => '权威发布政策相关新闻资讯',
             ],
             [
                 'name'        => '疫情资讯',
-                'description' => '疫情资讯信息',
+                'description' => '疫情资讯相关新闻信息',
             ],
         ];
 
