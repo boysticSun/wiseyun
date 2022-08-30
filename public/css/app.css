@@ -22157,37 +22157,37 @@ body {
   margin-top: 40px;
 }
 
-/* Topic Index Page */
-.news-index-page .news-list {
+/* News Index Page */
+.news-index-page .news-list, .categories-show-page .news-list {
   padding: 0;
 }
-.news-index-page .news-list .card {
+.news-index-page .news-list .card, .categories-show-page .news-list .card {
   border: 0;
   border-top-right-radius: 0;
 }
-.news-index-page .news-list .card .card-header {
+.news-index-page .news-list .card .card-header, .categories-show-page .news-list .card .card-header {
   padding: 30px 30px 0;
 }
-.news-index-page .news-list .card .card-header .nav {
+.news-index-page .news-list .card .card-header .nav, .categories-show-page .news-list .card .card-header .nav {
   margin-bottom: 15px;
 }
-.news-index-page .news-list .card .card-header .nav .nav-link {
+.news-index-page .news-list .card .card-header .nav .nav-link, .categories-show-page .news-list .card .card-header .nav .nav-link {
   color: #666666;
   font-size: 16px;
 }
-.news-index-page .news-list .card .card-header .nav .nav-link.active {
+.news-index-page .news-list .card .card-header .nav .nav-link.active, .categories-show-page .news-list .card .card-header .nav .nav-link.active {
   color: #333333;
   background: none;
   border-bottom: 2px solid #0195d7;
   border-radius: 0;
 }
-.news-index-page .news-list .card .card-body {
+.news-index-page .news-list .card .card-body, .categories-show-page .news-list .card .card-body {
   padding: 30px 0 30px 30px;
 }
-.news-index-page .news-list .card .card-body .news-title-box {
+.news-index-page .news-list .card .card-body .news-title-box, .categories-show-page .news-list .card .card-body .news-title-box {
   overflow: auto;
 }
-.news-index-page .news-list .card .card-body .news-title-box .news-title {
+.news-index-page .news-list .card .card-body .news-title-box .news-title, .categories-show-page .news-list .card .card-body .news-title-box .news-title {
   max-width: 600px;
   font-size: 20px;
   font-weight: 600;
@@ -22199,10 +22199,10 @@ body {
   -webkit-box-orient: vertical;
   float: left;
 }
-.news-index-page .news-list .card .card-body .news-title-box .reply-count {
+.news-index-page .news-list .card .card-body .news-title-box .reply-count, .categories-show-page .news-list .card .card-body .news-title-box .reply-count {
   padding-top: 5px;
 }
-.news-index-page .news-list .card .card-body .news-excerpt {
+.news-index-page .news-list .card .card-body .news-excerpt, .categories-show-page .news-list .card .card-body .news-excerpt {
   height: 65px;
   max-width: 600px;
   color: #999999;
@@ -22214,44 +22214,44 @@ body {
   display: -webkit-box;
   -webkit-box-orient: vertical;
 }
-.news-index-page .news-list .card .card-body .new-category {
+.news-index-page .news-list .card .card-body .new-category, .categories-show-page .news-list .card .card-body .new-category {
   color: #333333 !important;
 }
-.news-index-page .news-list .nav > li > a {
+.news-index-page .news-list .nav > li > a, .categories-show-page .news-list .nav > li > a {
   position: relative;
   display: block;
   padding: 5px 14px;
   font-size: 0.9em;
 }
-.news-index-page .news-list a {
+.news-index-page .news-list a, .categories-show-page .news-list a {
   text-decoration: none;
 }
-.news-index-page .news-list .meta {
+.news-index-page .news-list .meta, .categories-show-page .news-list .meta {
   font-size: 0.9em;
   color: #b3b3b3;
 }
-.news-index-page .news-list .meta a {
+.news-index-page .news-list .meta a, .categories-show-page .news-list .meta a {
   color: #b3b3b3;
 }
-.news-index-page .news-list .badge {
+.news-index-page .news-list .badge, .categories-show-page .news-list .badge {
   background-color: #d8d8d8 !important;
 }
-.news-index-page .news-list hr {
+.news-index-page .news-list hr, .categories-show-page .news-list hr {
   margin-top: 12px;
   margin-bottom: 12px;
   border: 0;
   border-top: 1px solid #979da0;
 }
-.news-index-page .news-list .img-thumbnail {
+.news-index-page .news-list .img-thumbnail, .categories-show-page .news-list .img-thumbnail {
   padding: 0;
   background: none;
   border: none;
   border-radius: 0;
 }
-.news-index-page .sidebar {
+.news-index-page .sidebar, .categories-show-page .sidebar {
   padding: 0;
 }
-.news-index-page .sidebar .card {
+.news-index-page .sidebar .card, .categories-show-page .sidebar .card {
   border: 0;
   border-top-left-radius: 0;
   height: 100%;
