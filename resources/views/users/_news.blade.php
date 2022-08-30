@@ -7,8 +7,8 @@
           {{ $list->title }}
         </a>
         <span class="meta float-right text-secondary">
-          {{ $list->reply_count }} 回复
-          <span> ⋅ </span>
+          {{-- {{ $list->reply_count }} 回复
+          <span> ⋅ </span> --}}
           {{ $list->created_at->diffForHumans() }}
         </span>
       </li>

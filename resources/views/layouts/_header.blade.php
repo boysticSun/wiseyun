@@ -20,9 +20,14 @@
         <li class="nav-item"><a class="nav-link" href="javascript:;">|</a></li>
         @guest
           <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">登录</a></li>
-          <li class="nav-item"><a class="nav-link" href="javascript:;">|</a></li>
+          <li class="nav-item"><a class="nav-link" href="javascript:;" style="line-height: 28px">|</a></li>
           <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">注册</a></li>
         @else
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold" href="{{ route('news.create') }}" style="line-height: 32px;">
+              <i class="fa-solid fa-plus"></i>
+            </a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">

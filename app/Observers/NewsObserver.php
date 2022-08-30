@@ -18,4 +18,9 @@ class NewsObserver
     {
         //
     }
+
+    public function saving(News $news)
+    {
+        $news->excerpt = make_excerpt($news->body);
+    }
 }
