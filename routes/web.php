@@ -47,3 +47,6 @@ Route::resource('news', 'NewsController', ['only' => ['index', 'show', 'create',
 
 // 新闻资讯分类相关路由
 Route::resource('categories', 'NewsCategoriesController', ['only' => ['show']]);
+
+// 上传图片
+Route::post('upload_image', 'NewsController@uploadImage')->name('news.upload_image');
