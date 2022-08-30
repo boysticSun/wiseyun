@@ -54,7 +54,8 @@ class NewsController extends Controller
 	public function edit(News $news)
 	{
         $this->authorize('update', $news);
-		return view('news.create_and_edit', compact('news'));
+        $categories = NewsCategory::all();
+		return view('news.create_and_edit', compact('news', 'categories'));
 	}
 
 	public function update(NewsRequest $request, ImageUploadHandler $uploader, News $news)
@@ -71,7 +72,7 @@ class NewsController extends Controller
 
 		$news->update($data);
 
-		return redirect()->route('news.show', $news->id)->with('message', '新闻资讯修改成功');
+		return redirect()->route('news.show', $news->id)->with('success', '新闻资讯修改成功');
 	}
 
 	public function destroy(News $news)
