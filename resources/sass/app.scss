@@ -1179,3 +1179,11 @@ body {
     }
   }
 }
+
+.user-news-list {
+  padding-top: 40px;
+
+  .list-group-item:last-child {
+    border-radius: 0;
+  }
+}

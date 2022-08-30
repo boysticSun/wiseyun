@@ -14,9 +14,9 @@
             <a class="news-title" href="{{ route('news.show', [$list->id]) }}" title="{{ $list->title }}">
               {{ $list->title }}
             </a>
-            <a class="float-end reply-count" href="{{ route('news.show', [$list->id]) }}">
+            {{-- <a class="float-end reply-count" href="{{ route('news.show', [$list->id]) }}">
               <span class="badge bg-secondary rounded-pill"> {{ $list->reply_count }} </span>
-            </a>
+            </a> --}}
           </div>
 
           <div class="news-excerpt">

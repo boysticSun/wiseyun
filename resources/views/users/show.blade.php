@@ -31,8 +31,12 @@
 
       {{-- 用户发布的内容 --}}
       <div class="card ">
-        <div class="card-body">
-          暂无数据 ~_~
+        <div class="card-body user-news-list">
+          <ul class="nav nav-tabs">
+            <li class="nav-item"><a class="nav-link active bg-transparent" href="#">Ta 发布的</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Ta 回复的</a></li>
+          </ul>
+          @include('users._news', ['news' => $user->news()->recent()->paginate(5)])
         </div>
       </div>
 
