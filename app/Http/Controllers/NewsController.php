@@ -48,7 +48,7 @@ class NewsController extends Controller
 
         $news->save();
 
-		return redirect()->route('news.show', $news->id)->with('success', '新闻资讯发布成功');
+		return redirect()->route('news.show', $news->id)->with('success', '新闻资讯发布成功！');
 	}
 
 	public function edit(News $news)
@@ -72,7 +72,7 @@ class NewsController extends Controller
 
 		$news->update($data);
 
-		return redirect()->route('news.show', $news->id)->with('success', '新闻资讯修改成功');
+		return redirect()->route('news.show', $news->id)->with('success', '新闻资讯修改成功！');
 	}
 
 	public function destroy(News $news)
@@ -80,7 +80,7 @@ class NewsController extends Controller
 		$this->authorize('destroy', $news);
 		$news->delete();
 
-		return redirect()->route('news.index')->with('message', 'Deleted successfully.');
+		return redirect()->route('news.index')->with('success', '删除成功！');
 	}
 
     // 上传图片
@@ -89,7 +89,7 @@ class NewsController extends Controller
         // 初始化返回数据，默认是失败的
         $data = [
             'success'   => false,
-            'msg'       => '上传失败!',
+            'msg'       => '上传失败！',
             'file_path' => ''
         ];
         // 判断是否有上传文件，并赋值给 $file
@@ -99,7 +99,7 @@ class NewsController extends Controller
             // 图片保存成功的话
             if ($result) {
                 $data['file_path'] = $result['path'];
-                $data['msg']       = "上传成功!";
+                $data['msg']       = "上传成功！";
                 $data['success']   = true;
             }
         }

@@ -9,12 +9,13 @@ class NewsPolicy extends Policy
 {
     public function update(User $user, News $news)
     {
-        return $news->user_id == $user->id;
+        return $user->isAuthorOf($news);
         // return true;
     }
 
     public function destroy(User $user, News $news)
     {
-        return true;
+        return $user->isAuthorOf($news);
+        // return true;
     }
 }
