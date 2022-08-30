@@ -22256,6 +22256,15 @@ body {
   border-top-left-radius: 0;
   height: 100%;
 }
+.news-index-page .sidebar .card .card-header, .categories-show-page .sidebar .card .card-header {
+  padding: 30px 30px 0;
+  border: 0;
+}
+.news-index-page .sidebar .card .card-header .sidebar-title, .categories-show-page .sidebar .card .card-header .sidebar-title {
+  margin-bottom: 15px;
+  font-size: 16px;
+  padding: 6px 14px;
+}
 
 .user-news-list {
   padding-top: 40px;
