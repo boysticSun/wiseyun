@@ -15,6 +15,8 @@
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
   <link href="/css/swiper-bundle.css" rel="stylesheet">
 
+  @yield('styles')
+
 </head>
 
 <body>
@@ -57,6 +59,9 @@
   <script src="{{ mix('js/app.js') }}"></script>
   <script src="{{ mix('js/manifest.js') }}"></script>
   <script src="{{ mix('js/vendor.js') }}"></script>
+
+  @yield('scripts')
+
   <script>
 
     var bannerSwiper = new swiper(".bannerSwiper", {

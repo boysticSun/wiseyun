@@ -1,6 +1,14 @@
 {
-    "/js/app.js": "/js/app.js?id=114fbfed9086de5679a64fa2d2cd2dba",
+    "/js/app.js": "/js/app.js?id=fc032b1b30feabfac69520e795b2b85c",
     "/js/manifest.js": "/js/manifest.js?id=9cc2062e81f477563f0c154a31924b1f",
     "/css/app.css": "/css/app.css?id=8a389b90e47b50d89bf215b4e6b76ac1",
-    "/js/vendor.js": "/js/vendor.js?id=0e2c31c68687742a29c305763189b393"
+    "/js/vendor.js": "/js/vendor.js?id=0e2c31c68687742a29c305763189b393",
+    "/js/hotkeys.js": "/js/hotkeys.js?id=60b95061e721b635da02b5cc7792204b",
+    "/js/module.js": "/js/module.js?id=1f0206730b87684b7ad654a458319014",
+    "/js/simditor.js": "/js/simditor.js?id=e19ffe3d664de3d4228a9bd3573b4a6b",
+    "/js/swiper-bundle.js": "/js/swiper-bundle.js?id=7ec6544e7b8783bf068eab3fa97e0e1a",
+    "/js/swiper-bundle.js.map": "/js/swiper-bundle.js.map?id=bf7d6340f7bc55a65ade3a5eab646bd2",
+    "/js/uploader.js": "/js/uploader.js?id=0e7f04273d8e2a0a834c6884635bb6d9",
+    "/css/simditor.css": "/css/simditor.css?id=69eb7767d3b20549b33fafd8e1255363",
+    "/css/swiper-bundle.css": "/css/swiper-bundle.css?id=0caac22d019b4d9e4a97a84576288cdb"
 }
