@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('news_categories', function (Blueprint $table) {
+        Schema::create('help_classes', function (Blueprint $table) {
             $table->id();
             $table->string('name')->index()->comment('名称');
-            $table->text('description')->nullable()->comment('描述');
-            $table->integer('post_count')->default(0)->comment('新闻资讯数');
             $table->tinyInteger('pid')->default(0)->comment('父级');
         });
     }
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('news_categories');
+        Schema::dropIfExists('help_classes');
     }
 };

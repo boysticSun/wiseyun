@@ -26,6 +26,8 @@
 
     @yield('banner')
 
+    @yield('searchbar')
+
     <div class="bg-white">
       <div class="container">
         @yield('statistics')
@@ -64,6 +66,7 @@
 
   <script>
 
+    // BANNER轮播图组
     var bannerSwiper = new swiper(".bannerSwiper", {
       autoHeight: true,
       autoplay: {
@@ -81,6 +84,7 @@
       observeParents:true
     });
 
+    // 新闻资讯轮播组
     var newSwiper = new swiper(".newsSwiper", {
       autoHeight: true,
       autoplay: {
@@ -98,6 +102,18 @@
       observer:true,
       observeParents:true
     });
+
+    $(document).ready(function() {
+
+      // 导航栏二级菜单
+      $('.navbar-brand').hover(function(){
+        if($(this).find('.snd-navbar-brand').css('display') == 'none') {
+          $(this).find('.snd-navbar-brand').stop().slideDown(500);
+        }
+      },function(){
+        $(this).find('.snd-navbar-brand').stop().slideUp(500);
+      })
+    })
 
   </script>
 </body>

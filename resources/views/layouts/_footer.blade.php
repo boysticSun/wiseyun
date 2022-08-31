@@ -48,16 +48,16 @@
         </div>
 
         <div class="footer-nav-snd">
-          <a href="#">帮助中心</a>
+          <a href="{{ route('help') }}">帮助中心</a>
         </div>
         <div class="footer-nav-snd">
           <a href="#">生态合作</a>
         </div>
         <div class="footer-nav-snd">
-          <a href="#">用户登录</a>
+          <a href="{{ route('login') }}">用户登录</a>
         </div>
         <div class="footer-nav-snd">
-          <a href="#">用户注册</a>
+          <a href="{{ route('register') }}">用户注册</a>
         </div>
       </div>
       <div class="footer-qrcode col-md-2">

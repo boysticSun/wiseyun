@@ -50,6 +50,8 @@ body {
     .navbar-brand {
       --bs-navbar-brand-margin-end: 2.075rem;
       float: left;
+      position: relative;
+
       a {
         color: #000000;
         text-decoration: none;
@@ -62,6 +64,51 @@ body {
         height: 3px;
         background: #FFFFFF;
         border-radius: 5px;
+      }
+      .snd-navbar-brand {
+        position: absolute;
+        overflow: auto;
+        z-index: 2;
+        background-color: rgba(255,255,255,0.7);
+        padding: 15px;
+        border: 1px solid #eaeaea;
+        box-shadow: 0px 0px 5px 0px #eaeaea;
+        min-width: 540px;
+        margin: 0 0 0 -260px;
+        left: 50%;
+        display: none;
+
+        .snd-navbar-item {
+          float: left;
+          min-width: 160px;
+          padding: 10px;
+
+          .snd-navbar-name {
+            text-align: center;
+            border-bottom: 1px solid #666666;
+            padding-bottom: 5px;
+          }
+          .trd-navbar-brand {
+            padding-top: 10px;
+
+            .trd-navbar-item {
+              text-align: center;
+              font-size: 14px;
+              padding-bottom: 5px;
+
+              a {
+                color: #666666;
+              }
+              a:hover {
+                color: #0195d7;
+              }
+            }
+          }
+        }
+      }
+      .snd-navbar-brand-2 {
+        min-width: 370px;
+        margin: 0 0 0 -185px;
       }
     }
 
@@ -78,7 +125,7 @@ body {
 
     .navbar-brand:hover {
 
-      a {
+      a.nav-link {
         color: #0195d7;
         font-weight: 600;
       }
@@ -1219,3 +1266,45 @@ body {
         }
     }
 }
+
+/* Help Show Page */
+.help-page {
+  background: #ffffff;
+
+  .searchbar {
+    width: 100%;
+    height: 360px;
+    background-color: #888888;
+    padding-top: 170px;
+
+    .row {
+      margin: 0;
+    }
+  }
+  .help-container {
+
+    .row {
+      margin: 0;
+      padding: 30px;
+
+      .col-md-3 {
+        padding-left: 30px;
+
+        .help-class-fst {
+          font-size: 18px;
+          padding: 10px 0;
+          border-bottom: 1px solid #dddddd;
+        }
+        .help-class-snd {
+          display: block;
+          font-size: 14px;
+          color: #333333;
+          padding: 10px 0;
+          border-bottom: 1px solid #dddddd;
+        }
+      }
+
+    }
+  }
+}
+

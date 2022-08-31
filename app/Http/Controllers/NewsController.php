@@ -17,10 +17,21 @@ class NewsController extends Controller
         $this->middleware('auth', ['except' => ['index', 'show']]);
     }
 
-	public function index()
+	public function index(NewsCategory $category)
 	{
-		$news = News::with('user', 'category')->orderBy('created_at', 'desc')->paginate();
-		return view('news.index', compact('news'));
+        $categories[] = $category->id;
+        $children = [];
+        $childcategories = NewsCategory::with('child')->where('pid',$category->id)->get();
+        if(!empty($childcategories))
+        {
+            foreach($childcategories as $value)
+            {
+                $categories[] = $value->id;
+                $children[] = $value;
+            }
+        }
+		$news = News::with('user', 'category')->whereIn('category_id', $categories)->orderBy('created_at', 'desc')->paginate();
+		return view('news.index', compact('news', 'category', 'children'));
 	}
 
     public function show(News $news)

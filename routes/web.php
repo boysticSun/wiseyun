@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', 'PagesController@root')->name('root');
 
+// 帮助中心
+Route::get('help', 'PagesController@help')->name('help');
+
 // 用户身份验证相关的路由
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
@@ -43,7 +46,8 @@ Route::post('email/resend', 'Auth\VerificationController@resend')->name('verific
 Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
 
 // 新闻资讯相关路由
-Route::resource('news', 'NewsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::resource('news', 'NewsController', ['only' => ['show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::get('news/list/{category}', 'NewsController@index')->name('news.index');
 
 // 新闻资讯分类相关路由
 Route::resource('categories', 'NewsCategoriesController', ['only' => ['show']]);

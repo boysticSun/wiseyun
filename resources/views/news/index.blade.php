@@ -9,15 +9,16 @@
 
     <div class="card ">
 
+      @if (!empty($children))
       <div class="card-header bg-transparent">
         <ul class="nav nav-pills">
-          <li class="nav-item"><a class="nav-link {{ active_class(if_route('news.index')) }}" href="{{ route('news.index') }}">最新资讯</a></li>
-          <li class="nav-item"><a class="nav-link {{ category_nav_active(1) }}" href="{{ route('categories.show', 1) }}">今日热点</a></li>
-          <li class="nav-item"><a class="nav-link {{ category_nav_active(2) }}" href="{{ route('categories.show', 2) }}">行业动态</a></li>
-          <li class="nav-item"><a class="nav-link {{ category_nav_active(3) }}" href="{{ route('categories.show', 3) }}">政策发布</a></li>
-          <li class="nav-item"><a class="nav-link {{ category_nav_active(4) }}" href="{{ route('categories.show', 4) }}">疫情资讯</a></li>
+          <li class="nav-item"><a class="nav-link {{ active_class(if_route('news.index')) }}" href="{{ route('news.index', $category->id) }}">最新资讯</a></li>
+          @foreach ($children as $child)
+          <li class="nav-item"><a class="nav-link {{ category_nav_active($child->id) }}" href="{{ route('categories.show', $child->id) }}">{{ $child->name }}</a></li>
+          @endforeach
         </ul>
       </div>
+      @endif
 
       <div class="card-body">
         @if (isset($category))
