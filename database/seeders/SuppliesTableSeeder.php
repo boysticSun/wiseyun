@@ -9,7 +9,7 @@ class SuppliesTableSeeder extends Seeder
 {
     public function run()
     {
-        // Supply::factory()->count(10)->create();
+        Supply::factory()->count(100)->create();
     }
 }
 
