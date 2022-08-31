@@ -159,8 +159,8 @@
             <a class="nav-link" href="#">标识解析</a>
             <em></em>
           </li>
-          <li class="navbar-brand nav-item">
-            <a class="nav-link" href="#">需求市场</a>
+          <li class="navbar-brand nav-item {{ active_class(if_route('market')) }}">
+            <a class="nav-link" href="{{ route('market') }}">需求市场</a>
             <em></em>
           </li>
           <li class="navbar-brand nav-item">
@@ -204,11 +204,11 @@
               </div>
             </div>
           </li>
-          <li class="navbar-brand nav-item">
+          <li class="navbar-brand nav-item {{ active_class(if_uri('news/list/6')) }}">
             <a class="nav-link" href="{{ route('news.index', 6) }}">政策解读</a>
             <em></em>
           </li>
-          <li class="navbar-brand nav-item">
+          <li class="navbar-brand nav-item {{ active_class(if_uri('news/list/1')) }}">
             <a class="nav-link" href="{{ route('news.index', 1) }}">新闻资讯</a>
             <em></em>
           </li>

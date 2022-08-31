@@ -19,6 +19,9 @@ Route::get('/', 'PagesController@root')->name('root');
 // 帮助中心
 Route::get('help', 'PagesController@help')->name('help');
 
+// 需求市场
+Route::get('market', 'PagesController@market')->name('market');
+
 // 用户身份验证相关的路由
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');

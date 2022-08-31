@@ -36,7 +36,7 @@
           <a href="#">智能制造</a>
         </div>
         <div class="footer-nav-snd">
-          <a href="#">需求市场</a>
+          <a href="{{ route('market') }}">需求市场</a>
         </div>
         <div class="footer-nav-snd">
           <a href="#">软件服务</a>

@@ -12,7 +12,7 @@
       @if (!empty($children))
       <div class="card-header bg-transparent">
         <ul class="nav nav-pills">
-          <li class="nav-item"><a class="nav-link {{ active_class(if_route('news.index')) }}" href="{{ route('news.index', $category->id) }}">最新资讯</a></li>
+          <li class="nav-item"><a class="nav-link {{ active_class(if_route('news.index', $category->id)) }}" href="{{ route('news.index', $category->id) }}">最新资讯</a></li>
           @foreach ($children as $child)
           <li class="nav-item"><a class="nav-link {{ category_nav_active($child->id) }}" href="{{ route('categories.show', $child->id) }}">{{ $child->name }}</a></li>
           @endforeach

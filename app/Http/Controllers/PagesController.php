@@ -20,4 +20,10 @@ class PagesController extends Controller
 
         return view('pages.help', compact('classes'));
     }
+
+    // 需求市场页
+    public function market()
+    {
+        return view('pages.market');
+    }
 }
