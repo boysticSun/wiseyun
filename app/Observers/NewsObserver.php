@@ -25,4 +25,9 @@ class NewsObserver
 
         $news->excerpt = make_excerpt($news->body);
     }
+
+    public function created(News $news)
+    {
+        $news->news_category->updateNewsCount();
+    }
 }

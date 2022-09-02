@@ -137,21 +137,6 @@ body {
   }
 }
 
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1200px;
-  }
-
-  .banner {
-    max-width: 100%;
-    max-height: 500px;
-    position: relative;
-    img {
-      max-width: 100%;
-    }
-  }
-}
-
 /* Sticky footer styles */
 html {
   position: relative;
@@ -775,16 +760,10 @@ body {
   }
 }
 
-@media (max-width: 1500px) {
-  .banner-item {
-    height: 400px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .banner-item {
-    height: 320px;
-  }
+.market-banner {
+  width: 100%;
+  height: 500px;
+  background-size: auto 100% !important;
 }
 
 /* register */
@@ -1308,3 +1287,706 @@ body {
   }
 }
 
+/* Market Page */
+.market-page {
+
+  .market-topbar {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(7, 64, 141, 0.1);
+
+    .search {
+      padding: 20px 80px;
+
+      .row {
+        margin: 0;
+
+        .select {
+          border: 2px solid #0195d7;
+          border-right: none;
+          padding: 0;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+
+          .form-select {
+            border: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-right: 1px solid #e5e5e5;
+            background-color: #ffffff;
+          }
+          .form-select:focus {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+          }
+        }
+        .keyword {
+          border-top: 2px solid #0195d7;
+          border-bottom: 2px solid #0195d7;
+          padding: 0;
+
+          input {
+            border: 0;
+            background-color: #ffffff;
+          }
+          .form-control:focus {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+          }
+        }
+        .button {
+          padding: 0;
+          border: 2px solid #0195d7;
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
+
+          .row {
+
+            button {
+              background-color: #0195d7;
+              border-color: #0195d7;
+              border-top-left-radius: 0;
+              border-bottom-left-radius: 0;
+            }
+          }
+        }
+      }
+    }
+    .serve {
+      height: 140px;
+      margin: 0;
+      box-shadow: 0 3px 10px rgba(7, 64, 141, 0.1);
+
+      .serve-item {
+
+        img {
+          float: left;
+          margin-right: 20px;
+        }
+        .serve-right {
+          float: left;
+
+          .line-fst {
+            padding-top: 10px;
+
+            .title {
+              font-size: 18px;
+              color: #333333;
+            }
+          }
+          .line-snd {
+            padding-top: 10px;
+          }
+        }
+      }
+      .serve-item.fst {
+        background: url(/images/serve-bg-1.png) no-repeat center;
+        border-right: 1px solid #cde7f2;
+
+        .serve-right {
+
+          .line-fst {
+
+            .title {
+
+            }
+            .label {
+              color: #018AFF;
+              border: 1px solid #018AFF;
+              border-radius: 5px;
+              padding: 0 5px;
+            }
+          }
+          .line-snd {
+            color: #018AFF;
+          }
+        }
+      }
+      .serve-item.snd {
+        background: url(/images/serve-bg-2.png) no-repeat center;
+        border-right: 1px solid #cde7f2;
+
+        .serve-right {
+
+          .line-fst {
+
+            .title {
+
+            }
+            .label {
+              color: #907DE6;
+              border: 1px solid #907DE6;
+              border-radius: 5px;
+              padding: 0 5px;
+            }
+          }
+          .line-snd {
+            color: #907DE6;
+          }
+        }
+      }
+      .serve-item.trd {
+        background: url(/images/serve-bg-3.png) no-repeat center;
+        border-right: 1px solid #cde7f2;
+
+        .serve-right {
+
+          .line-fst {
+
+            .title {
+
+            }
+            .label {
+              color: #6869EC;
+              border: 1px solid #6869EC;
+              border-radius: 5px;
+              padding: 0 5px;
+            }
+          }
+          .line-snd {
+            color: #6869EC;
+          }
+        }
+      }
+      .serve-item.fth {
+        background: url(/images/serve-bg-4.png) no-repeat center;
+
+        .serve-right {
+
+          .line-fst {
+
+            .title {
+
+            }
+            .label {
+              color: #FC9919;
+              border: 1px solid #FC9919;
+              border-radius: 5px;
+              padding: 0 5px;
+            }
+          }
+          .line-snd {
+            color: #FC9919;
+          }
+        }
+      }
+    }
+    .data {
+      height: 85px;
+      line-height: 50px;
+      margin: 0;
+
+      .data-item {
+        border-right: 1px solid #e8e8e8;
+      }
+      .data-item:last-child {
+        border: 0;
+      }
+      .text {
+        color: #999999;
+        font-size: 12px;
+      }
+      .number {
+        font-size: 30px;
+      }
+      .number.fst {
+        color: #018AFF;
+      }
+      .number.snd {
+        color: #907DE6;
+      }
+      .number.trd {
+        color: #6869EC;
+      }
+      .number.fth {
+        color: #FC9919;
+      }
+    }
+  }
+  .butt-content {
+    background: #f2f5fa url(/images/butt-bg.jpg) no-repeat center;
+    padding: 40px 0;
+
+    .floor-title {
+      text-align: center;
+    }
+    .floor-excerpt {
+      text-align: center;
+      font-size: 12px;
+      color: #999999;
+      position: relative;
+
+      a {
+        position: absolute;
+        right: 0;
+        color: #666;
+        text-decoration: none;
+      }
+    }
+    .purchaseSwiper {
+      width: 100%;
+      padding: 20px 0 40px;
+
+      .swiper-slide {
+        background: none;
+      }
+      .slide-row {
+        width: 100%;
+        overflow: auto;
+
+        .slide-item {
+          width: calc((100% - 40px)/5);
+          margin-right: 10px;
+          margin-bottom: 10px;
+          background: #ffffff;
+          float: left;
+
+          .name {
+            width: 100%;
+            display: block;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #0195d7;
+            text-align: left;
+            font-size: 14px;
+            padding: 10px;
+          }
+          .box {
+            padding: 10px;
+
+            .date.row {
+              margin: 0;
+              background: #f7f9fb;
+              padding: 15px 0;
+
+              .date-left {
+                border-right: 1px solid #e1e1e1;
+              }
+              .date-title {
+                font-size: 14px;
+                color: #aaaaaa;
+              }
+              .date-data {
+                font-size: 12px;
+                color: #666666;
+              }
+            }
+            .time {
+              padding-top: 20px;
+
+              .time-title {
+                color: #aaaaaa;
+                font-size: 14px;
+                text-align: left;
+              }
+              .time-progress.row {
+                margin: 0;
+                padding-top: 10px;
+                padding-bottom: 60px;
+
+                .progress {
+                  padding: 0;
+                  height: 8px;
+                  margin-top: 5px;
+
+                  .progress-bar {
+                    height: 8px;
+                    background: #0195d7;
+                  }
+                }
+                .col-md-1 {
+                  font-size: 12px;
+                }
+                .time-word {
+                  padding: 0;
+                  font-size: 12px;
+                  color: #999999;
+                }
+              }
+            }
+          }
+        }
+        .slide-item:nth-child(5n) {
+          margin-right: 0;
+        }
+      }
+      .swiper-pagination-bullet {
+        width: 40px;
+        height: 5px;
+        border-radius: 5px;
+      }
+    }
+    .supplySwiper {
+      width: 100%;
+      padding: 20px 0 40px;
+
+      .swiper-slide {
+        background: none;
+      }
+      .slide-row {
+        width: 100%;
+        overflow: auto;
+
+        .slide-item {
+          width: calc((100% - 40px)/5);
+          margin-right: 10px;
+          margin-bottom: 10px;
+          background: #ffffff;
+          padding: 20px;
+          float: left;
+
+          img {
+            width: 70%;
+            margin: 0 auto;
+            margin-bottom: 10px;
+          }
+          .title {
+            font-size: 12px;
+            color: #333333;
+            padding-bottom: 10px;
+          }
+          .excerpt {
+            font-size: 12px;
+            color: #999999;
+            padding-bottom: 10px;
+            -webkit-line-clamp: 1;
+            overflow : hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+          }
+          .price {
+            color: #ff8a00;
+            font-size: 18px;
+            padding-bottom: 10px;
+          }
+          .buy-btn {
+            color: #ffffff;
+            background: #0195d7;
+            font-size: 16px;
+            padding: 5px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+          }
+        }
+        .slide-item:nth-child(5n) {
+          margin-right: 0;
+        }
+        .slide-item:hover {
+          box-shadow: 5px 10px 10px 5px #eaeaea;
+        }
+      }
+      .swiper-pagination-bullet {
+        width: 40px;
+        height: 5px;
+        border-radius: 5px;
+      }
+    }
+  }
+  .enterprise-services {
+    padding: 40px 0;
+
+    .floor-title {
+      text-align: center;
+    }
+    .floor-excerpt {
+      text-align: center;
+      font-size: 12px;
+      color: #999999;
+    }
+  }
+}
+
+/* Supplies Index Page */
+.supplies-index-page {
+
+  .market-top-banner  {
+    width: 100%;
+    height: 300px;
+    background-size: auto 100% !important;
+
+    .supply-banner-top {
+      padding-top: 25px;
+      color: #ffffff;
+    }
+    .supply-banner-bottom {
+      padding-top: 35px;
+
+      .row {
+        margin: 0;
+
+        .col-md-8 {
+
+          .search {
+            padding: 15px 15px 15px;
+            background: #ffffff;
+            border: 1px solid #22D6CD;
+            position: relative;
+
+            i {
+              font-size: 20px;
+              color: #999999;
+              position: absolute;
+              top: 22px;
+              left: 22px;
+            }
+            input {
+              padding-left: 40px;
+              border: 0;
+              background-color: #ffffff;
+            }
+            .form-control:focus {
+              -webkit-box-shadow: none;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .recommend-manufacturer {
+    background: #ffffff;
+
+    .head {
+      padding: 10px 0;
+      border-bottom: 1px solid #eeeeee;
+    }
+    .body {
+      padding: 10px;
+    }
+  }
+  .recommend-supply {
+    background: #ffffff;
+
+    .head {
+      padding: 10px 0;
+      border-bottom: 1px solid #eeeeee;
+    }
+    .body {
+      padding: 10px;
+
+      .supply-tabs {
+        position: relative;
+
+        .nav {
+          position: absolute;
+          top: -50px;
+          left: 100px;
+
+          .nav-item {
+
+            .nav-link {
+              color: #999999;
+              background: 0;
+              min-width: 90px;
+              text-align: center;
+            }
+            .nav-link.active {
+              color: #0195d7;
+              border-bottom: 2px solid #0195d7;
+              border-radius: 0;
+            }
+          }
+        }
+        .more {
+          position: absolute;
+          top: -50px;
+          right: 0;
+          height: 40px;
+          line-height: 40px;
+          color: #999999;
+          font-size: 14px;
+          text-decoration: none;
+        }
+        .tab-content {
+
+          .tab-pane {
+            overflow: auto;
+
+            .supplies-item {
+              width: calc((100% - 40px)/5);
+              margin-right: 10px;
+              margin-bottom: 10px;
+              background: #ffffff;
+              padding: 20px;
+              float: left;
+              border: 1px solid #eeeeee;
+
+              .supplies-item-img {
+                display: block;
+                padding: 0 15%;
+
+                img {
+                  width: 100%;
+                  margin: 0 auto;
+                  margin-bottom: 10px;
+                }
+              }
+              .title {
+                font-size: 12px;
+                color: #333333;
+                padding-bottom: 10px;
+                text-align: center;
+              }
+              .excerpt {
+                font-size: 12px;
+                color: #999999;
+                padding-bottom: 10px;
+                -webkit-line-clamp: 1;
+                overflow : hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                text-align: center;
+              }
+              .price {
+                color: #ff8a00;
+                font-size: 18px;
+                padding-bottom: 10px;
+                text-align: center;
+              }
+              .buy-btn {
+                color: #ffffff;
+                background: #0195d7;
+                font-size: 16px;
+                padding: 5px;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                display: block;
+                text-decoration: none;
+                text-align: center;
+              }
+            }
+            .supplies-item:nth-child(5n) {
+              margin-right: 0;
+            }
+            .supplies-item:hover {
+              box-shadow: 0px 5px 5px 0px #eaeaea;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Goodstypes Supplytypes Page */
+.goodstypes-supplytypes-page {
+
+  .market-top-banner  {
+    width: 100%;
+    height: 300px;
+    background-size: auto 100% !important;
+
+    .supply-banner-top {
+      padding-top: 25px;
+      color: #ffffff;
+    }
+    .supply-banner-bottom {
+      padding-top: 35px;
+    }
+  }
+  .supply-list {
+    padding: 20px;
+    background: #ffffff;
+    overflow: auto;
+
+    .supply-list-box {
+      overflow: auto;
+    }
+    .supplies-item {
+      width: calc((100% - 80px)/5);
+      margin-right: 20px;
+      margin-bottom: 20px;
+      background: #ffffff;
+      padding: 20px;
+      float: left;
+      border: 1px solid #eeeeee;
+
+      .supplies-item-img {
+        display: block;
+        padding: 0 15%;
+
+        img {
+          width: 100%;
+          margin: 0 auto;
+          margin-bottom: 10px;
+        }
+      }
+      .title {
+        font-size: 12px;
+        color: #333333;
+        padding-bottom: 10px;
+        text-align: center;
+      }
+      .excerpt {
+        font-size: 12px;
+        color: #999999;
+        padding-bottom: 10px;
+        -webkit-line-clamp: 1;
+        overflow : hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        text-align: center;
+      }
+      .price {
+        color: #ff8a00;
+        font-size: 18px;
+        padding-bottom: 10px;
+        text-align: center;
+      }
+      .buy-btn {
+        color: #ffffff;
+        background: #0195d7;
+        font-size: 16px;
+        padding: 5px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+      }
+    }
+    .supplies-item:nth-child(5n) {
+      margin-right: 0;
+    }
+    .supplies-item:hover {
+      box-shadow: 0px 5px 5px 0px #eaeaea;
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .banner-item, .market-banner {
+    height: 400px;
+  }
+  .market-top-banner  {
+    height: 240px;
+  }
+}
+@media (max-width: 1200px) {
+  .banner-item, .market-banner {
+    height: 320px;
+  }
+  .market-top-banner  {
+    height: 180px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .banner {
+    max-width: 100%;
+    max-height: 500px;
+    position: relative;
+    img {
+      max-width: 100%;
+    }
+  }
+}

@@ -33,7 +33,7 @@ class NewsFactory extends Factory
             'body' => $body,// $this->faker->text(),
             'excerpt' => $excerpt,
             'user_id' => $this->faker->randomElement([1]),
-            'category_id' => $this->faker->randomElement([2, 3, 4, 5, 6]),
+            'news_category_id' => $this->faker->randomElement([2, 3, 4, 5, 6]),
         ];
     }
 }

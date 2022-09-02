@@ -42,6 +42,14 @@
 
     </div>
 
+    <div class="bg-custom">
+      @yield('customcontent')
+    </div>
+
+    <div class="bg-white">
+      @yield('whitecontent')
+    </div>
+
     <div class="bg-white root-floor-snd">
       @yield('cloudindex')
     </div>
@@ -103,15 +111,51 @@
       observeParents:true
     });
 
+    // 需求市场页采购轮播组
+    var purchaseSwiper = new swiper(".purchaseSwiper", {
+      autoHeight: true,
+      autoplay: {
+        delay: 5000,
+        stopOnLastSlide: false,
+        disableOnInteraction: false,
+      },
+      speed: 1000,
+      loop: true,
+      pagination: {
+        el: ".purchaseSwiper .swiper-pagination",
+        clickable: true,
+      },
+      observer:true,
+      observeParents:true
+    });
+
+    // 需求市场页供应轮播组
+    var purchaseSwiper = new swiper(".supplySwiper", {
+      autoHeight: true,
+      autoplay: {
+        delay: 5000,
+        stopOnLastSlide: false,
+        disableOnInteraction: false,
+      },
+      speed: 1000,
+      loop: true,
+      pagination: {
+        el: ".supplySwiper .swiper-pagination",
+        clickable: true,
+      },
+      observer:true,
+      observeParents:true
+    });
+
     $(document).ready(function() {
 
       // 导航栏二级菜单
-      $('.navbar-brand').hover(function(){
+      $('.navbar-brand').mouseover(function(){
         if($(this).find('.snd-navbar-brand').css('display') == 'none') {
-          $(this).find('.snd-navbar-brand').stop().slideDown(500);
+          $(this).find('.snd-navbar-brand').slideDown(500);
         }
-      },function(){
-        $(this).find('.snd-navbar-brand').stop().slideUp(500);
+      }).mouseout(function(){
+        $(this).find('.snd-navbar-brand').slideUp(500);
       })
     })
 

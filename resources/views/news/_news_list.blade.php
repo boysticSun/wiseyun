@@ -25,9 +25,9 @@
 
           <small class="media-body meta text-secondary">
 
-            <a class="text-secondary new-category" href="@if (empty($list->category->pid)) {{ route('news.index', $list->category_id) }} @else {{ route('categories.show', $list->category_id) }} @endif" title="{{ $list->category->name }}">
+            <a class="text-secondary new-category" href="@if (empty($list->news_category->pid)) {{ route('news.index', $list->news_category_id) }} @else {{ route('categories.show', $list->news_category_id) }} @endif" title="{{ $list->news_category->name }}">
               <i class="far fa-folder"></i>
-              {{ $list->category->name }}
+              {{ $list->news_category->name }}
             </a>
 
             {{-- <span> • </span>

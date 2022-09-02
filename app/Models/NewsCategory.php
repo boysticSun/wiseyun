@@ -19,4 +19,15 @@ class NewsCategory extends Model
     {
         return $this->hasMany(self::class,'pid');
     }
+
+    public function news()
+    {
+        return $this->hasMany(News::class);
+    }
+
+    public function updateNewsCount()
+    {
+        $this->post_count = $this->news->count();
+        $this->save();
+    }
 }

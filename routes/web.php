@@ -21,6 +21,7 @@ Route::get('help', 'PagesController@help')->name('help');
 
 // 需求市场
 Route::get('market', 'PagesController@market')->name('market');
+Route::post('market_search', 'PagesController@market_search')->name('market_search');
 
 // 用户身份验证相关的路由
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -60,3 +61,4 @@ Route::post('upload_image', 'NewsController@uploadImage')->name('news.upload_ima
 
 // 供应相关路由
 Route::resource('supplies', 'SuppliesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::get('supplytypes/{goodstype}', 'GoodsTypesController@supplytypes')->name('goodstypes.supplytypes');

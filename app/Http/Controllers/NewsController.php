@@ -30,7 +30,8 @@ class NewsController extends Controller
                 $children[] = $value;
             }
         }
-		$news = News::with('user', 'category')->whereIn('category_id', $categories)->orderBy('created_at', 'desc')->paginate();
+		$news = News::with('user', 'news_category')->whereIn('news_category_id', $categories)->orderBy('created_at', 'desc')->paginate();
+
 		return view('news.index', compact('news', 'category', 'children'));
 	}
 

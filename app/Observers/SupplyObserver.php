@@ -18,4 +18,9 @@ class SupplyObserver
     {
         //
     }
+
+    public function created(Supply $supply)
+    {
+        $supply->goods_type->updateSupplyCount();
+    }
 }

@@ -6,6 +6,7 @@ use App\Models\Supply;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SupplyRequest;
+use App\Models\GoodsType;
 
 class SuppliesController extends Controller
 {
@@ -16,8 +17,12 @@ class SuppliesController extends Controller
 
 	public function index()
 	{
-		$supplies = Supply::paginate();
-		return view('supplies.index', compact('supplies'));
+        $topgoodstypes = GoodsType::orderBy('supply_count','desc')->limit(4)->get();
+        foreach($topgoodstypes as $key=>$value)
+        {
+            $topgoodstypes[$key]->supplies = Supply::where('goods_type_id', $value->id)->limit(10)->get();
+        }
+		return view('supplies.index', compact('topgoodstypes'));
 	}
 
     public function show(Supply $supply)
