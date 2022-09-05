@@ -1254,10 +1254,16 @@ body {
     width: 100%;
     height: 360px;
     background-color: #888888;
+    background: url('/images/help-banner.jpg') no-repeat;
+    background-size: auto 100%;
     padding-top: 170px;
 
     .row {
       margin: 0;
+
+      span {
+        color: #999999;
+      }
     }
   }
   .help-container {
@@ -1700,7 +1706,7 @@ body {
 }
 
 /* Supplies Index Page */
-.supplies-index-page {
+.supplies-index-page, .goodstypes-supplytypes-page, .goodstypes-index-page {
 
   .market-top-banner  {
     width: 100%;
@@ -1717,19 +1723,23 @@ body {
       .row {
         margin: 0;
 
-        .col-md-8 {
+        .col-md-9 {
+          padding: 0;
 
           .search {
-            padding: 15px 15px 15px;
+            padding: 8px 15px 8px;
             background: #ffffff;
             border: 1px solid #22D6CD;
             position: relative;
+            height: 50px;
+            width: 70%;
+            float: left;
 
             i {
               font-size: 20px;
               color: #999999;
               position: absolute;
-              top: 22px;
+              top: 15px;
               left: 22px;
             }
             input {
@@ -1740,6 +1750,85 @@ body {
             .form-control:focus {
               -webkit-box-shadow: none;
               box-shadow: none;
+            }
+            button {
+              background: url('/images/market-t-search.png');
+              position: absolute;
+              right: 0;
+              top: 0px;
+              border: 0;
+              width: 110px;
+              height: 48px;
+              border-radius: 0;
+            }
+          }
+          .supply-publish {
+            float: left;
+            margin-left: 35px;
+            padding: 1px 0;
+          }
+          .goods-type-box {
+            float: left;
+            width: 100%;
+            padding-top: 10px;
+
+            .supply-types {
+              float: left;
+              color: #ffffff;
+              font-size: 1.125rem;
+              width: 20%;
+              padding: 10px 0 0;
+
+              a {
+                color: #ffffff;
+                text-decoration: none;
+
+                i {
+                  width: 1.375rem;
+                }
+                span {
+                  padding-left: 0.5rem;
+                }
+              }
+            }
+            .goods-types {
+              float: left;
+              color: #ffffff;
+              width: 5.75rem;
+              font-size: 0.9rem;
+
+              a {
+                color: #ffffff;
+                opacity: 0.6;
+                text-decoration: none;
+              }
+              a.active {
+                opacity: 1;
+              }
+            }
+          }
+        }
+        .col-md-3 {
+          padding: 0;
+
+          .supply-search-right {
+            padding-left: 50px;
+            padding-bottom: 15px;
+            overflow: auto;
+
+            img {
+              float: left;
+            }
+            div {
+              float: left;
+              color: #ffffff;
+              font-size: 30px;
+              padding-left: 10px;
+
+              span {
+                font-size: 16px;
+                padding-left: 10px;
+              }
             }
           }
         }
@@ -1872,8 +1961,138 @@ body {
   }
 }
 
+.purchases-index-page {
+  .market-top-banner  {
+    width: 100%;
+    height: 300px;
+    background-size: auto 100% !important;
+
+    .purchase-banner-top {
+      padding-top: 25px;
+      color: #ffffff;
+    }
+    .purchase-banner-bottom {
+      padding-top: 35px;
+
+      .row {
+        margin: 0;
+
+        .col-md-9 {
+          padding: 0;
+
+          .search {
+            padding: 8px 15px 8px;
+            background: #ffffff;
+            border: 1px solid #22D6CD;
+            position: relative;
+            height: 50px;
+            width: 70%;
+            float: left;
+
+            i {
+              font-size: 20px;
+              color: #999999;
+              position: absolute;
+              top: 15px;
+              left: 22px;
+            }
+            input {
+              padding-left: 40px;
+              border: 0;
+              background-color: #ffffff;
+            }
+            .form-control:focus {
+              -webkit-box-shadow: none;
+              box-shadow: none;
+            }
+            button {
+              background: url('/images/market-t-search.png');
+              position: absolute;
+              right: 0;
+              top: 0px;
+              border: 0;
+              width: 110px;
+              height: 48px;
+              border-radius: 0;
+            }
+          }
+          .purchase-publish {
+            float: left;
+            margin-left: 35px;
+            padding: 1px 0;
+          }
+          .goods-type-box {
+            float: left;
+            width: 100%;
+            padding-top: 10px;
+
+            .purchase-types {
+              float: left;
+              color: #ffffff;
+              font-size: 1.125rem;
+              width: 20%;
+              padding: 10px 0 0;
+
+              a {
+                color: #ffffff;
+                text-decoration: none;
+
+                i {
+                  width: 1.375rem;
+                }
+                span {
+                  padding-left: 0.5rem;
+                }
+              }
+            }
+            .goods-types {
+              float: left;
+              color: #ffffff;
+              width: 5.75rem;
+              font-size: 0.9rem;
+
+              a {
+                color: #ffffff;
+                opacity: 0.6;
+                text-decoration: none;
+              }
+              a.active {
+                opacity: 1;
+              }
+            }
+          }
+        }
+        .col-md-3 {
+          padding: 0;
+
+          .purchase-search-right {
+            padding-left: 50px;
+            padding-bottom: 15px;
+            overflow: auto;
+
+            img {
+              float: left;
+            }
+            div {
+              float: left;
+              color: #ffffff;
+              font-size: 30px;
+              padding-left: 10px;
+
+              span {
+                font-size: 16px;
+                padding-left: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 /* Goodstypes Supplytypes Page */
-.goodstypes-supplytypes-page {
+.goodstypes-supplytypes-page, .goodstypes-index-page {
 
   .market-top-banner  {
     width: 100%;
@@ -1885,7 +2104,7 @@ body {
       color: #ffffff;
     }
     .supply-banner-bottom {
-      padding-top: 35px;
+      padding-top: 5px;
     }
   }
   .supply-list {
@@ -1955,6 +2174,61 @@ body {
     }
     .supplies-item:hover {
       box-shadow: 0px 5px 5px 0px #eaeaea;
+    }
+  }
+}
+
+.supplies-show-page {
+
+  .show-top-banner {
+    width: 100%;
+    height: 400px;
+    background-size: auto 100% !important;
+
+    h1 {
+      color: #ffffff;
+    }
+    img {
+      max-width: 30%;
+      max-height: 150px;
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+    }
+    .price {
+      color: #ff8a00;
+      font-size: 1.75rem;
+    }
+    .validity {
+
+      p {
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+      }
+    }
+    .supplier {
+      color: #ffffff;
+      background: rgba(0,0,0,0.15);
+      border-radius: 5px;
+
+      h5 {
+        padding: 0 20px;
+        -webkit-line-clamp: 1;
+        overflow : hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+      }
+      .line {
+        height: 1px;
+        background: #ffffff;
+      }
+      .info {
+        padding: 10px 20px;
+
+        p {
+          margin-bottom: 0.5rem;
+        }
+      }
     }
   }
 }

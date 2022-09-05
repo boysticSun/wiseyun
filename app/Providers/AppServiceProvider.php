@@ -25,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         \App\Models\User::observe(\App\Observers\UserObserver::class);
+		\App\Models\Purchase::observe(\App\Observers\PurchaseObserver::class);
 		\App\Models\Supply::observe(\App\Observers\SupplyObserver::class);
 		\App\Models\News::observe(\App\Observers\NewsObserver::class);
         \Illuminate\Pagination\Paginator::useBootstrap();

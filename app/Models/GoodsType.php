@@ -16,9 +16,20 @@ class GoodsType extends Model
         return $this->hasMany(Supply::class);
     }
 
+    public function purchases()
+    {
+        return $this->hasMany(Purchase::class);
+    }
+
     public function updateSupplyCount()
     {
         $this->supply_count = $this->supplies->count();
+        $this->save();
+    }
+
+    public function updatePurchaseCount()
+    {
+        $this->purchase_count = $this->purchases->count();
         $this->save();
     }
 }

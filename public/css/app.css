@@ -22659,10 +22659,15 @@ body {
   width: 100%;
   height: 360px;
   background-color: #888888;
+  background: url("/images/help-banner.jpg") no-repeat;
+  background-size: auto 100%;
   padding-top: 170px;
 }
 .help-page .searchbar .row {
   margin: 0;
+}
+.help-page .searchbar .row span {
+  color: #999999;
 }
 .help-page .help-container .row {
   margin: 0;
@@ -23022,82 +23027,160 @@ body {
 }
 
 /* Supplies Index Page */
-.supplies-index-page .market-top-banner {
+.supplies-index-page .market-top-banner, .goodstypes-supplytypes-page .market-top-banner, .goodstypes-index-page .market-top-banner {
   width: 100%;
   height: 300px;
   background-size: auto 100% !important;
 }
-.supplies-index-page .market-top-banner .supply-banner-top {
+.supplies-index-page .market-top-banner .supply-banner-top, .goodstypes-supplytypes-page .market-top-banner .supply-banner-top, .goodstypes-index-page .market-top-banner .supply-banner-top {
   padding-top: 25px;
   color: #ffffff;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom {
+.supplies-index-page .market-top-banner .supply-banner-bottom, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom, .goodstypes-index-page .market-top-banner .supply-banner-bottom {
   padding-top: 35px;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row {
   margin: 0;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-8 .search {
-  padding: 15px 15px 15px;
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 {
+  padding: 0;
+}
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search {
+  padding: 8px 15px 8px;
   background: #ffffff;
   border: 1px solid #22D6CD;
   position: relative;
+  height: 50px;
+  width: 70%;
+  float: left;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-8 .search i {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search i, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search i, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search i {
   font-size: 20px;
   color: #999999;
   position: absolute;
-  top: 22px;
+  top: 15px;
   left: 22px;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-8 .search input {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search input, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search input, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search input {
   padding-left: 40px;
   border: 0;
   background-color: #ffffff;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-8 .search .form-control:focus {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search .form-control:focus, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search .form-control:focus, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search .form-control:focus {
   box-shadow: none;
 }
-.supplies-index-page .recommend-manufacturer {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search button, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search button, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search button {
+  background: url("/images/market-t-search.png");
+  position: absolute;
+  right: 0;
+  top: 0px;
+  border: 0;
+  width: 110px;
+  height: 48px;
+  border-radius: 0;
+}
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .supply-publish, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .supply-publish, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .supply-publish {
+  float: left;
+  margin-left: 35px;
+  padding: 1px 0;
+}
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box {
+  float: left;
+  width: 100%;
+  padding-top: 10px;
+}
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types {
+  float: left;
+  color: #ffffff;
+  font-size: 1.125rem;
+  width: 20%;
+  padding: 10px 0 0;
+}
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a i, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a i, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a i {
+  width: 1.375rem;
+}
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a span, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a span, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a span {
+  padding-left: 0.5rem;
+}
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types {
+  float: left;
+  color: #ffffff;
+  width: 5.75rem;
+  font-size: 0.9rem;
+}
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a {
+  color: #ffffff;
+  opacity: 0.6;
+  text-decoration: none;
+}
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a.active, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a.active, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a.active {
+  opacity: 1;
+}
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-3, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 {
+  padding: 0;
+}
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right {
+  padding-left: 50px;
+  padding-bottom: 15px;
+  overflow: auto;
+}
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right img, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right img, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right img {
+  float: left;
+}
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div {
+  float: left;
+  color: #ffffff;
+  font-size: 30px;
+  padding-left: 10px;
+}
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div span, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div span, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div span {
+  font-size: 16px;
+  padding-left: 10px;
+}
+.supplies-index-page .recommend-manufacturer, .goodstypes-supplytypes-page .recommend-manufacturer, .goodstypes-index-page .recommend-manufacturer {
   background: #ffffff;
 }
-.supplies-index-page .recommend-manufacturer .head {
+.supplies-index-page .recommend-manufacturer .head, .goodstypes-supplytypes-page .recommend-manufacturer .head, .goodstypes-index-page .recommend-manufacturer .head {
   padding: 10px 0;
   border-bottom: 1px solid #eeeeee;
 }
-.supplies-index-page .recommend-manufacturer .body {
+.supplies-index-page .recommend-manufacturer .body, .goodstypes-supplytypes-page .recommend-manufacturer .body, .goodstypes-index-page .recommend-manufacturer .body {
   padding: 10px;
 }
-.supplies-index-page .recommend-supply {
+.supplies-index-page .recommend-supply, .goodstypes-supplytypes-page .recommend-supply, .goodstypes-index-page .recommend-supply {
   background: #ffffff;
 }
-.supplies-index-page .recommend-supply .head {
+.supplies-index-page .recommend-supply .head, .goodstypes-supplytypes-page .recommend-supply .head, .goodstypes-index-page .recommend-supply .head {
   padding: 10px 0;
   border-bottom: 1px solid #eeeeee;
 }
-.supplies-index-page .recommend-supply .body {
+.supplies-index-page .recommend-supply .body, .goodstypes-supplytypes-page .recommend-supply .body, .goodstypes-index-page .recommend-supply .body {
   padding: 10px;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs {
+.supplies-index-page .recommend-supply .body .supply-tabs, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs, .goodstypes-index-page .recommend-supply .body .supply-tabs {
   position: relative;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .nav {
+.supplies-index-page .recommend-supply .body .supply-tabs .nav, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .nav, .goodstypes-index-page .recommend-supply .body .supply-tabs .nav {
   position: absolute;
   top: -50px;
   left: 100px;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .nav .nav-item .nav-link {
+.supplies-index-page .recommend-supply .body .supply-tabs .nav .nav-item .nav-link, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .nav .nav-item .nav-link, .goodstypes-index-page .recommend-supply .body .supply-tabs .nav .nav-item .nav-link {
   color: #999999;
   background: 0;
   min-width: 90px;
   text-align: center;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .nav .nav-item .nav-link.active {
+.supplies-index-page .recommend-supply .body .supply-tabs .nav .nav-item .nav-link.active, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .nav .nav-item .nav-link.active, .goodstypes-index-page .recommend-supply .body .supply-tabs .nav .nav-item .nav-link.active {
   color: #0195d7;
   border-bottom: 2px solid #0195d7;
   border-radius: 0;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .more {
+.supplies-index-page .recommend-supply .body .supply-tabs .more, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .more, .goodstypes-index-page .recommend-supply .body .supply-tabs .more {
   position: absolute;
   top: -50px;
   right: 0;
@@ -23107,10 +23190,10 @@ body {
   font-size: 14px;
   text-decoration: none;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane {
+.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane, .goodstypes-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane {
   overflow: auto;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item {
+.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item, .goodstypes-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item {
   width: calc((100% - 40px) / 5);
   margin-right: 10px;
   margin-bottom: 10px;
@@ -23119,22 +23202,22 @@ body {
   float: left;
   border: 1px solid #eeeeee;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .supplies-item-img {
+.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .supplies-item-img, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .supplies-item-img, .goodstypes-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .supplies-item-img {
   display: block;
   padding: 0 15%;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .supplies-item-img img {
+.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .supplies-item-img img, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .supplies-item-img img, .goodstypes-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .supplies-item-img img {
   width: 100%;
   margin: 0 auto;
   margin-bottom: 10px;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .title {
+.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .title, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .title, .goodstypes-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .title {
   font-size: 12px;
   color: #333333;
   padding-bottom: 10px;
   text-align: center;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .excerpt {
+.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .excerpt, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .excerpt, .goodstypes-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .excerpt {
   font-size: 12px;
   color: #999999;
   padding-bottom: 10px;
@@ -23145,13 +23228,13 @@ body {
   -webkit-box-orient: vertical;
   text-align: center;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .price {
+.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .price, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .price, .goodstypes-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .price {
   color: #ff8a00;
   font-size: 18px;
   padding-bottom: 10px;
   text-align: center;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .buy-btn {
+.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .buy-btn, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .buy-btn, .goodstypes-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .buy-btn {
   color: #ffffff;
   background: #0195d7;
   font-size: 16px;
@@ -23162,35 +23245,150 @@ body {
   text-decoration: none;
   text-align: center;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item:nth-child(5n) {
+.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item:nth-child(5n), .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item:nth-child(5n), .goodstypes-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item:nth-child(5n) {
   margin-right: 0;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item:hover {
+.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item:hover, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item:hover, .goodstypes-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item:hover {
   box-shadow: 0px 5px 5px 0px #eaeaea;
 }
 
-/* Goodstypes Supplytypes Page */
-.goodstypes-supplytypes-page .market-top-banner {
+.purchases-index-page .market-top-banner {
   width: 100%;
   height: 300px;
   background-size: auto 100% !important;
 }
-.goodstypes-supplytypes-page .market-top-banner .supply-banner-top {
+.purchases-index-page .market-top-banner .purchase-banner-top {
   padding-top: 25px;
   color: #ffffff;
 }
-.goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom {
+.purchases-index-page .market-top-banner .purchase-banner-bottom {
   padding-top: 35px;
 }
-.goodstypes-supplytypes-page .supply-list {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row {
+  margin: 0;
+}
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 {
+  padding: 0;
+}
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search {
+  padding: 8px 15px 8px;
+  background: #ffffff;
+  border: 1px solid #22D6CD;
+  position: relative;
+  height: 50px;
+  width: 70%;
+  float: left;
+}
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search i {
+  font-size: 20px;
+  color: #999999;
+  position: absolute;
+  top: 15px;
+  left: 22px;
+}
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search input {
+  padding-left: 40px;
+  border: 0;
+  background-color: #ffffff;
+}
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search .form-control:focus {
+  box-shadow: none;
+}
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search button {
+  background: url("/images/market-t-search.png");
+  position: absolute;
+  right: 0;
+  top: 0px;
+  border: 0;
+  width: 110px;
+  height: 48px;
+  border-radius: 0;
+}
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .purchase-publish {
+  float: left;
+  margin-left: 35px;
+  padding: 1px 0;
+}
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box {
+  float: left;
+  width: 100%;
+  padding-top: 10px;
+}
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types {
+  float: left;
+  color: #ffffff;
+  font-size: 1.125rem;
+  width: 20%;
+  padding: 10px 0 0;
+}
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a i {
+  width: 1.375rem;
+}
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a span {
+  padding-left: 0.5rem;
+}
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types {
+  float: left;
+  color: #ffffff;
+  width: 5.75rem;
+  font-size: 0.9rem;
+}
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types a {
+  color: #ffffff;
+  opacity: 0.6;
+  text-decoration: none;
+}
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types a.active {
+  opacity: 1;
+}
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-3 {
+  padding: 0;
+}
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right {
+  padding-left: 50px;
+  padding-bottom: 15px;
+  overflow: auto;
+}
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right img {
+  float: left;
+}
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right div {
+  float: left;
+  color: #ffffff;
+  font-size: 30px;
+  padding-left: 10px;
+}
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right div span {
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+/* Goodstypes Supplytypes Page */
+.goodstypes-supplytypes-page .market-top-banner, .goodstypes-index-page .market-top-banner {
+  width: 100%;
+  height: 300px;
+  background-size: auto 100% !important;
+}
+.goodstypes-supplytypes-page .market-top-banner .supply-banner-top, .goodstypes-index-page .market-top-banner .supply-banner-top {
+  padding-top: 25px;
+  color: #ffffff;
+}
+.goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom, .goodstypes-index-page .market-top-banner .supply-banner-bottom {
+  padding-top: 5px;
+}
+.goodstypes-supplytypes-page .supply-list, .goodstypes-index-page .supply-list {
   padding: 20px;
   background: #ffffff;
   overflow: auto;
 }
-.goodstypes-supplytypes-page .supply-list .supply-list-box {
+.goodstypes-supplytypes-page .supply-list .supply-list-box, .goodstypes-index-page .supply-list .supply-list-box {
   overflow: auto;
 }
-.goodstypes-supplytypes-page .supply-list .supplies-item {
+.goodstypes-supplytypes-page .supply-list .supplies-item, .goodstypes-index-page .supply-list .supplies-item {
   width: calc((100% - 80px) / 5);
   margin-right: 20px;
   margin-bottom: 20px;
@@ -23199,22 +23397,22 @@ body {
   float: left;
   border: 1px solid #eeeeee;
 }
-.goodstypes-supplytypes-page .supply-list .supplies-item .supplies-item-img {
+.goodstypes-supplytypes-page .supply-list .supplies-item .supplies-item-img, .goodstypes-index-page .supply-list .supplies-item .supplies-item-img {
   display: block;
   padding: 0 15%;
 }
-.goodstypes-supplytypes-page .supply-list .supplies-item .supplies-item-img img {
+.goodstypes-supplytypes-page .supply-list .supplies-item .supplies-item-img img, .goodstypes-index-page .supply-list .supplies-item .supplies-item-img img {
   width: 100%;
   margin: 0 auto;
   margin-bottom: 10px;
 }
-.goodstypes-supplytypes-page .supply-list .supplies-item .title {
+.goodstypes-supplytypes-page .supply-list .supplies-item .title, .goodstypes-index-page .supply-list .supplies-item .title {
   font-size: 12px;
   color: #333333;
   padding-bottom: 10px;
   text-align: center;
 }
-.goodstypes-supplytypes-page .supply-list .supplies-item .excerpt {
+.goodstypes-supplytypes-page .supply-list .supplies-item .excerpt, .goodstypes-index-page .supply-list .supplies-item .excerpt {
   font-size: 12px;
   color: #999999;
   padding-bottom: 10px;
@@ -23225,13 +23423,13 @@ body {
   -webkit-box-orient: vertical;
   text-align: center;
 }
-.goodstypes-supplytypes-page .supply-list .supplies-item .price {
+.goodstypes-supplytypes-page .supply-list .supplies-item .price, .goodstypes-index-page .supply-list .supplies-item .price {
   color: #ff8a00;
   font-size: 18px;
   padding-bottom: 10px;
   text-align: center;
 }
-.goodstypes-supplytypes-page .supply-list .supplies-item .buy-btn {
+.goodstypes-supplytypes-page .supply-list .supplies-item .buy-btn, .goodstypes-index-page .supply-list .supplies-item .buy-btn {
   color: #ffffff;
   background: #0195d7;
   font-size: 16px;
@@ -23242,11 +23440,57 @@ body {
   text-decoration: none;
   text-align: center;
 }
-.goodstypes-supplytypes-page .supply-list .supplies-item:nth-child(5n) {
+.goodstypes-supplytypes-page .supply-list .supplies-item:nth-child(5n), .goodstypes-index-page .supply-list .supplies-item:nth-child(5n) {
   margin-right: 0;
 }
-.goodstypes-supplytypes-page .supply-list .supplies-item:hover {
+.goodstypes-supplytypes-page .supply-list .supplies-item:hover, .goodstypes-index-page .supply-list .supplies-item:hover {
   box-shadow: 0px 5px 5px 0px #eaeaea;
+}
+
+.supplies-show-page .show-top-banner {
+  width: 100%;
+  height: 400px;
+  background-size: auto 100% !important;
+}
+.supplies-show-page .show-top-banner h1, .supplies-show-page .show-top-banner .h1 {
+  color: #ffffff;
+}
+.supplies-show-page .show-top-banner img {
+  max-width: 30%;
+  max-height: 150px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+.supplies-show-page .show-top-banner .price {
+  color: #ff8a00;
+  font-size: 1.75rem;
+}
+.supplies-show-page .show-top-banner .validity p {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+.supplies-show-page .show-top-banner .supplier {
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+.supplies-show-page .show-top-banner .supplier h5, .supplies-show-page .show-top-banner .supplier .h5 {
+  padding: 0 20px;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.supplies-show-page .show-top-banner .supplier .line {
+  height: 1px;
+  background: #ffffff;
+}
+.supplies-show-page .show-top-banner .supplier .info {
+  padding: 10px 20px;
+}
+.supplies-show-page .show-top-banner .supplier .info p {
+  margin-bottom: 0.5rem;
 }
 
 @media (max-width: 1500px) {
