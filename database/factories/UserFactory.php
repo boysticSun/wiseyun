@@ -19,7 +19,7 @@ class UserFactory extends Factory
     {
         return [
             'name' => '无心听风',
-            'usertype'  =>  1,
+            'user_type_id'  =>  1,
             'email' => '578863588@qq.com',
             'email_verified_at' => now(),
             'mobile'    =>  '18745791650',

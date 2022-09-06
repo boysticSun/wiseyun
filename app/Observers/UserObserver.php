@@ -13,4 +13,9 @@ class UserObserver
             $user->avatar = '/images/avatar.jpg';
         }
     }
+
+    public function created(User $user)
+    {
+        $user->user_type->updateUserCount();
+    }
 }

@@ -32,5 +32,11 @@
     "More Purchase": "更多采购",
     "More Supply": "更多产品",
     "Please Enter A Market Keyword": "请输入交易市场关键字",
-    "Detail": "详情介绍"
+    "Detail": "详情介绍",
+    "Purchase Type": "采购分类",
+    "No Record": "暂无记录 ~",
+    "Created At": "发布时间",
+    "Validity": "截止日期",
+    "Is Indefinitely": "长期有效",
+    "View Count": "点击量"
 }

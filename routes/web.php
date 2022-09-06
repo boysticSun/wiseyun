@@ -61,8 +61,10 @@ Route::post('upload_image', 'NewsController@uploadImage')->name('news.upload_ima
 
 // 供应相关路由
 Route::resource('supplies', 'SuppliesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
-Route::get('supplytypes/list', 'GoodsTypesController@index')->name('goodstypes.index');
+Route::get('supplytypes/list', 'GoodsTypesController@allsupplytypes')->name('goodstypes.allsupplytypes');
 Route::get('supplytypes/{goodstype}', 'GoodsTypesController@supplytypes')->name('goodstypes.supplytypes');
 
 // 采购相关路由
 Route::resource('purchases', 'PurchasesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::get('purchasetypes/list', 'GoodsTypesController@allpurchasetypes')->name('goodstypes.allpurchasetypes');
+Route::get('purchasetypes/{goodstype}', 'GoodsTypesController@purchasetypes')->name('goodstypes.purchasetypes');

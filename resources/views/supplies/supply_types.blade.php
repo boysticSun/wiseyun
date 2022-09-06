@@ -26,7 +26,7 @@
             <div class="goods-type-box">
               <div class="goods-types">行业分类</div>
               <div class="goods-types">
-                <a href="{{ route('goodstypes.index') }}" class="@if($isall == 1) active @endif">全部</a>
+                <a href="{{ route('goodstypes.allsupplytypes') }}" class="@if($isall == 1) active @endif">全部</a>
               </div>
               @foreach($goodstypes as $type)
               <div class="goods-types">

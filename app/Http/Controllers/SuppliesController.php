@@ -27,6 +27,7 @@ class SuppliesController extends Controller
 
     public function show(Supply $supply)
     {
+        $supply->increment('view_count', 1);
         return view('supplies.show', compact('supply'));
     }
 

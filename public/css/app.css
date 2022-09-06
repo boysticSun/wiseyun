@@ -23027,25 +23027,25 @@ body {
 }
 
 /* Supplies Index Page */
-.supplies-index-page .market-top-banner, .goodstypes-supplytypes-page .market-top-banner, .goodstypes-index-page .market-top-banner {
+.supplies-index-page .market-top-banner, .goodstypes-supplytypes-page .market-top-banner, .goodstypes-allsupplytypes-page .market-top-banner {
   width: 100%;
   height: 300px;
   background-size: auto 100% !important;
 }
-.supplies-index-page .market-top-banner .supply-banner-top, .goodstypes-supplytypes-page .market-top-banner .supply-banner-top, .goodstypes-index-page .market-top-banner .supply-banner-top {
+.supplies-index-page .market-top-banner .supply-banner-top, .goodstypes-supplytypes-page .market-top-banner .supply-banner-top, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-top {
   padding-top: 25px;
   color: #ffffff;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom, .goodstypes-index-page .market-top-banner .supply-banner-bottom {
+.supplies-index-page .market-top-banner .supply-banner-bottom, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom {
   padding-top: 35px;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row {
   margin: 0;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 {
   padding: 0;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search {
   padding: 8px 15px 8px;
   background: #ffffff;
   border: 1px solid #22D6CD;
@@ -23054,22 +23054,22 @@ body {
   width: 70%;
   float: left;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search i, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search i, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search i {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search i, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search i, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search i {
   font-size: 20px;
   color: #999999;
   position: absolute;
   top: 15px;
   left: 22px;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search input, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search input, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search input {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search input, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search input, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search input {
   padding-left: 40px;
   border: 0;
   background-color: #ffffff;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search .form-control:focus, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search .form-control:focus, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search .form-control:focus {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search .form-control:focus, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search .form-control:focus, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search .form-control:focus {
   box-shadow: none;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search button, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search button, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search button {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search button, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search button, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .search button {
   background: url("/images/market-t-search.png");
   position: absolute;
   right: 0;
@@ -23079,108 +23079,108 @@ body {
   height: 48px;
   border-radius: 0;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .supply-publish, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .supply-publish, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .supply-publish {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .supply-publish, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .supply-publish, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .supply-publish {
   float: left;
   margin-left: 35px;
   padding: 1px 0;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box {
   float: left;
   width: 100%;
   padding-top: 10px;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types {
   float: left;
   color: #ffffff;
   font-size: 1.125rem;
   width: 20%;
   padding: 10px 0 0;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a {
   color: #ffffff;
   text-decoration: none;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a i, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a i, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a i {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a i, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a i, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a i {
   width: 1.375rem;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a span, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a span, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a span {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a span, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a span, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .supply-types a span {
   padding-left: 0.5rem;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types {
   float: left;
   color: #ffffff;
   width: 5.75rem;
   font-size: 0.9rem;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a {
   color: #ffffff;
   opacity: 0.6;
   text-decoration: none;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a.active, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a.active, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a.active {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a.active, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a.active, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a.active {
   opacity: 1;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-3, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-3, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3 {
   padding: 0;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right {
   padding-left: 50px;
   padding-bottom: 15px;
   overflow: auto;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right img, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right img, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right img {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right img, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right img, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right img {
   float: left;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div {
   float: left;
   color: #ffffff;
   font-size: 30px;
   padding-left: 10px;
 }
-.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div span, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div span, .goodstypes-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div span {
+.supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div span, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div span, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div span {
   font-size: 16px;
   padding-left: 10px;
 }
-.supplies-index-page .recommend-manufacturer, .goodstypes-supplytypes-page .recommend-manufacturer, .goodstypes-index-page .recommend-manufacturer {
+.supplies-index-page .recommend-manufacturer, .goodstypes-supplytypes-page .recommend-manufacturer, .goodstypes-allsupplytypes-page .recommend-manufacturer {
   background: #ffffff;
 }
-.supplies-index-page .recommend-manufacturer .head, .goodstypes-supplytypes-page .recommend-manufacturer .head, .goodstypes-index-page .recommend-manufacturer .head {
+.supplies-index-page .recommend-manufacturer .head, .goodstypes-supplytypes-page .recommend-manufacturer .head, .goodstypes-allsupplytypes-page .recommend-manufacturer .head {
   padding: 10px 0;
   border-bottom: 1px solid #eeeeee;
 }
-.supplies-index-page .recommend-manufacturer .body, .goodstypes-supplytypes-page .recommend-manufacturer .body, .goodstypes-index-page .recommend-manufacturer .body {
+.supplies-index-page .recommend-manufacturer .body, .goodstypes-supplytypes-page .recommend-manufacturer .body, .goodstypes-allsupplytypes-page .recommend-manufacturer .body {
   padding: 10px;
 }
-.supplies-index-page .recommend-supply, .goodstypes-supplytypes-page .recommend-supply, .goodstypes-index-page .recommend-supply {
+.supplies-index-page .recommend-supply, .goodstypes-supplytypes-page .recommend-supply, .goodstypes-allsupplytypes-page .recommend-supply {
   background: #ffffff;
 }
-.supplies-index-page .recommend-supply .head, .goodstypes-supplytypes-page .recommend-supply .head, .goodstypes-index-page .recommend-supply .head {
+.supplies-index-page .recommend-supply .head, .goodstypes-supplytypes-page .recommend-supply .head, .goodstypes-allsupplytypes-page .recommend-supply .head {
   padding: 10px 0;
   border-bottom: 1px solid #eeeeee;
 }
-.supplies-index-page .recommend-supply .body, .goodstypes-supplytypes-page .recommend-supply .body, .goodstypes-index-page .recommend-supply .body {
+.supplies-index-page .recommend-supply .body, .goodstypes-supplytypes-page .recommend-supply .body, .goodstypes-allsupplytypes-page .recommend-supply .body {
   padding: 10px;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs, .goodstypes-index-page .recommend-supply .body .supply-tabs {
+.supplies-index-page .recommend-supply .body .supply-tabs, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs, .goodstypes-allsupplytypes-page .recommend-supply .body .supply-tabs {
   position: relative;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .nav, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .nav, .goodstypes-index-page .recommend-supply .body .supply-tabs .nav {
+.supplies-index-page .recommend-supply .body .supply-tabs .nav, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .nav, .goodstypes-allsupplytypes-page .recommend-supply .body .supply-tabs .nav {
   position: absolute;
   top: -50px;
   left: 100px;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .nav .nav-item .nav-link, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .nav .nav-item .nav-link, .goodstypes-index-page .recommend-supply .body .supply-tabs .nav .nav-item .nav-link {
+.supplies-index-page .recommend-supply .body .supply-tabs .nav .nav-item .nav-link, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .nav .nav-item .nav-link, .goodstypes-allsupplytypes-page .recommend-supply .body .supply-tabs .nav .nav-item .nav-link {
   color: #999999;
   background: 0;
   min-width: 90px;
   text-align: center;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .nav .nav-item .nav-link.active, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .nav .nav-item .nav-link.active, .goodstypes-index-page .recommend-supply .body .supply-tabs .nav .nav-item .nav-link.active {
+.supplies-index-page .recommend-supply .body .supply-tabs .nav .nav-item .nav-link.active, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .nav .nav-item .nav-link.active, .goodstypes-allsupplytypes-page .recommend-supply .body .supply-tabs .nav .nav-item .nav-link.active {
   color: #0195d7;
   border-bottom: 2px solid #0195d7;
   border-radius: 0;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .more, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .more, .goodstypes-index-page .recommend-supply .body .supply-tabs .more {
+.supplies-index-page .recommend-supply .body .supply-tabs .more, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .more, .goodstypes-allsupplytypes-page .recommend-supply .body .supply-tabs .more {
   position: absolute;
   top: -50px;
   right: 0;
@@ -23190,10 +23190,10 @@ body {
   font-size: 14px;
   text-decoration: none;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane, .goodstypes-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane {
+.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane, .goodstypes-allsupplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane {
   overflow: auto;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item, .goodstypes-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item {
+.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item, .goodstypes-allsupplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item {
   width: calc((100% - 40px) / 5);
   margin-right: 10px;
   margin-bottom: 10px;
@@ -23202,22 +23202,22 @@ body {
   float: left;
   border: 1px solid #eeeeee;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .supplies-item-img, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .supplies-item-img, .goodstypes-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .supplies-item-img {
+.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .supplies-item-img, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .supplies-item-img, .goodstypes-allsupplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .supplies-item-img {
   display: block;
   padding: 0 15%;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .supplies-item-img img, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .supplies-item-img img, .goodstypes-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .supplies-item-img img {
+.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .supplies-item-img img, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .supplies-item-img img, .goodstypes-allsupplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .supplies-item-img img {
   width: 100%;
   margin: 0 auto;
   margin-bottom: 10px;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .title, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .title, .goodstypes-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .title {
+.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .title, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .title, .goodstypes-allsupplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .title {
   font-size: 12px;
   color: #333333;
   padding-bottom: 10px;
   text-align: center;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .excerpt, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .excerpt, .goodstypes-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .excerpt {
+.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .excerpt, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .excerpt, .goodstypes-allsupplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .excerpt {
   font-size: 12px;
   color: #999999;
   padding-bottom: 10px;
@@ -23228,13 +23228,13 @@ body {
   -webkit-box-orient: vertical;
   text-align: center;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .price, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .price, .goodstypes-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .price {
+.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .price, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .price, .goodstypes-allsupplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .price {
   color: #ff8a00;
   font-size: 18px;
   padding-bottom: 10px;
   text-align: center;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .buy-btn, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .buy-btn, .goodstypes-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .buy-btn {
+.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .buy-btn, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .buy-btn, .goodstypes-allsupplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .buy-btn {
   color: #ffffff;
   background: #0195d7;
   font-size: 16px;
@@ -23245,32 +23245,32 @@ body {
   text-decoration: none;
   text-align: center;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item:nth-child(5n), .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item:nth-child(5n), .goodstypes-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item:nth-child(5n) {
+.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item:nth-child(5n), .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item:nth-child(5n), .goodstypes-allsupplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item:nth-child(5n) {
   margin-right: 0;
 }
-.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item:hover, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item:hover, .goodstypes-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item:hover {
+.supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item:hover, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item:hover, .goodstypes-allsupplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item:hover {
   box-shadow: 0px 5px 5px 0px #eaeaea;
 }
 
-.purchases-index-page .market-top-banner {
+.purchases-index-page .market-top-banner, .goodstypes-purchasetypes-page .market-top-banner, .goodstypes-allpurchasetypes-page .market-top-banner {
   width: 100%;
   height: 300px;
   background-size: auto 100% !important;
 }
-.purchases-index-page .market-top-banner .purchase-banner-top {
+.purchases-index-page .market-top-banner .purchase-banner-top, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-top, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-top {
   padding-top: 25px;
   color: #ffffff;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom {
+.purchases-index-page .market-top-banner .purchase-banner-bottom, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom {
   padding-top: 35px;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row {
   margin: 0;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 {
   padding: 0;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search {
   padding: 8px 15px 8px;
   background: #ffffff;
   border: 1px solid #22D6CD;
@@ -23279,22 +23279,22 @@ body {
   width: 70%;
   float: left;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search i {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search i, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search i, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search i {
   font-size: 20px;
   color: #999999;
   position: absolute;
   top: 15px;
   left: 22px;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search input {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search input, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search input, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search input {
   padding-left: 40px;
   border: 0;
   background-color: #ffffff;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search .form-control:focus {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search .form-control:focus, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search .form-control:focus, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search .form-control:focus {
   box-shadow: none;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search button {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search button, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search button, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .search button {
   background: url("/images/market-t-search.png");
   position: absolute;
   right: 0;
@@ -23304,91 +23304,283 @@ body {
   height: 48px;
   border-radius: 0;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .purchase-publish {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .purchase-publish, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .purchase-publish, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .purchase-publish {
   float: left;
   margin-left: 35px;
   padding: 1px 0;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box {
   float: left;
   width: 100%;
   padding-top: 10px;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types {
   float: left;
   color: #ffffff;
   font-size: 1.125rem;
   width: 20%;
   padding: 10px 0 0;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a {
   color: #ffffff;
   text-decoration: none;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a i {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a i, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a i, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a i {
   width: 1.375rem;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a span {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a span, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a span, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a span {
   padding-left: 0.5rem;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types {
   float: left;
   color: #ffffff;
   width: 5.75rem;
   font-size: 0.9rem;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types a {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types a, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types a, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types a {
   color: #ffffff;
   opacity: 0.6;
   text-decoration: none;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types a.active {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types a.active, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types a.active, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types a.active {
   opacity: 1;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-3 {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-3, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-3, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-3 {
   padding: 0;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right {
   padding-left: 50px;
   padding-bottom: 15px;
   overflow: auto;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right img {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right img, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right img, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right img {
   float: left;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right div {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right div, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right div, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right div {
   float: left;
   color: #ffffff;
   font-size: 30px;
   padding-left: 10px;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right div span {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right div span, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right div span, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right div span {
   font-size: 16px;
   padding-left: 10px;
 }
-
-/* Goodstypes Supplytypes Page */
-.goodstypes-supplytypes-page .market-top-banner, .goodstypes-index-page .market-top-banner {
+.purchases-index-page .purchases-index-floor, .goodstypes-purchasetypes-page .purchases-index-floor, .goodstypes-allpurchasetypes-page .purchases-index-floor {
+  background: #ffffff;
+}
+.purchases-index-page .purchases-index-floor .head, .goodstypes-purchasetypes-page .purchases-index-floor .head, .goodstypes-allpurchasetypes-page .purchases-index-floor .head {
+  padding: 10px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+.purchases-index-page .purchases-index-floor .body, .goodstypes-purchasetypes-page .purchases-index-floor .body, .goodstypes-allpurchasetypes-page .purchases-index-floor .body {
+  padding: 10px;
+}
+.purchases-index-page .purchases-index-floor .body .floor-tabs, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs {
+  position: relative;
+}
+.purchases-index-page .purchases-index-floor .body .floor-tabs .nav, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .nav, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .nav {
+  position: absolute;
+  top: -50px;
+  left: 100px;
+}
+.purchases-index-page .purchases-index-floor .body .floor-tabs .nav .nav-item .nav-link, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .nav .nav-item .nav-link, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .nav .nav-item .nav-link {
+  color: #999999;
+  background: 0;
+  min-width: 90px;
+  text-align: center;
+}
+.purchases-index-page .purchases-index-floor .body .floor-tabs .nav .nav-item .nav-link.active, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .nav .nav-item .nav-link.active, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .nav .nav-item .nav-link.active {
+  color: #0195d7;
+  border-bottom: 2px solid #0195d7;
+  border-radius: 0;
+}
+.purchases-index-page .purchases-index-floor .body .floor-tabs .more, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .more, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .more {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  height: 40px;
+  line-height: 40px;
+  color: #999999;
+  font-size: 14px;
+  text-decoration: none;
+}
+.purchases-index-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane {
+  overflow: auto;
+}
+.purchases-index-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item {
+  width: calc((100% - 40px) / 5);
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  float: left;
+}
+.purchases-index-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .name, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .name, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .name {
   width: 100%;
-  height: 300px;
-  background-size: auto 100% !important;
-}
-.goodstypes-supplytypes-page .market-top-banner .supply-banner-top, .goodstypes-index-page .market-top-banner .supply-banner-top {
-  padding-top: 25px;
+  display: block;
+  text-decoration: none;
   color: #ffffff;
+  background-color: #0195d7;
+  text-align: left;
+  font-size: 14px;
+  padding: 10px;
 }
-.goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom, .goodstypes-index-page .market-top-banner .supply-banner-bottom {
-  padding-top: 5px;
+.purchases-index-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box {
+  padding: 10px;
+  border: 1px solid #eeeeee;
+  border-top: 0;
 }
-.goodstypes-supplytypes-page .supply-list, .goodstypes-index-page .supply-list {
+.purchases-index-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .date.row, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .date.row, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .date.row {
+  margin: 0;
+  background: #f7f9fb;
+  padding: 15px 0;
+}
+.purchases-index-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .date.row .date-left, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .date.row .date-left, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .date.row .date-left {
+  border-right: 1px solid #e1e1e1;
+}
+.purchases-index-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .date.row .date-title, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .date.row .date-title, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .date.row .date-title {
+  font-size: 14px;
+  color: #aaaaaa;
+}
+.purchases-index-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .date.row .date-data, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .date.row .date-data, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .date.row .date-data {
+  font-size: 12px;
+  color: #666666;
+}
+.purchases-index-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time {
+  padding-top: 20px;
+}
+.purchases-index-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time .time-title, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time .time-title, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time .time-title {
+  color: #aaaaaa;
+  font-size: 14px;
+  text-align: left;
+}
+.purchases-index-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time .time-progress.row, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time .time-progress.row, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time .time-progress.row {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 60px;
+}
+.purchases-index-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time .time-progress.row .progress, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time .time-progress.row .progress, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time .time-progress.row .progress {
+  padding: 0;
+  height: 8px;
+  margin-top: 5px;
+}
+.purchases-index-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time .time-progress.row .progress .progress-bar, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time .time-progress.row .progress .progress-bar, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time .time-progress.row .progress .progress-bar {
+  height: 8px;
+  background: #0195d7;
+}
+.purchases-index-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time .time-progress.row .col-md-1, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time .time-progress.row .col-md-1, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time .time-progress.row .col-md-1 {
+  font-size: 12px;
+}
+.purchases-index-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time .time-progress.row .time-word, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time .time-progress.row .time-word, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box .time .time-progress.row .time-word {
+  padding: 0;
+  font-size: 12px;
+  color: #999999;
+}
+.purchases-index-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item:nth-child(5n), .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item:nth-child(5n), .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item:nth-child(5n) {
+  margin-right: 0;
+}
+.purchases-index-page .purchases-list, .goodstypes-purchasetypes-page .purchases-list, .goodstypes-allpurchasetypes-page .purchases-list {
   padding: 20px;
   background: #ffffff;
   overflow: auto;
 }
-.goodstypes-supplytypes-page .supply-list .supply-list-box, .goodstypes-index-page .supply-list .supply-list-box {
+.purchases-index-page .purchases-list .purchases-list-box, .goodstypes-purchasetypes-page .purchases-list .purchases-list-box, .goodstypes-allpurchasetypes-page .purchases-list .purchases-list-box {
   overflow: auto;
 }
-.goodstypes-supplytypes-page .supply-list .supplies-item, .goodstypes-index-page .supply-list .supplies-item {
+.purchases-index-page .purchases-list .purchases-list-box .purchases-item, .goodstypes-purchasetypes-page .purchases-list .purchases-list-box .purchases-item, .goodstypes-allpurchasetypes-page .purchases-list .purchases-list-box .purchases-item {
+  width: calc((100% - 40px) / 5);
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  float: left;
+}
+.purchases-index-page .purchases-list .purchases-list-box .purchases-item .name, .goodstypes-purchasetypes-page .purchases-list .purchases-list-box .purchases-item .name, .goodstypes-allpurchasetypes-page .purchases-list .purchases-list-box .purchases-item .name {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #0195d7;
+  text-align: left;
+  font-size: 14px;
+  padding: 10px;
+}
+.purchases-index-page .purchases-list .purchases-list-box .purchases-item .box, .goodstypes-purchasetypes-page .purchases-list .purchases-list-box .purchases-item .box, .goodstypes-allpurchasetypes-page .purchases-list .purchases-list-box .purchases-item .box {
+  padding: 10px;
+  border: 1px solid #eeeeee;
+  border-top: 0;
+}
+.purchases-index-page .purchases-list .purchases-list-box .purchases-item .box .date.row, .goodstypes-purchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .date.row, .goodstypes-allpurchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .date.row {
+  margin: 0;
+  background: #f7f9fb;
+  padding: 15px 0;
+}
+.purchases-index-page .purchases-list .purchases-list-box .purchases-item .box .date.row .date-left, .goodstypes-purchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .date.row .date-left, .goodstypes-allpurchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .date.row .date-left {
+  border-right: 1px solid #e1e1e1;
+}
+.purchases-index-page .purchases-list .purchases-list-box .purchases-item .box .date.row .date-title, .goodstypes-purchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .date.row .date-title, .goodstypes-allpurchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .date.row .date-title {
+  font-size: 14px;
+  color: #aaaaaa;
+}
+.purchases-index-page .purchases-list .purchases-list-box .purchases-item .box .date.row .date-data, .goodstypes-purchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .date.row .date-data, .goodstypes-allpurchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .date.row .date-data {
+  font-size: 12px;
+  color: #666666;
+}
+.purchases-index-page .purchases-list .purchases-list-box .purchases-item .box .time, .goodstypes-purchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .time, .goodstypes-allpurchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .time {
+  padding-top: 20px;
+}
+.purchases-index-page .purchases-list .purchases-list-box .purchases-item .box .time .time-title, .goodstypes-purchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .time .time-title, .goodstypes-allpurchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .time .time-title {
+  color: #aaaaaa;
+  font-size: 14px;
+  text-align: left;
+}
+.purchases-index-page .purchases-list .purchases-list-box .purchases-item .box .time .time-progress.row, .goodstypes-purchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .time .time-progress.row, .goodstypes-allpurchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .time .time-progress.row {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 60px;
+}
+.purchases-index-page .purchases-list .purchases-list-box .purchases-item .box .time .time-progress.row .progress, .goodstypes-purchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .time .time-progress.row .progress, .goodstypes-allpurchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .time .time-progress.row .progress {
+  padding: 0;
+  height: 8px;
+  margin-top: 5px;
+}
+.purchases-index-page .purchases-list .purchases-list-box .purchases-item .box .time .time-progress.row .progress .progress-bar, .goodstypes-purchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .time .time-progress.row .progress .progress-bar, .goodstypes-allpurchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .time .time-progress.row .progress .progress-bar {
+  height: 8px;
+  background: #0195d7;
+}
+.purchases-index-page .purchases-list .purchases-list-box .purchases-item .box .time .time-progress.row .col-md-1, .goodstypes-purchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .time .time-progress.row .col-md-1, .goodstypes-allpurchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .time .time-progress.row .col-md-1 {
+  font-size: 12px;
+}
+.purchases-index-page .purchases-list .purchases-list-box .purchases-item .box .time .time-progress.row .time-word, .goodstypes-purchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .time .time-progress.row .time-word, .goodstypes-allpurchasetypes-page .purchases-list .purchases-list-box .purchases-item .box .time .time-progress.row .time-word {
+  padding: 0;
+  font-size: 12px;
+  color: #999999;
+}
+.purchases-index-page .purchases-list .purchases-list-box .purchases-item:nth-child(5n), .goodstypes-purchasetypes-page .purchases-list .purchases-list-box .purchases-item:nth-child(5n), .goodstypes-allpurchasetypes-page .purchases-list .purchases-list-box .purchases-item:nth-child(5n) {
+  margin-right: 0;
+}
+
+/* Goodstypes Supplytypes Page */
+.goodstypes-supplytypes-page .market-top-banner, .goodstypes-allsupplytypes-page .market-top-banner {
+  width: 100%;
+  height: 300px;
+  background-size: auto 100% !important;
+}
+.goodstypes-supplytypes-page .market-top-banner .supply-banner-top, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-top {
+  padding-top: 25px;
+  color: #ffffff;
+}
+.goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom {
+  padding-top: 5px;
+}
+.goodstypes-supplytypes-page .supply-list, .goodstypes-allsupplytypes-page .supply-list {
+  padding: 20px;
+  background: #ffffff;
+  overflow: auto;
+}
+.goodstypes-supplytypes-page .supply-list .supply-list-box, .goodstypes-allsupplytypes-page .supply-list .supply-list-box {
+  overflow: auto;
+}
+.goodstypes-supplytypes-page .supply-list .supplies-item, .goodstypes-allsupplytypes-page .supply-list .supplies-item {
   width: calc((100% - 80px) / 5);
   margin-right: 20px;
   margin-bottom: 20px;
@@ -23397,22 +23589,22 @@ body {
   float: left;
   border: 1px solid #eeeeee;
 }
-.goodstypes-supplytypes-page .supply-list .supplies-item .supplies-item-img, .goodstypes-index-page .supply-list .supplies-item .supplies-item-img {
+.goodstypes-supplytypes-page .supply-list .supplies-item .supplies-item-img, .goodstypes-allsupplytypes-page .supply-list .supplies-item .supplies-item-img {
   display: block;
   padding: 0 15%;
 }
-.goodstypes-supplytypes-page .supply-list .supplies-item .supplies-item-img img, .goodstypes-index-page .supply-list .supplies-item .supplies-item-img img {
+.goodstypes-supplytypes-page .supply-list .supplies-item .supplies-item-img img, .goodstypes-allsupplytypes-page .supply-list .supplies-item .supplies-item-img img {
   width: 100%;
   margin: 0 auto;
   margin-bottom: 10px;
 }
-.goodstypes-supplytypes-page .supply-list .supplies-item .title, .goodstypes-index-page .supply-list .supplies-item .title {
+.goodstypes-supplytypes-page .supply-list .supplies-item .title, .goodstypes-allsupplytypes-page .supply-list .supplies-item .title {
   font-size: 12px;
   color: #333333;
   padding-bottom: 10px;
   text-align: center;
 }
-.goodstypes-supplytypes-page .supply-list .supplies-item .excerpt, .goodstypes-index-page .supply-list .supplies-item .excerpt {
+.goodstypes-supplytypes-page .supply-list .supplies-item .excerpt, .goodstypes-allsupplytypes-page .supply-list .supplies-item .excerpt {
   font-size: 12px;
   color: #999999;
   padding-bottom: 10px;
@@ -23423,13 +23615,13 @@ body {
   -webkit-box-orient: vertical;
   text-align: center;
 }
-.goodstypes-supplytypes-page .supply-list .supplies-item .price, .goodstypes-index-page .supply-list .supplies-item .price {
+.goodstypes-supplytypes-page .supply-list .supplies-item .price, .goodstypes-allsupplytypes-page .supply-list .supplies-item .price {
   color: #ff8a00;
   font-size: 18px;
   padding-bottom: 10px;
   text-align: center;
 }
-.goodstypes-supplytypes-page .supply-list .supplies-item .buy-btn, .goodstypes-index-page .supply-list .supplies-item .buy-btn {
+.goodstypes-supplytypes-page .supply-list .supplies-item .buy-btn, .goodstypes-allsupplytypes-page .supply-list .supplies-item .buy-btn {
   color: #ffffff;
   background: #0195d7;
   font-size: 16px;
@@ -23440,11 +23632,15 @@ body {
   text-decoration: none;
   text-align: center;
 }
-.goodstypes-supplytypes-page .supply-list .supplies-item:nth-child(5n), .goodstypes-index-page .supply-list .supplies-item:nth-child(5n) {
+.goodstypes-supplytypes-page .supply-list .supplies-item:nth-child(5n), .goodstypes-allsupplytypes-page .supply-list .supplies-item:nth-child(5n) {
   margin-right: 0;
 }
-.goodstypes-supplytypes-page .supply-list .supplies-item:hover, .goodstypes-index-page .supply-list .supplies-item:hover {
+.goodstypes-supplytypes-page .supply-list .supplies-item:hover, .goodstypes-allsupplytypes-page .supply-list .supplies-item:hover {
   box-shadow: 0px 5px 5px 0px #eaeaea;
+}
+
+.goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom {
+  padding-top: 5px;
 }
 
 .supplies-show-page .show-top-banner {
@@ -23491,6 +23687,51 @@ body {
 }
 .supplies-show-page .show-top-banner .supplier .info p {
   margin-bottom: 0.5rem;
+}
+
+.purchases-show-page .card {
+  border: 0;
+}
+.purchases-show-page .card .head {
+  padding: 10px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+.purchases-show-page .card .body {
+  padding: 10px;
+}
+.purchases-show-page .card .body .purchase-info-left {
+  width: 225px;
+  float: left;
+}
+.purchases-show-page .card .body .purchase-info-left img {
+  width: 100%;
+}
+.purchases-show-page .card .body .purchase-info-left i {
+  font-size: 225px;
+  color: #999999;
+}
+.purchases-show-page .card .body .purchase-info-right {
+  float: left;
+  width: calc(100% - 225px);
+}
+.purchases-show-page .card .body .purchase-info-right .purchase-info-buttons a {
+  color: #0195d7;
+  border: 1px solid #0195d7;
+}
+.purchases-show-page .card .body .company-p {
+  color: #999999;
+}
+.purchases-show-page .card .body .company-p .company-label {
+  width: 3.5rem;
+  float: left;
+}
+.purchases-show-page .card .body .company-p .company-label i {
+  font-style: normal;
+  display: block;
+  width: 100px;
+}
+.purchases-show-page img {
+  max-width: 100%;
 }
 
 @media (max-width: 1500px) {

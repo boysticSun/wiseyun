@@ -6,6 +6,7 @@ use App\Models\Purchase;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PurchaseRequest;
+use App\Models\GoodsType;
 
 class PurchasesController extends Controller
 {
@@ -16,12 +17,18 @@ class PurchasesController extends Controller
 
 	public function index()
 	{
-		$purchases = Purchase::paginate();
-		return view('purchases.index', compact('purchases'));
+		$topgoodstypes = GoodsType::orderBy('purchase_count','desc')->limit(4)->get();
+        foreach($topgoodstypes as $key=>$value)
+        {
+            $topgoodstypes[$key]->purchases = Purchase::where('goods_type_id', $value->id)->limit(10)->get();
+            $topgoodstypes[$key]->isnewlist = Purchase::where('goods_type_id', $value->id)->orderBy('created_at', 'desc')->limit(10)->get();
+        }
+		return view('purchases.index', compact('topgoodstypes'));
 	}
 
     public function show(Purchase $purchase)
     {
+        $purchase->increment('view_count', 1);
         return view('purchases.show', compact('purchase'));
     }
 
