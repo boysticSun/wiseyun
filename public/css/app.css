@@ -23688,6 +23688,10 @@ body {
 .supplies-show-page .show-top-banner .supplier .info p {
   margin-bottom: 0.5rem;
 }
+.supplies-show-page .supply-body {
+  border: 0;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.12);
+}
 
 .purchases-show-page .card {
   border: 0;

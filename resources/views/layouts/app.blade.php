@@ -150,11 +150,11 @@
     $(document).ready(function() {
 
       // 导航栏二级菜单
-      $('.navbar-brand').mouseover(function(){
+      $('.navbar-brand').hover(function(){
         if($(this).find('.snd-navbar-brand').css('display') == 'none') {
           $(this).find('.snd-navbar-brand').slideDown(500);
         }
-      }).mouseout(function(){
+      },function(){
         $(this).find('.snd-navbar-brand').slideUp(500);
       })
     })
