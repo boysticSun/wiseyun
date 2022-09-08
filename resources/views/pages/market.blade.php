@@ -108,7 +108,7 @@
             <div class="slide-row">
               @foreach ($purchase as $purch)
               <div class="slide-item">
-                <a class="name" href="{{ route('purchases.show', $purch->id) }}">{{ $purch->title }}</a>
+                <a class="name" href="{{ route('purchases.show', $purch->id) }}"><span>{{ $purch->title }}</span></a>
                 <div class="box">
                   <div class="row date">
                     <div class="col-md-6 date-left">

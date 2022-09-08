@@ -48,4 +48,10 @@ class PagesController extends Controller
     {
 
     }
+
+    // 资源库
+    public function repository()
+    {
+        return view('pages.repository');
+    }
 }

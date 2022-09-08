@@ -20,27 +20,17 @@ class SupplyController extends AdminController
         return Grid::make(new Supply(), function (Grid $grid) {
             $grid->column('id')->sortable();
             $grid->column('title');
-            $grid->column('body');
-            $grid->column('user_id');
             $grid->column('goods_type_id');
             $grid->column('reply_count');
             $grid->column('view_count');
-            $grid->column('last_reply_user_id');
             $grid->column('order');
-            $grid->column('price');
-            $grid->column('price_unit');
-            $grid->column('is_negotiable');
             $grid->column('thumb');
-            $grid->column('validity');
-            $grid->column('is_indefinitely');
-            $grid->column('excerpt');
-            $grid->column('slug');
-            $grid->column('created_at');
-            $grid->column('updated_at')->sortable();
-        
+            $grid->column('created_at')->toDateString();
+            $grid->column('updated_at')->toDateString()->sortable();
+
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-        
+
             });
         });
     }
@@ -87,22 +77,30 @@ class SupplyController extends AdminController
         return Form::make(new Supply(), function (Form $form) {
             $form->display('id');
             $form->text('title');
-            $form->text('body');
-            $form->text('user_id');
+            $form->textarea('body');
+            $form->select('user_id');
             $form->text('goods_type_id');
-            $form->text('reply_count');
-            $form->text('view_count');
-            $form->text('last_reply_user_id');
             $form->text('order');
             $form->text('price');
-            $form->text('price_unit');
-            $form->text('is_negotiable');
-            $form->text('thumb');
-            $form->text('validity');
-            $form->text('is_indefinitely');
-            $form->text('excerpt');
+            $form->select('price_unit')
+                 ->options(['年','月','日','次']);
+            $form->radio('is_negotiable')
+                 ->options([
+                    1   =>  '是',
+                    0   =>  '否'
+                 ])
+                 ->default(1);
+            $form->image('thumb');
+            $form->date('validity');
+            $form->radio('is_indefinitely')
+                 ->options([
+                    1   =>  '是',
+                    0   =>  '否'
+                 ])
+                 ->default(1);
+            $form->textarea('excerpt');
             $form->text('slug');
-        
+
             $form->display('created_at');
             $form->display('updated_at');
         });

@@ -2,13 +2,16 @@
 
 namespace App\Admin\Controllers;
 
-use App\Admin\Repositories\Purchase;
+use App\Admin\Repositories\News;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Show;
 use Dcat\Admin\Http\Controllers\AdminController;
+use App\Models\User;
+use App\Models\NewsCategory as Category;
+use Illuminate\Support\Str;
 
-class PurchaseController extends AdminController
+class NewsController extends AdminController
 {
     /**
      * Make a grid builder.
@@ -17,22 +20,25 @@ class PurchaseController extends AdminController
      */
     protected function grid()
     {
-        return Grid::make(new Purchase(), function (Grid $grid) {
+        return Grid::make(new News(['user', 'news_category']), function (Grid $grid) {
             $grid->column('id')->sortable();
             $grid->column('title');
-            $grid->column('user_id');
-            $grid->column('goods_type_id');
+            // $grid->column('thumb')->image();
+            $grid->user('作者')->display(function($user){
+                return $user->name;
+            });
+            $grid->news_category('新闻分类')->display(function($news_category){
+                return $news_category->name;
+            });
             $grid->column('reply_count');
             $grid->column('view_count');
+            // $grid->column('last_reply_user_id');
             $grid->column('order');
-            $grid->column('thumb');
-            $grid->column('excerpt');
             $grid->column('created_at')->toDateString();
             $grid->column('updated_at')->toDateString()->sortable();
 
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-
             });
         });
     }
@@ -46,19 +52,17 @@ class PurchaseController extends AdminController
      */
     protected function detail($id)
     {
-        return Show::make($id, new Purchase(), function (Show $show) {
+        return Show::make($id, new News(), function (Show $show) {
             $show->field('id');
             $show->field('title');
+            $show->field('thumb');
             $show->field('body');
             $show->field('user_id');
-            $show->field('goods_type_id');
+            $show->field('news_category_id');
             $show->field('reply_count');
             $show->field('view_count');
             $show->field('last_reply_user_id');
             $show->field('order');
-            $show->field('thumb');
-            $show->field('validity');
-            $show->field('is_indefinitely');
             $show->field('excerpt');
             $show->field('slug');
             $show->field('created_at');
@@ -73,17 +77,21 @@ class PurchaseController extends AdminController
      */
     protected function form()
     {
-        return Form::make(new Purchase(), function (Form $form) {
+        return Form::make(new News(), function (Form $form) {
             $form->display('id');
             $form->text('title');
-            $form->textarea('body');
-            $form->text('user_id');
-            $form->text('goods_type_id');
-            $form->text('order');
-            $form->image('thumb');
-            $form->date('validity');
-            $form->text('is_indefinitely');
+            $form->image('thumb')
+                 ->disk('admin')
+                 ->move('images/thumbs/'.date('Ym').'/'.date('d'))
+                 ->name(function ($file) {
+                    return $this->user_id . '_' . time() . '_' . Str::random(10) . '.' . $file->guessExtension();
+                 })
+                 ->accept('jpg,png,gif,jpeg', 'image/*');
             $form->textarea('excerpt');
+            $form->select('user_id')->options(User::pluck('name', 'id'));
+            $form->select('news_category_id')->options(Category::pluck('name', 'id'));
+            $form->text('order')->default(0);
+            $form->editor('body');
 
             $form->display('created_at');
             $form->display('updated_at');

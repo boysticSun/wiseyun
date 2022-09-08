@@ -17,18 +17,20 @@ class UserController extends AdminController
      */
     protected function grid()
     {
-        return Grid::make(new User(), function (Grid $grid) {
+        return Grid::make(new User(['user_type']), function (Grid $grid) {
             $grid->column('id')->sortable();
             $grid->column('name');
-            $grid->column('user_type_id');
+            $grid->user_type('用户类型')->display(function($user_type){
+                return $user_type->name;
+            });
             $grid->column('email');
-            $grid->column('email_verified_at');
+            $grid->column('email_verified_at')->toDateString();
             $grid->column('mobile');
-            $grid->column('mobile_verified_at');
+            $grid->column('mobile_verified_at')->toDateString();
             $grid->column('qq');
-            $grid->column('avatar');
-            $grid->column('created_at');
-            $grid->column('updated_at')->sortable();
+            // $grid->column('avatar');
+            $grid->column('created_at')->toDateString();
+            $grid->column('updated_at')->toDateString()->sortable();
 
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');

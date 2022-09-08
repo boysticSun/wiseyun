@@ -34,10 +34,10 @@
           </div>
 
           <div class="mb-3">
-            <select class="form-control" name="category_id" required>
+            <select class="form-control" name="news_category_id" required>
               <option value="" hidden disabled {{ $news->id ? '' : 'selected' }}>请选择分类</option>
               @foreach ($categories as $value)
-                <option value="{{ $value->id }}" {{ $news->category_id == $value->id ? 'selected' : '' }}>{{ $value->name }}</option>
+                <option value="{{ $value->id }}" {{ $news->news_category_id == $value->id ? 'selected' : '' }}>{{ $value->name }}</option>
               @endforeach
             </select>
           </div>

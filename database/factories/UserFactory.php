@@ -18,16 +18,16 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'name' => '无心听风',
-            'user_type_id'  =>  1,
-            'email' => '578863588@qq.com',
+            'name' => $this->faker->name(),
+            'user_type_id'  =>  $this->faker->randomElement([1, 2, 3]),
+            'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
-            'mobile'    =>  '18745791650',
+            'mobile'    =>  $this->faker->unique()->phoneNumber(),
             'mobile_verified_at'    =>  now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'remember_token' => Str::random(10),
             'avatar'    =>  '/images/avatar.jpg',
-            'introduction'   =>  'Stay hungry, stay foolish.',
+            'introduction'   =>  $this->faker->sentence(5, true),
         ];
     }
 

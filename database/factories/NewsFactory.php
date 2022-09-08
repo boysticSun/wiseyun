@@ -12,7 +12,7 @@ class NewsFactory extends Factory
     public function definition()
     {
         // $sentence = $this->faker->sentence();
-        $sentence = "2022世界5G大会“5G与工业振兴论坛”在黑龙江省哈尔滨市举办";
+        $sentence = "2022世界5G大会“5G与工业振兴论坛”在黑龙江省哈尔滨市举办" . $this->faker->sentence(3, true);
         $excerpt = "　　近日，2022世界5G大会“5G与工业振兴论坛”在黑龙江省哈尔滨市召开。本次论坛以“5G赋能生产制造，助力国之重器腾飞”为主题。全国政协教科卫体委员会副主任、科技部原副部长曹健林及中国工程院院士周济共同担任本次论坛主席。";
         $body = "<p>　　近日，2022世界5G大会“5G与工业振兴论坛”在黑龙江省哈尔滨市召开。本次论坛以“5G赋能生产制造，助力国之重器腾飞”为主题。全国政协教科卫体委员会副主任、科技部原副部长曹健林及中国工程院院士周济共同担任本次论坛主席。</p>
         <p>　　曹健林在致辞中表示，近年来，5G在我国工业领域得到广泛应用，自动驾驶、智慧城市、智能大数据应用等都与5G技术发展有着重要联系。未来，随着我国工业进一步转型升级，5G将会在工业领域得到更加广泛的应用。他同时提道，5G技术发展依赖诸多关键设备，这些设备制造本身也是非常重要的工业领域，其所需要的核心技术对5G发展同样至关重要。黑龙江省政协副主席聂云凌在致辞中表示，随着5G技术日益成熟，5G在工业互联网发展中充当着越来越重要的角色，并且在智能制造领域的应用呈现出规模化突破态势。黑龙江省作为我国重要的老工业基地，在诸多工业领域具有一定的产业基础和优势，能够为5G技术提供丰富的应用场景。</p>
@@ -32,8 +32,8 @@ class NewsFactory extends Factory
             'thumb' => "/images/news-demo.jpg",
             'body' => $body,// $this->faker->text(),
             'excerpt' => $excerpt,
-            'user_id' => $this->faker->randomElement([1]),
-            'news_category_id' => $this->faker->randomElement([2, 3, 4, 5, 6]),
+            'user_id' => $this->faker->numberBetween(1, 100),
+            'news_category_id' => $this->faker->numberBetween(2, 6),
         ];
     }
 }

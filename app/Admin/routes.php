@@ -17,5 +17,7 @@ Route::group([
     $router->resource('usertypes', 'UserTypeController');
     $router->resource('supplies', 'SupplyController');
     $router->resource('purchases', 'PurchaseController');
+    $router->resource('newscategories', 'NewsCategoryController');
+    $router->resource('news', 'NewsController');
 
 });

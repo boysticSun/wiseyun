@@ -22,5 +22,8 @@ return [
         'order'         => '订单',
         'supplyorder'   => '供应订单',
         'purchaseorder' => '采购订单',
+        'news'          => '新闻',
+        'newscategory'  => '新闻分类',
+        'newslist'      => '新闻列表',
     ],
 ];

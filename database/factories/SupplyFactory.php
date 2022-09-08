@@ -12,12 +12,12 @@ class SupplyFactory extends Factory
     public function definition()
     {
         return [
-            'title'     =>  '供应产品示例数据',
-            'body'      =>  '供应产品示例数据详情信息供应产品示例数据详情信息供应产品示例数据详情信息供应产品示例数据详情信息供应产品示例数据详情信息',
-            'excerpt'   =>  '供应产品示例数据详情信息',
-            'user_id'   =>  1,
-            'goods_type_id'   =>  $this->faker->randomElement([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]),
-            'price_unit'=>  '年'
+            'title'     =>  '供应产品示例数据' . $this->faker->sentence(5, true),
+            'body'      =>  '供应产品示例数据详情信息' . $this->faker->paragraph(5, true),
+            'excerpt'   =>  $this->faker->sentence(10, true),
+            'user_id'   =>  $this->faker->numberBetween(1, 100),
+            'goods_type_id'   =>  $this->faker->numberBetween(1, 35),
+            'price_unit'=>  $this->faker->randomElement(['年', '月', '日', '次'])
         ];
     }
 }

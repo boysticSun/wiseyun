@@ -13,4 +13,9 @@ class UserType extends EloquentRepository
      * @var string
      */
     protected $eloquentClass = Model::class;
+
+    public function users()
+    {
+        return $this->hasMany(User::class);
+    }
 }

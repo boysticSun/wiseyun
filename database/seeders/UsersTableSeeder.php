@@ -16,6 +16,13 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         // 生成数据集合
-        User::factory()->count(1)->create();
+        User::factory()->count(100)->create();
+
+        // 单独处理第一个用户的数据
+        $user = User::find(1);
+        $user->name = '无心听风';
+        $user->email = '578863588@qq.com';
+        $user->mobile = '18745791650';
+        $user->save();
     }
 }

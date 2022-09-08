@@ -15,7 +15,7 @@ class NewsRequest extends Request
                     // CREATE ROLES
                     'title'       => 'required|min:2',
                     'body'        => 'required|min:3',
-                    'category_id' => 'required|numeric',
+                    'news_category_id' => 'required|numeric',
                 ];
             }
             // UPDATE
@@ -25,7 +25,7 @@ class NewsRequest extends Request
                     // UPDATE ROLES
                     'title'       => 'required|min:2',
                     'body'        => 'required|min:3',
-                    'category_id' => 'required|numeric',
+                    'news_category_id' => 'required|numeric',
                 ];
             }
             case 'PATCH':
@@ -34,7 +34,7 @@ class NewsRequest extends Request
                     // UPDATE ROLES
                     'title'       => 'required|min:2',
                     'body'        => 'required|min:3',
-                    'category_id' => 'required|numeric',
+                    'news_category_id' => 'required|numeric',
                 ];
             }
             case 'GET':

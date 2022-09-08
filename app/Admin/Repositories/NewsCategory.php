@@ -2,10 +2,10 @@
 
 namespace App\Admin\Repositories;
 
-use App\Models\User as Model;
+use App\Models\NewsCategory as Model;
 use Dcat\Admin\Repositories\EloquentRepository;
 
-class User extends EloquentRepository
+class NewsCategory extends EloquentRepository
 {
     /**
      * Model.
@@ -17,10 +17,5 @@ class User extends EloquentRepository
     public function news()
     {
         return $this->hasMany(News::class);
-    }
-
-    public function user_type()
-    {
-        return $this->belongsTo(UserType::class);
     }
 }

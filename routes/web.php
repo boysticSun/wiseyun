@@ -23,6 +23,9 @@ Route::get('help', 'PagesController@help')->name('help');
 Route::get('market', 'PagesController@market')->name('market');
 Route::post('market_search', 'PagesController@market_search')->name('market_search');
 
+// 资源库
+Route::get('repository', 'PagesController@repository')->name('repository');
+
 // 用户身份验证相关的路由
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');

@@ -22892,6 +22892,15 @@ body {
   font-size: 14px;
   padding: 10px;
 }
+.market-page .butt-content .purchaseSwiper .slide-row .slide-item .name span {
+  height: 44px;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
 .market-page .butt-content .purchaseSwiper .slide-row .slide-item .box {
   padding: 10px;
 }
@@ -22976,7 +22985,13 @@ body {
 .market-page .butt-content .supplySwiper .slide-row .slide-item .title {
   font-size: 12px;
   color: #333333;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
+  height: 40px;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 .market-page .butt-content .supplySwiper .slide-row .slide-item .excerpt {
   font-size: 12px;
