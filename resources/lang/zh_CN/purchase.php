@@ -1,8 +1,8 @@
-<?php 
+<?php
 return [
     'labels' => [
-        'Purchase' => 'Purchase',
-        'purchase' => 'Purchase',
+        'Purchase' => '采购',
+        'purchases' => '采购',
     ],
     'fields' => [
         'title' => '标题',
@@ -16,7 +16,7 @@ return [
         'thumb' => '图片',
         'validity' => '有效期至',
         'is_indefinitely' => '是否长期',
-        'excerpt' => 'excerpt',
+        'excerpt' => '简介',
         'slug' => 'slug',
     ],
     'options' => [

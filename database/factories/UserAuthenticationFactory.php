@@ -36,6 +36,8 @@ class UserAuthenticationFactory extends Factory
             'business_scope'  =>  $this->faker->sentence(5, true),
             'staff_size'  =>  $this->faker->randomNumber(3, false),
             'qualifications'  =>  $this->faker->paragraph(3, true),
+            'examine_status'    =>  1,
+            'examine_at'    =>  $this->faker->date("Y-m-d H:i:s", 'now'),
         ];
     }
 }

@@ -8,6 +8,7 @@ use App\Models\Supply;
 use App\Models\Purchase;
 use App\Models\News;
 use App\Models\NewsCategory;
+use App\Models\UserAuthentication;
 
 class PagesController extends Controller
 {
@@ -64,6 +65,8 @@ class PagesController extends Controller
     // 资源库
     public function repository()
     {
-        return view('pages.repository');
+        $company = UserAuthentication::where('examine_status', 1)->orderBy('created_at', 'desc')->paginate();
+
+        return view('pages.repository', compact('company'));
     }
 }

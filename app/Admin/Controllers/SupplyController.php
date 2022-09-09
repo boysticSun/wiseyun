@@ -17,10 +17,12 @@ class SupplyController extends AdminController
      */
     protected function grid()
     {
-        return Grid::make(new Supply(), function (Grid $grid) {
+        return Grid::make(new Supply(['goods_type']), function (Grid $grid) {
             $grid->column('id')->sortable();
             $grid->column('title');
-            $grid->column('goods_type_id');
+            $grid->goods_type('分类')->display(function($goods_type){
+                return $goods_type->name;
+            });
             $grid->column('reply_count');
             $grid->column('view_count');
             $grid->column('order');

@@ -1,8 +1,8 @@
-<?php 
+<?php
 return [
     'labels' => [
-        'Supply' => 'Supply',
-        'supply' => 'Supply',
+        'Supply' => '供应',
+        'supplies' => '供应',
     ],
     'fields' => [
         'title' => '标题',
