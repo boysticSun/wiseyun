@@ -22,8 +22,14 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call(UsersTableSeeder::class);
+        $this->call(UserAuthenticationTableSeeder::class);
 		$this->call(PurchasesTableSeeder::class);
 		$this->call(SuppliesTableSeeder::class);
         $this->call(NewsTableSeeder::class);
+        $this->call(AdminMenuTableSeeder::class);
+        $this->call(AdminPermissionsTableSeeder::class);
+        $this->call(AdminRolesTableSeeder::class);
+        $this->call(AdminRoleUsersTableSeeder::class);
+        $this->call(AdminUsersTableSeeder::class);
     }
 }

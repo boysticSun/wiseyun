@@ -106,7 +106,7 @@
             <div>
               @foreach ($list->purchases as $purchases)
                 <div class="purchases-item">
-                  <a class="name" href="{{ route('purchases.show', $purchases->id) }}">{{ $purchases->title }}</a>
+                  <a class="name" href="{{ route('purchases.show', $purchases->id) }}"><span>{{ $purchases->title }}</span></a>
                   <div class="box">
                     <div class="row date">
                       <div class="col-md-6 date-left">
@@ -148,7 +148,7 @@
       <ul class="nav nav-pills">
         @foreach ($topgoodstypes as $key=>$type)
           <li class="nav-item">
-            <a class="nav-link @if($key == 0) active @endif" data-bs-toggle="pill" data-bs-target="#type-{{ $type->id }}" href="javascript:;">
+            <a class="nav-link @if($key == 0) active @endif" data-bs-toggle="pill" data-bs-target="#new-type-{{ $type->id }}" href="javascript:;">
               <span>{{ $type->name }}</span>
               <em></em>
             </a>
@@ -157,12 +157,12 @@
       </ul>
       <div class="tab-content">
         @foreach ($topgoodstypes as $k=>$list)
-          <div class="tab-pane @if($k == 0) active @endif" id="type-{{ $list->id }}">
+          <div class="tab-pane @if($k == 0) active @endif" id="new-type-{{ $list->id }}">
             <a class="more" href="{{ route('goodstypes.purchasetypes', $list->id) }}">{{ __('More') }} >></a>
             <div>
               @foreach ($list->isnewlist as $new)
                 <div class="purchases-item">
-                  <a class="name" href="{{ route('purchases.show', $new->id) }}">{{ $new->title }}</a>
+                  <a class="name" href="{{ route('purchases.show', $new->id) }}"><span>{{ $new->title }}</span></a>
                   <div class="box">
                     <div class="row date">
                       <div class="col-md-6 date-left">

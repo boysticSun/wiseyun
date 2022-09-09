@@ -26,6 +26,7 @@ class User extends Authenticatable
         'qq',
         'avatar',
         'introduction',
+        'user_authentication_id',
     ];
 
     /**

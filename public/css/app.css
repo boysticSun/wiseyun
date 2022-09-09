@@ -21513,6 +21513,41 @@ body {
   display: none;
 }
 
+/* Right Float Bar */
+.right-float-bar {
+  position: fixed;
+  right: 5px;
+  bottom: 60px;
+}
+.right-float-bar .item {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: #ffffff;
+  text-align: center;
+  border: 1px solid #eeeeee;
+  cursor: pointer;
+}
+.right-float-bar .item i {
+  font-size: 1.25rem;
+  color: #666666;
+}
+.right-float-bar .item .title {
+  font-size: 0.5rem;
+  color: #666666;
+}
+.right-float-bar .item:hover {
+  border: 1px solid #0195d7;
+}
+.right-float-bar .item:hover i {
+  color: #0195d7;
+}
+.right-float-bar .item:hover .title {
+  color: #0195d7;
+}
+.right-float-bar #go-top {
+  display: none;
+}
+
 /* swiper */
 .swiper {
   width: 100%;
@@ -21951,6 +21986,9 @@ body {
 .register-page .navbar-nav .container-fluid .navbar-brand, .register-page .navbar-nav .container-sm .navbar-brand, .register-page .navbar-nav .container-md .navbar-brand, .register-page .navbar-nav .container-lg .navbar-brand, .register-page .navbar-nav .container-xl .navbar-brand, .register-page .navbar-nav .container-xxl .navbar-brand {
   display: none;
 }
+.register-page .right-float-bar {
+  display: none;
+}
 
 .register-box {
   padding-top: 60px;
@@ -22108,6 +22146,9 @@ body {
 .login-page .footer-bottom .login-footer-copyright {
   display: block;
   font-size: 14px;
+}
+.login-page .right-float-bar {
+  display: none;
 }
 
 /* root */
@@ -22996,7 +23037,7 @@ body {
 .market-page .butt-content .supplySwiper .slide-row .slide-item .excerpt {
   font-size: 12px;
   color: #999999;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
   -webkit-line-clamp: 1;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -23231,11 +23272,17 @@ body {
   color: #333333;
   padding-bottom: 10px;
   text-align: center;
+  height: 40px;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 .supplies-index-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .excerpt, .goodstypes-supplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .excerpt, .goodstypes-allsupplytypes-page .recommend-supply .body .supply-tabs .tab-content .tab-pane .supplies-item .excerpt {
   font-size: 12px;
   color: #999999;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
   -webkit-line-clamp: 1;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -23440,6 +23487,15 @@ body {
   font-size: 14px;
   padding: 10px;
 }
+.purchases-index-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .name span, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .name span, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .name span {
+  height: 44px;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
 .purchases-index-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box, .goodstypes-purchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box, .goodstypes-allpurchasetypes-page .purchases-index-floor .body .floor-tabs .tab-content .tab-pane .purchases-item .box {
   padding: 10px;
   border: 1px solid #eeeeee;
@@ -23518,6 +23574,15 @@ body {
   text-align: left;
   font-size: 14px;
   padding: 10px;
+}
+.purchases-index-page .purchases-list .purchases-list-box .purchases-item .name span, .goodstypes-purchasetypes-page .purchases-list .purchases-list-box .purchases-item .name span, .goodstypes-allpurchasetypes-page .purchases-list .purchases-list-box .purchases-item .name span {
+  height: 44px;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 .purchases-index-page .purchases-list .purchases-list-box .purchases-item .box, .goodstypes-purchasetypes-page .purchases-list .purchases-list-box .purchases-item .box, .goodstypes-allpurchasetypes-page .purchases-list .purchases-list-box .purchases-item .box {
   padding: 10px;
@@ -23618,11 +23683,17 @@ body {
   color: #333333;
   padding-bottom: 10px;
   text-align: center;
+  height: 40px;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 .goodstypes-supplytypes-page .supply-list .supplies-item .excerpt, .goodstypes-allsupplytypes-page .supply-list .supplies-item .excerpt {
   font-size: 12px;
   color: #999999;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
   -webkit-line-clamp: 1;
   overflow: hidden;
   text-overflow: ellipsis;

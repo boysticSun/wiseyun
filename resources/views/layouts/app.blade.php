@@ -63,6 +63,9 @@
     </div>
 
     @include('layouts._footer')
+
+    @include('layouts._right_float_bar')
+
   </div>
 
   <!-- Scripts -->
@@ -157,6 +160,24 @@
       },function(){
         $(this).find('.snd-navbar-brand').slideUp(500);
       })
+
+      // $("#go-top").slideUp(1000);
+
+      /*滑动回到顶部*/
+      $("#go-top").click(function(){
+        $(document).scrollTop(0);
+      })
+      /*滑块超过固定高度按钮划出(slideDown)*/
+      $(document).scroll(function(){
+        var h = $(document).scrollTop();
+        var win_h = $(window).height();
+        if(h > win_h*0.2){
+          $("#go-top").slideDown(1000);
+        }else{
+          $("#go-top").slideUp(1000);
+        }
+      })
+      /*the end*/
     })
 
   </script>

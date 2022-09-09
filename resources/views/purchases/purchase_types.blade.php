@@ -60,7 +60,7 @@
     <div class="purchases-list-box">
       @foreach ($purchases as $list)
         <div class="purchases-item">
-          <a class="name" href="{{ route('purchases.show', $list->id) }}">{{ $list->title }}</a>
+          <a class="name" href="{{ route('purchases.show', $list->id) }}"><span>{{ $list->title }}</span></a>
           <div class="box">
             <div class="row date">
               <div class="col-md-6 date-left">

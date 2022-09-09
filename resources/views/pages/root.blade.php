@@ -369,41 +369,15 @@
           <!-- Swiper -->
           <div class="swiper newsSwiper">
             <div class="swiper-wrapper">
+              @foreach ($lastnews as $last)
               <div class="swiper-slide">
-                <div class="news-slide-item" style="background: url('/images/news-demo.jpg');">
-                  <a href="#">
-                    <div class="slide-title">这里是资讯标题这里是资讯标题这里是资讯标题这里是资讯标题这里是资讯标题</div>
+                <div class="news-slide-item" style="background: url('{{ $last->thumb }}');">
+                  <a href="{{ route('news.show', [$last->id]) }}">
+                    <div class="slide-title">{{ $last->title }}</div>
                   </a>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="news-slide-item" style="background: url('/images/news-demo.jpg');">
-                  <a href="#">
-                    <div class="slide-title">这里是资讯标题这里是资讯标题这里是资讯标题这里是资讯标题这里是资讯标题</div>
-                  </a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="news-slide-item" style="background: url('/images/news-demo.jpg');">
-                  <a href="#">
-                    <div class="slide-title">这里是资讯标题这里是资讯标题这里是资讯标题这里是资讯标题这里是资讯标题</div>
-                  </a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="news-slide-item" style="background: url('/images/news-demo.jpg');">
-                  <a href="#">
-                    <div class="slide-title">这里是资讯标题这里是资讯标题这里是资讯标题这里是资讯标题这里是资讯标题</div>
-                  </a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="news-slide-item" style="background: url('/images/news-demo.jpg');">
-                  <a href="#">
-                    <div class="slide-title">这里是资讯标题这里是资讯标题这里是资讯标题这里是资讯标题这里是资讯标题</div>
-                  </a>
-                </div>
-              </div>
+              @endforeach
             </div>
             <div class="swiper-pagination"></div>
           </div>
@@ -412,204 +386,34 @@
       <div class="root-news-right">
         <div class="news-tabs">
           <ul class="nav nav-pills">
+            @foreach ($categories as $key => $cateitem)
             <li class="nav-item">
-              <a class="nav-link active" data-bs-toggle="pill" data-bs-target="#hot-news" href="javascript:;">
-                <span>今日热点</span>
+              <a class="nav-link @if($key == 0)active @endif" data-bs-toggle="pill" data-bs-target="#news-cate-{{ $cateitem->id }}" href="javascript:;">
+                <span>{{ $cateitem->name }}</span>
                 <em></em>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="pill" data-bs-target="#dynamic" href="javascript:;">
-                <span>行业动态</span>
-                <em></em>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="pill" data-bs-target="#policy" href="javascript:;">
-                <span>政策发布</span>
-                <em></em>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="pill" data-bs-target="#infomation" href="javascript:;">
-                <span>疫情资讯</span>
-                <em></em>
-              </a>
-            </li>
+            @endforeach
           </ul>
           <div class="tab-content">
-            <div class="tab-pane active" id="hot-news">
+            @foreach ($categories as $k => $item)
+            <div class="tab-pane @if($k == 0)active @endif" id="news-cate-{{$item->id}}">
+              @foreach ($item->children as $newsitem)
               <div class="news-list-item">
-                <a href="#">
+                <a href="{{ route('news.show', [$newsitem->id]) }}">
                   <div class="row">
-                    <div class="news-item-left col-md-10">这里是资讯标题这里是资讯标题这里是资讯标题这里是资讯标题这里是资讯标题</div>
-                    <div class="news-item-right col-md-2">2022-08-26</div>
+                    <div class="news-item-left col-md-10">{{ $newsitem->title }}</div>
+                    <div class="news-item-right col-md-2">{{ $newsitem->created_at->toDateString() }}</div>
                   </div>
                 </a>
               </div>
-              <div class="news-list-item">
-                <a href="#">
-                  <div class="row">
-                    <div class="news-item-left col-md-10">这里是资讯标题这里是资讯标题这里是资讯标题这里是资讯标题这里是资讯标题</div>
-                    <div class="news-item-right col-md-2">2022-08-26</div>
-                  </div>
-                </a>
-              </div>
-              <div class="news-list-item">
-                <a href="#">
-                  <div class="row">
-                    <div class="news-item-left col-md-10">这里是资讯标题这里是资讯标题这里是资讯标题这里是资讯标题这里是资讯标题</div>
-                    <div class="news-item-right col-md-2">2022-08-26</div>
-                  </div>
-                </a>
-              </div>
-              <div class="news-list-item">
-                <a href="#">
-                  <div class="row">
-                    <div class="news-item-left col-md-10">这里是资讯标题这里是资讯标题这里是资讯标题这里是资讯标题这里是资讯标题</div>
-                    <div class="news-item-right col-md-2">2022-08-26</div>
-                  </div>
-                </a>
-              </div>
-              <div class="news-list-item">
-                <a href="#">
-                  <div class="row">
-                    <div class="news-item-left col-md-10">这里是资讯标题这里是资讯标题这里是资讯标题这里是资讯标题这里是资讯标题</div>
-                    <div class="news-item-right col-md-2">2022-08-26</div>
-                  </div>
-                </a>
-              </div>
+              @endforeach
             </div>
-            <div class="tab-pane" id="dynamic">
-              <div class="news-list-item">
-                <a href="#">
-                  <div class="row">
-                    <div class="news-item-left col-md-10">这里是行业动态标题这里是行业动态标题这里是行业动态标题这里是行业动态标题这里是行业动态标题</div>
-                    <div class="news-item-right col-md-2">2022-08-26</div>
-                  </div>
-                </a>
-              </div>
-              <div class="news-list-item">
-                <a href="#">
-                  <div class="row">
-                    <div class="news-item-left col-md-10">这里是行业动态标题这里是行业动态标题这里是行业动态标题这里是行业动态标题这里是行业动态标题</div>
-                    <div class="news-item-right col-md-2">2022-08-26</div>
-                  </div>
-                </a>
-              </div>
-              <div class="news-list-item">
-                <a href="#">
-                  <div class="row">
-                    <div class="news-item-left col-md-10">这里是行业动态标题这里是行业动态标题这里是行业动态标题这里是行业动态标题这里是行业动态标题</div>
-                    <div class="news-item-right col-md-2">2022-08-26</div>
-                  </div>
-                </a>
-              </div>
-              <div class="news-list-item">
-                <a href="#">
-                  <div class="row">
-                    <div class="news-item-left col-md-10">这里是行业动态标题这里是行业动态标题这里是行业动态标题这里是行业动态标题这里是行业动态标题</div>
-                    <div class="news-item-right col-md-2">2022-08-26</div>
-                  </div>
-                </a>
-              </div>
-              <div class="news-list-item">
-                <a href="#">
-                  <div class="row">
-                    <div class="news-item-left col-md-10">这里是行业动态标题这里是行业动态标题这里是行业动态标题这里是行业动态标题这里是行业动态标题</div>
-                    <div class="news-item-right col-md-2">2022-08-26</div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="tab-pane" id="policy">
-              <div class="news-list-item">
-                <a href="#">
-                  <div class="row">
-                    <div class="news-item-left col-md-10">这里是政策发布标题这里是政策发布标题这里是政策发布标题这里是政策发布标题这里是政策发布标题</div>
-                    <div class="news-item-right col-md-2">2022-08-26</div>
-                  </div>
-                </a>
-              </div>
-              <div class="news-list-item">
-                <a href="#">
-                  <div class="row">
-                    <div class="news-item-left col-md-10">这里是政策发布标题这里是政策发布标题这里是政策发布标题这里是政策发布标题这里是政策发布标题</div>
-                    <div class="news-item-right col-md-2">2022-08-26</div>
-                  </div>
-                </a>
-              </div>
-              <div class="news-list-item">
-                <a href="#">
-                  <div class="row">
-                    <div class="news-item-left col-md-10">这里是政策发布标题这里是政策发布标题这里是政策发布标题这里是政策发布标题这里是政策发布标题</div>
-                    <div class="news-item-right col-md-2">2022-08-26</div>
-                  </div>
-                </a>
-              </div>
-              <div class="news-list-item">
-                <a href="#">
-                  <div class="row">
-                    <div class="news-item-left col-md-10">这里是政策发布标题这里是政策发布标题这里是政策发布标题这里是政策发布标题这里是政策发布标题</div>
-                    <div class="news-item-right col-md-2">2022-08-26</div>
-                  </div>
-                </a>
-              </div>
-              <div class="news-list-item">
-                <a href="#">
-                  <div class="row">
-                    <div class="news-item-left col-md-10">这里是政策发布标题这里是政策发布标题这里是政策发布标题这里是政策发布标题这里是政策发布标题</div>
-                    <div class="news-item-right col-md-2">2022-08-26</div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="tab-pane" id="infomation">
-              <div class="news-list-item">
-                <a href="#">
-                  <div class="row">
-                    <div class="news-item-left col-md-10">这里是疫情资讯标题这里是疫情资讯标题这里是疫情资讯标题这里是疫情资讯标题这里是疫情资讯标题</div>
-                    <div class="news-item-right col-md-2">2022-08-26</div>
-                  </div>
-                </a>
-              </div>
-              <div class="news-list-item">
-                <a href="#">
-                  <div class="row">
-                    <div class="news-item-left col-md-10">这里是疫情资讯标题这里是疫情资讯标题这里是疫情资讯标题这里是疫情资讯标题这里是疫情资讯标题</div>
-                    <div class="news-item-right col-md-2">2022-08-26</div>
-                  </div>
-                </a>
-              </div>
-              <div class="news-list-item">
-                <a href="#">
-                  <div class="row">
-                    <div class="news-item-left col-md-10">这里是疫情资讯标题这里是疫情资讯标题这里是疫情资讯标题这里是疫情资讯标题这里是疫情资讯标题</div>
-                    <div class="news-item-right col-md-2">2022-08-26</div>
-                  </div>
-                </a>
-              </div>
-              <div class="news-list-item">
-                <a href="#">
-                  <div class="row">
-                    <div class="news-item-left col-md-10">这里是疫情资讯标题这里是疫情资讯标题这里是疫情资讯标题这里是疫情资讯标题这里是疫情资讯标题</div>
-                    <div class="news-item-right col-md-2">2022-08-26</div>
-                  </div>
-                </a>
-              </div>
-              <div class="news-list-item">
-                <a href="#">
-                  <div class="row">
-                    <div class="news-item-left col-md-10">这里是疫情资讯标题这里是疫情资讯标题这里是疫情资讯标题这里是疫情资讯标题这里是疫情资讯标题</div>
-                    <div class="news-item-right col-md-2">2022-08-26</div>
-                  </div>
-                </a>
-              </div>
-            </div>
+            @endforeach
           </div>
         </div>
       </div>
     </div>
-    <a class="more" href="#">查看更多 >></a>
+    <a class="more" href="{{ route('news.index', 1) }}">查看更多 >></a>
   </div>
 @stop

@@ -6,13 +6,25 @@ use Illuminate\Http\Request;
 use App\Models\HelpClass;
 use App\Models\Supply;
 use App\Models\Purchase;
+use App\Models\News;
+use App\Models\NewsCategory;
 
 class PagesController extends Controller
 {
     //
     public function root()
     {
-        return view('pages.root');
+        $categories = NewsCategory::with('child')->where('pid',1)->get();
+        if(!empty($categories))
+        {
+            foreach($categories as $key => $value)
+            {
+                $cateids[] = $value->id;
+                $categories[$key]->children = News::where('news_category_id', $value->id)->orderBy('created_at', 'desc')->limit(5)->get();
+            }
+        }
+        $lastnews = News::whereIn('news_category_id', $cateids)->orderBy('created_at', 'desc')->limit(5)->get();
+        return view('pages.root', compact('lastnews', 'categories'));
     }
 
     // 帮助中心页

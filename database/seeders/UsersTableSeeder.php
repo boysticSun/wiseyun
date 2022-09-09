@@ -23,6 +23,14 @@ class UsersTableSeeder extends Seeder
         $user->name = '无心听风';
         $user->email = '578863588@qq.com';
         $user->mobile = '18745791650';
+        $user->user_authentication_id = 1;
         $user->save();
+
+        for ($i=2; $i<=100; $i++)
+        {
+            $user = User::find($i);
+            $user->user_authentication_id = $i;
+            $user->save();
+        }
     }
 }

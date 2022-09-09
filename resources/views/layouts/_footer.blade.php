@@ -8,7 +8,7 @@
       </div>
       <div class="footer-list col-md-2">
         <div class="footer-nav-fst">
-          <a href="#">关于我们</a>
+          <a href="javascript:;">关于我们</a>
         </div>
 
         <div class="footer-nav-snd">
@@ -26,7 +26,7 @@
       </div>
       <div class="footer-list col-md-2">
         <div class="footer-nav-fst">
-          <a href="#">产品推荐</a>
+          <a href="javascript:;">产品推荐</a>
         </div>
 
         <div class="footer-nav-snd">
@@ -44,7 +44,7 @@
       </div>
       <div class="footer-list col-md-2">
         <div class="footer-nav-fst">
-          <a href="#">服务支持</a>
+          <a href="javascript:;">服务支持</a>
         </div>
 
         <div class="footer-nav-snd">
