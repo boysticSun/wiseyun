@@ -23,17 +23,7 @@
                 <img src="/images/supply-publish.png">
               </a>
             </div>
-            <div class="goods-type-box">
-              <div class="goods-types">行业分类</div>
-              <div class="goods-types">
-                <a href="{{ route('goodstypes.allsupplytypes') }}" class="@if($isall == 1) active @endif">全部</a>
-              </div>
-              @foreach($goodstypes as $type)
-              <div class="goods-types">
-                <a href="{{ route('goodstypes.supplytypes', $type->id) }}" class="{{ $type->active }}">{{ $type->name }}</a>
-              </div>
-              @endforeach
-            </div>
+
           </div>
           <div class="col-md-3">
             <div class="supply-search-right">
@@ -56,6 +46,19 @@
 @stop
 
 @section('content')
+  <div class="goods-type-row mt-5 bg-white">
+    <div class="goods-type-box">
+      <div class="goods-types">{{ __('Industry Class') }}</div>
+      <div class="goods-types">
+        <a href="{{ route('goodstypes.allsupplytypes') }}" class="@if($isall == 1) active @endif">{{ __('All') }}</a>
+      </div>
+      @foreach($goodstypes as $type)
+      <div class="goods-types">
+        <a href="{{ route('goodstypes.supplytypes', $type->id) }}" class="{{ $type->active }}">{{ $type->name }}</a>
+      </div>
+      @endforeach
+    </div>
+  </div>
   <div class="supply-list mt-5">
     <div class="supply-list-box">
       @foreach ($supplies as $list)

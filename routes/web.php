@@ -25,6 +25,7 @@ Route::post('market_search', 'PagesController@market_search')->name('market_sear
 
 // 资源库
 Route::get('repository', 'PagesController@repository')->name('repository');
+Route::get('repository/{company}', 'PagesController@repository_show')->name('repositoryshow');
 
 // 用户身份验证相关的路由
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -51,6 +52,10 @@ Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->na
 Route::post('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
 
 Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
+Route::get('users/supplies/{user}', 'UsersController@supplies')->name('users.supplies');
+Route::get('users/purchases/{user}', 'UsersController@purchases')->name('users.purchases');
+Route::get('users/supplyorders/{user}', 'UsersController@supplyorders')->name('users.supplyorders');
+Route::get('users/purchaseorders/{user}', 'UsersController@purchaseorders')->name('users.purchaseorders');
 
 // 新闻资讯相关路由
 Route::resource('news', 'NewsController', ['only' => ['show', 'create', 'store', 'update', 'edit', 'destroy']]);

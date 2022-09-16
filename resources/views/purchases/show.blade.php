@@ -22,7 +22,12 @@
         </div>
         <div class="purchase-info-right ps-4 pt-3">
           <h5 class="mb-4">{{ $purchase->title }}</h5>
-          <div class="text-muted">{{ __('Purchase Type') }}：{{ $purchase->goods_type->name }}</div>
+          <div class="text-muted" style="overflow: auto">
+            <div class="float-start me-2 mb-2">{{ __('Purchase Type') }}：</div>
+            @foreach ($purchase->goods_types as $type)
+              <div class="border px-2 float-start me-2 mb-2">{{ $type->name }}</div>
+            @endforeach
+          </div>
           <div class="border-top border-bottom mt-4 py-2">
             <span class="text-muted pe-5">{{ __('Created At') }}：{{ $purchase->created_at->toDateString() }}</span>
             <span class="text-info pe-5">@if($purchase->is_indefinitely == 1) {{ __('Is Indefinitely') }} @else {{ __('Validity') }}：{{ $purchase->validity->toDateString() }} @endif</span>
@@ -56,11 +61,11 @@
         <img src="/images/purchase-company.png">
       </div>
       <div class="body">
-        <p class="company-p"><span class="company-label"><i style="letter-spacing: 7px;">服务商</i></span>：***</p>
-        <p class="company-p"><span class="company-label"><i style="letter-spacing: 7px;">联系人</i></span>：***</p>
-        <p class="company-p"><span class="company-label"><i style="letter-spacing: 28px;">电话</i></span>：***</p>
-        <p class="company-p"><span class="company-label"><i style="letter-spacing: 28px;">地址</i></span>：***</p>
-        <p class="company-p"><span class="company-label"><i>公司简介</i></span>：***</p>
+        <p class="company-p"><span class="company-label"><i style="letter-spacing: 7px;">服务商</i></span>：{{ $purchase->user->user_authentication->company_name }}</p>
+        <p class="company-p"><span class="company-label"><i style="letter-spacing: 7px;">联系人</i></span>：{{ $purchase->user->user_authentication->legal_representative }}</p>
+        <p class="company-p"><span class="company-label"><i style="letter-spacing: 28px;">电话</i></span>：{{ $purchase->user->mobile }}</p>
+        <p class="company-p"><span class="company-label"><i style="letter-spacing: 28px;">地址</i></span>：{{ $purchase->user->user_authentication->address }}</p>
+        <p class="company-p"><span class="company-label"><i>公司简介</i></span>：{{ $purchase->user->user_authentication->brief }}</p>
       </div>
     </div>
     <a href="#" class="mt-3" style="display: block;">

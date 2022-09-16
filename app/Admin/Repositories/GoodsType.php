@@ -16,11 +16,11 @@ class GoodsType extends EloquentRepository
 
     public function supplies()
     {
-        return $this->hasMany(Supply::class);
+        return $this->belongsToMany(Supply::class);
     }
 
     public function purchases()
     {
-        return $this->hasMany(Purchase::class);
+        return $this->belongsToMany(Purchase::class);
     }
 }

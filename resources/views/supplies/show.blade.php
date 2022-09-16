@@ -32,14 +32,14 @@
         </div>
         <div class="col-md-3">
           <div class="supplier pt-3">
-            <h5 class="mb-3">示例供应商企业名称</h5>
+            <h5 class="mb-3">{{ $supply->user->user_authentication->company_name }}</h5>
             <div class="line"></div>
             <div class="info">
-              <p>入驻时间：</p>
-              <p>企业供应：</p>
-              <p>联 系 人：</p>
-              <p>联系电话：</p>
-              <p>点 击 量：</p>
+              <p><span class="company-label">入驻时间</span>：{{ $supply->user->user_authentication->created_at->toDateString() }}</p>
+              <p><span class="company-label">企业供应</span>：{{ $supply->user->supplies->count() }}</p>
+              <p><span class="company-label"><i>联系人</i></span>：{{ $supply->user->user_authentication->legal_representative }}</p>
+              <p><span class="company-label">联系电话</span>：{{ $supply->user->mobile }}</p>
+              <p><span class="company-label"><i>点击量</i></span>：{{ $supply->view_count }}</p>
             </div>
           </div>
         </div>

@@ -23,17 +23,6 @@
                 <img src="/images/purchase-publish.png">
               </a>
             </div>
-            <div class="goods-type-box">
-              <div class="goods-types">行业分类</div>
-              <div class="goods-types">
-                <a href="{{ route('goodstypes.allpurchasetypes') }}" class="@if($isall == 1) active @endif">全部</a>
-              </div>
-              @foreach($goodstypes as $type)
-              <div class="goods-types">
-                <a href="{{ route('goodstypes.purchasetypes', $type->id) }}" class="{{ $type->active }}">{{ $type->name }}</a>
-              </div>
-              @endforeach
-            </div>
           </div>
           <div class="col-md-3">
             <div class="purchase-search-right">
@@ -56,6 +45,19 @@
 @stop
 
 @section('content')
+  <div class="goods-type-row mt-5 bg-white">
+    <div class="goods-type-box">
+      <div class="goods-types">{{ __('Industry Class') }}</div>
+      <div class="goods-types">
+        <a href="{{ route('goodstypes.allpurchasetypes') }}" class="@if($isall == 1) active @endif">{{ __('All') }}</a>
+      </div>
+      @foreach($goodstypes as $type)
+      <div class="goods-types">
+        <a href="{{ route('goodstypes.purchasetypes', $type->id) }}" class="{{ $type->active }}">{{ $type->name }}</a>
+      </div>
+      @endforeach
+    </div>
+  </div>
   <div class="purchases-list mt-5">
     <div class="purchases-list-box">
       @foreach ($purchases as $list)
@@ -68,7 +70,7 @@
                 <div class="date-data">{{ $list->created_at->toDateString() }}</div>
               </div>
               <div class="col-md-6">
-                <div class="date-title">截止日期</div>
+                <div class="date-title">{{ __('Validity') }}</div>
                 <div class="date-data">@if($list->is_indefinitely == 1) 长期有效 @else {{ $list->validity->toDateString() }} @endif</div>
               </div>
             </div>

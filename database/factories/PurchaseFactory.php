@@ -16,7 +16,6 @@ class PurchaseFactory extends Factory
             'body'      =>  '采购产品示例数据详情信息' . $this->faker->paragraph(5, true),
             'excerpt'   =>  $this->faker->sentence(10, true),
             'user_id'   =>  $this->faker->numberBetween(1, 100),
-            'goods_type_id'   =>  $this->faker->numberBetween(1, 35),
             'is_indefinitely'   =>  1
         ];
     }

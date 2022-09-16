@@ -7,7 +7,7 @@ return [
     'fields' => [
         'title' => '标题',
         'body' => '详情',
-        'user_id' => '用户ID',
+        'user_id' => '服务商',
         'goods_type_id' => '分类',
         'reply_count' => '回复数',
         'view_count' => '查看数',
@@ -19,7 +19,7 @@ return [
         'thumb' => '图片',
         'validity' => '有效期至',
         'is_indefinitely' => '是否长期',
-        'excerpt' => 'excerpt',
+        'excerpt' => '简介',
         'slug' => 'slug',
     ],
     'options' => [

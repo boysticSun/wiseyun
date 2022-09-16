@@ -14,8 +14,13 @@ class Supply extends EloquentRepository
      */
     protected $eloquentClass = Model::class;
 
-    public function goods_type()
+    public function goods_types()
     {
-        return $this->belongsTo(GoodsType::class);
+        return $this->belongsToMany(GoodsType::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }

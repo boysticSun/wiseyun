@@ -21,6 +21,9 @@ class PurchaseObserver
 
     public function created(Purchase $purchase)
     {
-        $purchase->goods_type->updatePurchaseCount();
+        // foreach($purchase->goods_types as $val)
+        // {
+        //     $val->updatePurchaseCount();
+        // }
     }
 }

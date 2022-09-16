@@ -17,12 +17,13 @@ class UserAuthenticationFactory extends Factory
     public function definition()
     {
         $name = $this->faker->name();
+        $company_name = $this->faker->company();
         return [
             //
             'realname'  =>  $name,
-            'company_name'  =>  $this->faker->company(),
+            'company_name'  =>  $company_name,
             'logo'  =>  '',
-            'brief'  =>  $this->faker->catchPhrase(),
+            'brief'  =>  $company_name . ' 企业简介 以下内容是企业简介，以下内容是企业简介以下内容是企业简介以下内容是企业简介以下内容是企业简介以下内容是企业简介，以下内容是企业简介以下内容是企业简介以下内容是企业简介以下内容是企业简介以下内容是企业简介。',
             'status'  =>  1,
             'credit_code'  =>  $this->faker->randomLetter() . $this->faker->randomNumber(9, true),
             'registered_capital'  =>  $this->faker->randomNumber(1, true) . '00万',

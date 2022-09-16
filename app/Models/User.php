@@ -54,6 +54,16 @@ class User extends Authenticatable
         return $this->hasMany(News::class);
     }
 
+    public function supplies()
+    {
+        return $this->hasMany(Supply::class);
+    }
+
+    public function purchases()
+    {
+        return $this->hasMany(Purchase::class);
+    }
+
     public function isAuthorOf($model)
     {
         return $this->id == $model->user_id;

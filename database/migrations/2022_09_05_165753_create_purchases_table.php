@@ -13,7 +13,6 @@ return new class extends Migration
             $table->string('title')->index()->comment('标题');
             $table->text('body')->comment('详情');
             $table->bigInteger('user_id')->unsigned()->index()->comment('用户ID');
-            $table->integer('goods_type_id')->unsigned()->index()->comment('分类');
             $table->integer('reply_count')->unsigned()->default(0)->comment('回复数');
             $table->integer('view_count')->unsigned()->default(0)->comment('查看数');
             $table->integer('last_reply_user_id')->unsigned()->default(0)->comment('最后回复用户');

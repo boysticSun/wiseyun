@@ -4,16 +4,27 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Dcat\Admin\Traits\ModelTree;
 
 class NewsCategory extends Model
 {
     use HasFactory;
+    use ModelTree;
 
     public $timestamps = false;
 
     protected $fillable = [
         'name', 'description', 'pid',
     ];
+
+    protected $titleColumn = 'name';
+
+    protected $parentColumn = 'pid';
+
+    public function parent()
+    {
+        return $this->belongsTo(self::class,'pid');
+    }
 
     public function child()
     {

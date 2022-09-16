@@ -20,31 +20,37 @@ return new class extends Migration
                 'name'        => '新闻资讯',
                 'description' => '热点、热门、实时新闻资讯信息',
                 'pid'         => 0,
+                'order'       => 1,
             ],
             [
                 'name'        => '今日热点',
                 'description' => '今日最热点、热门、实时新闻资讯',
                 'pid'         => 1,
+                'order'       => 1,
             ],
             [
                 'name'        => '行业动态',
                 'description' => '行业内最新动态新闻资讯',
                 'pid'         => 1,
+                'order'       => 2,
             ],
             [
                 'name'        => '政策发布',
                 'description' => '权威发布政策相关新闻资讯',
                 'pid'         => 1,
+                'order'       => 3,
             ],
             [
                 'name'        => '疫情资讯',
                 'description' => '疫情资讯相关新闻信息',
                 'pid'         => 1,
+                'order'       => 4,
             ],
             [
                 'name'        => '政策解读',
                 'description' => '政策信息权威解读',
                 'pid'         => 0,
+                'order'       => 2,
             ],
         ];
 

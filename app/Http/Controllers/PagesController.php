@@ -9,6 +9,7 @@ use App\Models\Purchase;
 use App\Models\News;
 use App\Models\NewsCategory;
 use App\Models\UserAuthentication;
+use App\Models\GoodsTypeSupply;
 
 class PagesController extends Controller
 {
@@ -25,6 +26,7 @@ class PagesController extends Controller
             }
         }
         $lastnews = News::whereIn('news_category_id', $cateids)->orderBy('created_at', 'desc')->limit(5)->get();
+
         return view('pages.root', compact('lastnews', 'categories'));
     }
 
@@ -65,8 +67,27 @@ class PagesController extends Controller
     // 资源库
     public function repository()
     {
-        $company = UserAuthentication::where('examine_status', 1)->orderBy('created_at', 'desc')->paginate();
+        $company = UserAuthentication::with('user')->where('examine_status', 1)->orderBy('created_at', 'desc')->paginate();
+
+        if($company)
+        {
+            foreach($company as $key => $val)
+            {
+                $company[$key]->legal_representative = substr_replace($val->legal_representative, '*', 3, 3);
+                $company[$key]->user->mobile = substr_replace($val->user->mobile, '****', 3, 4);
+            }
+        }
 
         return view('pages.repository', compact('company'));
+    }
+
+    // 资源库详情
+    public function repository_show(UserAuthentication $company)
+    {
+
+        $company->legal_representative = substr_replace($company->legal_representative, '*', 3, 3);
+        $company->user->mobile = substr_replace($company->user->mobile, '****', 3, 4);
+
+        return view('pages.repositoryshow', compact('company'));
     }
 }

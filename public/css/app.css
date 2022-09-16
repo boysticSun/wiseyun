@@ -21518,6 +21518,7 @@ body {
   position: fixed;
   right: 5px;
   bottom: 60px;
+  z-index: 1;
 }
 .right-float-bar .item {
   width: 3.5rem;
@@ -21613,7 +21614,6 @@ body {
 .root-floor-fst .root-floor-item .root-register-route {
   width: 100%;
   height: 200px;
-  background: #ffffff;
   border-radius: 15px;
   margin: 0;
 }
@@ -21646,9 +21646,17 @@ body {
   padding-left: 0;
   padding-right: 20px;
 }
+.root-floor-fst .floor-item-left .root-register-route {
+  background: url("/images/index-reg-left.png") no-repeat;
+  background-size: 100% 100%;
+}
 .root-floor-fst .floor-item-right {
   padding-left: 20px;
   padding-right: 0;
+}
+.root-floor-fst .floor-item-right .root-register-route {
+  background: url("/images/index-reg-right.png") no-repeat;
+  background-size: 100% 100%;
 }
 .root-floor-fst h2, .root-floor-fst .h2 {
   text-align: center;
@@ -22334,6 +22342,7 @@ body {
 
 .user-news-list {
   padding-top: 40px;
+  min-height: 420px;
 }
 .user-news-list .list-group-item:last-child {
   border-radius: 0;
@@ -23164,12 +23173,12 @@ body {
 }
 .supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types {
   float: left;
-  color: #ffffff;
+  color: #666666;
   width: 5.75rem;
   font-size: 0.9rem;
 }
 .supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-9 .goods-type-box .goods-types a {
-  color: #ffffff;
+  color: #666666;
   opacity: 0.6;
   text-decoration: none;
 }
@@ -23196,6 +23205,46 @@ body {
 .supplies-index-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div span, .goodstypes-supplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div span, .goodstypes-allsupplytypes-page .market-top-banner .supply-banner-bottom .row .col-md-3 .supply-search-right div span {
   font-size: 16px;
   padding-left: 10px;
+}
+.supplies-index-page .goods-type-row, .goodstypes-supplytypes-page .goods-type-row, .goodstypes-allsupplytypes-page .goods-type-row {
+  overflow: auto;
+  padding: 20px;
+}
+.supplies-index-page .goods-type-row .goods-type-box, .goodstypes-supplytypes-page .goods-type-row .goods-type-box, .goodstypes-allsupplytypes-page .goods-type-row .goods-type-box {
+  float: left;
+  width: 100%;
+  padding-top: 10px;
+}
+.supplies-index-page .goods-type-row .goods-type-box .supply-types, .goodstypes-supplytypes-page .goods-type-row .goods-type-box .supply-types, .goodstypes-allsupplytypes-page .goods-type-row .goods-type-box .supply-types {
+  float: left;
+  color: #ffffff;
+  font-size: 1.125rem;
+  width: 20%;
+  padding: 10px 0 0;
+}
+.supplies-index-page .goods-type-row .goods-type-box .supply-types a, .goodstypes-supplytypes-page .goods-type-row .goods-type-box .supply-types a, .goodstypes-allsupplytypes-page .goods-type-row .goods-type-box .supply-types a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.supplies-index-page .goods-type-row .goods-type-box .supply-types a i, .goodstypes-supplytypes-page .goods-type-row .goods-type-box .supply-types a i, .goodstypes-allsupplytypes-page .goods-type-row .goods-type-box .supply-types a i {
+  width: 1.375rem;
+}
+.supplies-index-page .goods-type-row .goods-type-box .supply-types a span, .goodstypes-supplytypes-page .goods-type-row .goods-type-box .supply-types a span, .goodstypes-allsupplytypes-page .goods-type-row .goods-type-box .supply-types a span {
+  padding-left: 0.5rem;
+}
+.supplies-index-page .goods-type-row .goods-type-box .goods-types, .goodstypes-supplytypes-page .goods-type-row .goods-type-box .goods-types, .goodstypes-allsupplytypes-page .goods-type-row .goods-type-box .goods-types {
+  float: left;
+  color: #666666;
+  width: 5.75rem;
+  font-size: 0.9rem;
+}
+.supplies-index-page .goods-type-row .goods-type-box .goods-types a, .goodstypes-supplytypes-page .goods-type-row .goods-type-box .goods-types a, .goodstypes-allsupplytypes-page .goods-type-row .goods-type-box .goods-types a {
+  color: #666666;
+  opacity: 0.6;
+  text-decoration: none;
+}
+.supplies-index-page .goods-type-row .goods-type-box .goods-types a.active, .goodstypes-supplytypes-page .goods-type-row .goods-type-box .goods-types a.active, .goodstypes-allsupplytypes-page .goods-type-row .goods-type-box .goods-types a.active {
+  opacity: 1;
 }
 .supplies-index-page .recommend-manufacturer, .goodstypes-supplytypes-page .recommend-manufacturer, .goodstypes-allsupplytypes-page .recommend-manufacturer {
   background: #ffffff;
@@ -23376,31 +23425,31 @@ body {
   width: 100%;
   padding-top: 10px;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .supply-types, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .supply-types, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .supply-types {
   float: left;
   color: #ffffff;
   font-size: 1.125rem;
   width: 20%;
   padding: 10px 0 0;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .supply-types a, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .supply-types a, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .supply-types a {
   color: #ffffff;
   text-decoration: none;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a i, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a i, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a i {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .supply-types a i, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .supply-types a i, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .supply-types a i {
   width: 1.375rem;
 }
-.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a span, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a span, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .purchase-types a span {
+.purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .supply-types a span, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .supply-types a span, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .supply-types a span {
   padding-left: 0.5rem;
 }
 .purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types {
   float: left;
-  color: #ffffff;
+  color: #666666;
   width: 5.75rem;
   font-size: 0.9rem;
 }
 .purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types a, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types a, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-9 .goods-type-box .goods-types a {
-  color: #ffffff;
+  color: #666666;
   opacity: 0.6;
   text-decoration: none;
 }
@@ -23427,6 +23476,46 @@ body {
 .purchases-index-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right div span, .goodstypes-purchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right div span, .goodstypes-allpurchasetypes-page .market-top-banner .purchase-banner-bottom .row .col-md-3 .purchase-search-right div span {
   font-size: 16px;
   padding-left: 10px;
+}
+.purchases-index-page .goods-type-row, .goodstypes-purchasetypes-page .goods-type-row, .goodstypes-allpurchasetypes-page .goods-type-row {
+  overflow: auto;
+  padding: 20px;
+}
+.purchases-index-page .goods-type-row .goods-type-box, .goodstypes-purchasetypes-page .goods-type-row .goods-type-box, .goodstypes-allpurchasetypes-page .goods-type-row .goods-type-box {
+  float: left;
+  width: 100%;
+  padding-top: 10px;
+}
+.purchases-index-page .goods-type-row .goods-type-box .supply-types, .goodstypes-purchasetypes-page .goods-type-row .goods-type-box .supply-types, .goodstypes-allpurchasetypes-page .goods-type-row .goods-type-box .supply-types {
+  float: left;
+  color: #ffffff;
+  font-size: 1.125rem;
+  width: 20%;
+  padding: 10px 0 0;
+}
+.purchases-index-page .goods-type-row .goods-type-box .supply-types a, .goodstypes-purchasetypes-page .goods-type-row .goods-type-box .supply-types a, .goodstypes-allpurchasetypes-page .goods-type-row .goods-type-box .supply-types a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.purchases-index-page .goods-type-row .goods-type-box .supply-types a i, .goodstypes-purchasetypes-page .goods-type-row .goods-type-box .supply-types a i, .goodstypes-allpurchasetypes-page .goods-type-row .goods-type-box .supply-types a i {
+  width: 1.375rem;
+}
+.purchases-index-page .goods-type-row .goods-type-box .supply-types a span, .goodstypes-purchasetypes-page .goods-type-row .goods-type-box .supply-types a span, .goodstypes-allpurchasetypes-page .goods-type-row .goods-type-box .supply-types a span {
+  padding-left: 0.5rem;
+}
+.purchases-index-page .goods-type-row .goods-type-box .goods-types, .goodstypes-purchasetypes-page .goods-type-row .goods-type-box .goods-types, .goodstypes-allpurchasetypes-page .goods-type-row .goods-type-box .goods-types {
+  float: left;
+  color: #666666;
+  width: 5.75rem;
+  font-size: 0.9rem;
+}
+.purchases-index-page .goods-type-row .goods-type-box .goods-types a, .goodstypes-purchasetypes-page .goods-type-row .goods-type-box .goods-types a, .goodstypes-allpurchasetypes-page .goods-type-row .goods-type-box .goods-types a {
+  color: #666666;
+  opacity: 0.6;
+  text-decoration: none;
+}
+.purchases-index-page .goods-type-row .goods-type-box .goods-types a.active, .goodstypes-purchasetypes-page .goods-type-row .goods-type-box .goods-types a.active, .goodstypes-allpurchasetypes-page .goods-type-row .goods-type-box .goods-types a.active {
+  opacity: 1;
 }
 .purchases-index-page .purchases-index-floor, .goodstypes-purchasetypes-page .purchases-index-floor, .goodstypes-allpurchasetypes-page .purchases-index-floor {
   background: #ffffff;
@@ -23774,6 +23863,16 @@ body {
 .supplies-show-page .show-top-banner .supplier .info p {
   margin-bottom: 0.5rem;
 }
+.supplies-show-page .show-top-banner .supplier .info p .company-label {
+  width: 3.5rem;
+  float: left;
+}
+.supplies-show-page .show-top-banner .supplier .info p .company-label i {
+  letter-spacing: 7px;
+  font-style: normal;
+  display: block;
+  width: 100px;
+}
 .supplies-show-page .supply-body {
   border: 0;
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.12);
@@ -23822,6 +23921,74 @@ body {
 }
 .purchases-show-page img {
   max-width: 100%;
+}
+
+.repository-page .nomal-logo {
+  background: #0195d7;
+  color: #ffffff;
+  height: 7.5rem;
+  padding: 35px 10px;
+  text-align: center;
+  font-size: 16px;
+}
+.repository-page .repository-brief {
+  line-height: 30px;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.repository-page .repository-right {
+  padding-top: 30px;
+  line-height: 30px;
+}
+.repository-page .repository-right .repository-right-item b {
+  width: 60px;
+  display: inline-block;
+}
+.repository-page .repository-right .repository-right-item b i {
+  width: 100px;
+  letter-spacing: 7px;
+  display: block;
+  font-style: normal;
+}
+.repositoryshow-page .repository-head .logo .nomal-logo {
+  background: #0195d7;
+  color: #ffffff;
+  height: 7.5rem;
+  padding: 35px 10px;
+  text-align: center;
+  font-size: 16px;
+  max-width: 100%;
+}
+.repositoryshow-page .repository-tabs {
+  background: #f7f7f7;
+  border-bottom: 1px solid #0195d7;
+}
+.repositoryshow-page .repository-tabs .active {
+  background: #0195d7;
+  color: #ffffff !important;
+  border-color: #0195d7;
+  border-radius: 0;
+}
+.repositoryshow-page .floor .floor-head {
+  position: relative;
+}
+.repositoryshow-page .floor .floor-head span {
+  position: absolute;
+  left: 30px;
+}
+.repositoryshow-page .floor .floor-content {
+  overflow: auto;
+}
+.repositoryshow-page .floor .floor-content .floor-left {
+  width: 50%;
+  float: left;
+}
+.repositoryshow-page .floor .floor-content .floor-right {
+  width: 50%;
+  float: left;
 }
 
 @media (max-width: 1500px) {

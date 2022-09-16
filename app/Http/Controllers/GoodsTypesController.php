@@ -13,7 +13,7 @@ class GoodsTypesController extends Controller
     {
         $isall = 1;
         $goodstypes = GoodsType::all();
-        $supplies = Supply::where('goods_type_id', '>=', 0)->paginate(15);
+        $supplies = Supply::where('id', '>=', 0)->paginate(15);
         // 传参变量话题和分类到模板中
         return view('supplies.supply_types', compact('supplies', 'goodstypes', 'isall'));
     }
@@ -34,7 +34,7 @@ class GoodsTypesController extends Controller
             }
         }
         // 读取分类 ID 关联的供应，并按每 15 条分页
-        $supplies = Supply::where('goods_type_id', $goodstype->id)->paginate(15);
+        $supplies = GoodsType::find($goodstype->id)->supplies()->paginate(15);
         // 传参变量话题和分类到模板中
         return view('supplies.supply_types', compact('supplies', 'goodstypes', 'isall'));
     }
@@ -43,7 +43,7 @@ class GoodsTypesController extends Controller
     {
         $isall = 1;
         $goodstypes = GoodsType::all();
-        $purchases = Purchase::where('goods_type_id', '>=', 0)->paginate(15);
+        $purchases = Purchase::where('id', '>=', 0)->paginate(15);
         // 传参变量话题和分类到模板中
         return view('purchases.purchase_types', compact('purchases', 'goodstypes', 'isall'));
     }
@@ -64,7 +64,7 @@ class GoodsTypesController extends Controller
             }
         }
         // 读取分类 ID 关联的供应，并按每 15 条分页
-        $purchases = Purchase::where('goods_type_id', $goodstype->id)->paginate(15);
+        $purchases = GoodsType::find($goodstype->id)->purchases()->paginate(15);
         // 传参变量话题和分类到模板中
         return view('purchases.purchase_types', compact('purchases', 'goodstypes', 'isall'));
     }

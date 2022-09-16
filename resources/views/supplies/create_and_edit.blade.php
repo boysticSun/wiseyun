@@ -3,23 +3,23 @@
 @section('content')
 
 <div class="container">
-  <div class="col-md-10 offset-md-1">
+  <div class="col-md-10 offset-md-1 mt-5">
     <div class="card ">
 
       <div class="card-header">
-        <h1>
-          Supply /
+        <h4>
+          采购
           @if($supply->id)
-            Edit #{{ $supply->id }}
+            编辑 #{{ $supply->id }}
           @else
-            Create
+            添加
           @endif
-        </h1>
+        </h4>
       </div>
 
       <div class="card-body">
         @if($supply->id)
-          <form action="{{ route('supplies.update', $supply->id) }}" method="POST" accept-charset="UTF-8">
+          <form action="{{ route('supplies.update', $supply->id) }}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
           <input type="hidden" name="_method" value="PUT">
         @else
           <form action="{{ route('supplies.store') }}" method="POST" accept-charset="UTF-8">
@@ -29,46 +29,39 @@
 
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-          
                 <div class="mb-3">
-                	<label for="title-field">Title</label>
-                	<input class="form-control" type="text" name="title" id="title-field" value="{{ old('title', $supply->title ) }}" />
-                </div> 
+                  <label for="title-field">标题</label>
+                    <div class="p-1"></div>
+                	<input class="form-control" type="text" name="title" id="title-field" value="{{ old('title', $supply->title ) }}" placeholder="请填写标题" />
+                </div>
                 <div class="mb-3">
-                	<label for="body-field">Body</label>
-                	<textarea name="body" id="body-field" class="form-control" rows="3">{{ old('body', $supply->body ) }}</textarea>
-                </div> 
+                  <label for="excerpt-field">简介</label>
+                    <div class="p-1"></div>
+                	<textarea name="excerpt" id="excerpt-field" class="form-control" rows="3" placeholder="简介">{{ old('excerpt', $supply->excerpt ) }}</textarea>
+                </div>
                 <div class="mb-3">
-                    <label for="user_id-field">User_id</label>
-                    <input class="form-control" type="text" name="user_id" id="user_id-field" value="{{ old('user_id', $supply->user_id ) }}" />
-                </div> 
+                    <label for="typeids-field">分类</label>
+                    <div class="p-1"></div>
+                    <div class="row m-0">
+                      @foreach($types as $type)
+                      <div class="form-check col-md-2">
+                        <input class="form-check-input" type="checkbox" name="typeids" value="" id="flexCheckDefault-{{ $type->id }}">
+                        <label class="form-check-label" for="flexCheckDefault-{{ $type->id }}">
+                          {{ $type->name }}
+                        </label>
+                      </div>
+                      @endforeach
+                    </div>
+                </div>
                 <div class="mb-3">
-                    <label for="type_id-field">Type_id</label>
-                    <input class="form-control" type="text" name="type_id" id="type_id-field" value="{{ old('type_id', $supply->type_id ) }}" />
-                </div> 
+                    <label for="order-field">排序</label>
+                    <div class="p-1"></div>
+                    <input class="form-control" type="text" name="order" id="order-field" value="{{ old('order', $supply->order ) }}" placeholder="排序" />
+                </div>
                 <div class="mb-3">
-                    <label for="reply_count-field">Reply_count</label>
-                    <input class="form-control" type="text" name="reply_count" id="reply_count-field" value="{{ old('reply_count', $supply->reply_count ) }}" />
-                </div> 
-                <div class="mb-3">
-                    <label for="view_count-field">View_count</label>
-                    <input class="form-control" type="text" name="view_count" id="view_count-field" value="{{ old('view_count', $supply->view_count ) }}" />
-                </div> 
-                <div class="mb-3">
-                    <label for="last_reply_user_id-field">Last_reply_user_id</label>
-                    <input class="form-control" type="text" name="last_reply_user_id" id="last_reply_user_id-field" value="{{ old('last_reply_user_id', $supply->last_reply_user_id ) }}" />
-                </div> 
-                <div class="mb-3">
-                    <label for="order-field">Order</label>
-                    <input class="form-control" type="text" name="order" id="order-field" value="{{ old('order', $supply->order ) }}" />
-                </div> 
-                <div class="mb-3">
-                	<label for="excerpt-field">Excerpt</label>
-                	<textarea name="excerpt" id="excerpt-field" class="form-control" rows="3">{{ old('excerpt', $supply->excerpt ) }}</textarea>
-                </div> 
-                <div class="mb-3">
-                	<label for="slug-field">Slug</label>
-                	<input class="form-control" type="text" name="slug" id="slug-field" value="{{ old('slug', $supply->slug ) }}" />
+                	<label for="body-field">详情</label>
+                  <div class="p-1"></div>
+                	<textarea name="body" id="editor" class="form-control" rows="3" placeholder="详情">{{ old('body', $supply->body ) }}</textarea>
                 </div>
 
           <div class="well well-sm">
@@ -82,3 +75,32 @@
 </div>
 
 @endsection
+
+@section('styles')
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/simditor.css') }}">
+@stop
+
+@section('scripts')
+  <script type="text/javascript" src="{{ asset('js/module.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/hotkeys.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/uploader.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/simditor.js') }}"></script>
+
+  <script>
+    $(document).ready(function() {
+      var editor = new Simditor({
+        textarea: $('#editor'),
+        upload: {
+          url: '{{ route('news.upload_image') }}',
+          params: {
+            _token: '{{ csrf_token() }}'
+          },
+          fileKey: 'upload_file',
+          connectionCount: 3,
+          leaveConfirm: '文件上传中，关闭此页面将取消上传。'
+        },
+        pasteImage: true,
+      });
+    });
+  </script>
+@stop

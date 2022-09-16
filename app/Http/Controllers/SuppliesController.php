@@ -20,7 +20,7 @@ class SuppliesController extends Controller
         $topgoodstypes = GoodsType::orderBy('supply_count','desc')->limit(4)->get();
         foreach($topgoodstypes as $key=>$value)
         {
-            $topgoodstypes[$key]->supplies = Supply::where('goods_type_id', $value->id)->limit(10)->get();
+            $topgoodstypes[$key]->supplies = GoodsType::find($value->id)->supplies()->limit(10)->get();
         }
 		return view('supplies.index', compact('topgoodstypes'));
 	}
@@ -28,12 +28,18 @@ class SuppliesController extends Controller
     public function show(Supply $supply)
     {
         $supply->increment('view_count', 1);
+
+        $supply->user->user_authentication->legal_representative = substr_replace($supply->user->user_authentication->legal_representative, '*', 3, 3);
+        $supply->user->mobile = substr_replace($supply->user->mobile, '****', 3, 4);
+
         return view('supplies.show', compact('supply'));
     }
 
 	public function create(Supply $supply)
 	{
-		return view('supplies.create_and_edit', compact('supply'));
+        $types = GoodsType::all();
+
+		return view('supplies.create_and_edit', compact('supply', 'types'));
 	}
 
 	public function store(SupplyRequest $request)

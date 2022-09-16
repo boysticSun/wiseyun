@@ -14,8 +14,14 @@ class Purchase extends EloquentRepository
      */
     protected $eloquentClass = Model::class;
 
-    public function goods_type()
+    public function user()
     {
-        return $this->belongsTo(GoodsType::class);
+        return $this->belongsTo(User::class);
     }
+
+    public function goods_types()
+    {
+        return $this->belongsToMany(GoodsType::class);
+    }
+
 }

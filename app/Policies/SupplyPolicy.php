@@ -9,12 +9,13 @@ class SupplyPolicy extends Policy
 {
     public function update(User $user, Supply $supply)
     {
-        // return $supply->user_id == $user->id;
-        return true;
+        return $user->isAuthorOf($news);
+        // return true;
     }
 
     public function destroy(User $user, Supply $supply)
     {
-        return true;
+        return $user->isAuthorOf($news);
+        // return true;
     }
 }

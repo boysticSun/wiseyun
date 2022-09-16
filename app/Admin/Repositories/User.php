@@ -19,6 +19,16 @@ class User extends EloquentRepository
         return $this->hasMany(News::class);
     }
 
+    public function supplies()
+    {
+        return $this->hasMany(Supply::class);
+    }
+
+    public function purchases()
+    {
+        return $this->hasMany(Purchase::class);
+    }
+
     public function user_type()
     {
         return $this->belongsTo(UserType::class);

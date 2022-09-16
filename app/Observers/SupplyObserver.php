@@ -21,6 +21,10 @@ class SupplyObserver
 
     public function created(Supply $supply)
     {
-        $supply->goods_type->updateSupplyCount();
+
+        // foreach($supply->goods_types as $val)
+        // {
+        //     $val->updateSupplyCount();
+        // }
     }
 }

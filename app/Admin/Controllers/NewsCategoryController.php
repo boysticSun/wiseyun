@@ -7,6 +7,7 @@ use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Show;
 use Dcat\Admin\Http\Controllers\AdminController;
+use App\Models\NewsCategory as Category;
 
 class NewsCategoryController extends AdminController
 {
@@ -19,14 +20,14 @@ class NewsCategoryController extends AdminController
     {
         return Grid::make(new NewsCategory(), function (Grid $grid) {
             $grid->column('id')->sortable();
-            $grid->column('name');
+            $grid->column('name')->tree();
+            $grid->column('order')->sortable();
             $grid->column('description');
             $grid->column('post_count');
-            $grid->column('pid');
-        
+
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-        
+
             });
         });
     }
@@ -40,12 +41,14 @@ class NewsCategoryController extends AdminController
      */
     protected function detail($id)
     {
-        return Show::make($id, new NewsCategory(), function (Show $show) {
+        return Show::make($id, new NewsCategory(['parent']), function (Show $show) {
             $show->field('id');
             $show->field('name');
             $show->field('description');
             $show->field('post_count');
-            $show->field('pid');
+            $show->parent('父级分类')->as(function($parent){
+                return $parent;
+            });
         });
     }
 
@@ -59,9 +62,9 @@ class NewsCategoryController extends AdminController
         return Form::make(new NewsCategory(), function (Form $form) {
             $form->display('id');
             $form->text('name');
-            $form->text('description');
-            $form->text('post_count');
-            $form->text('pid');
+            $form->textarea('description');
+            $form->text('post_count')->default(0)->readOnly();
+            $form->select('pid')->options(Category::orderBy('id')->pluck('name', 'id'));
         });
     }
 }

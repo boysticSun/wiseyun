@@ -41,4 +41,28 @@ class UsersController extends Controller
         $user->update($data);
         return redirect()->route('users.show', $user->id)->with('success', '个人资料更新成功！');
     }
+
+    public function supplies(User $user)
+    {
+
+        return view('users.supplies', compact('user'));
+    }
+
+    public function purchases(User $user)
+    {
+
+        return view('users.purchases', compact('user'));
+    }
+
+    public function supplyorders(User $user)
+    {
+
+        return view('users.supplyorders', compact('user'));
+    }
+
+    public function purchaseorders(User $user)
+    {
+
+        return view('users.purchaseorders', compact('user'));
+    }
 }

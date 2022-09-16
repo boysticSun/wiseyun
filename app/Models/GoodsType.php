@@ -13,23 +13,33 @@ class GoodsType extends Model
 
     public function supplies()
     {
-        return $this->hasMany(Supply::class);
+        return $this->belongsToMany(Supply::class);
     }
 
     public function purchases()
     {
-        return $this->hasMany(Purchase::class);
+        return $this->belongsToMany(Purchase::class);
+    }
+
+    public function goodsTypeSupplies()
+    {
+        return $this->hasMany(GoodsTypeSupply::class);
+    }
+
+    public function goodsTypePurchases()
+    {
+        return $this->hasMany(GoodsTypePurchase::class);
     }
 
     public function updateSupplyCount()
     {
-        $this->supply_count = $this->supplies->count();
+        $this->supply_count = $this->goodsTypeSupplies->count();
         $this->save();
     }
 
     public function updatePurchaseCount()
     {
-        $this->purchase_count = $this->purchases->count();
+        $this->purchase_count = $this->goodsTypePurchases->count();
         $this->save();
     }
 }

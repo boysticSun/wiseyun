@@ -21,21 +21,21 @@ class NewsController extends AdminController
     protected function grid()
     {
         return Grid::make(new News(['user', 'news_category']), function (Grid $grid) {
-            $grid->column('id')->sortable();
+            $grid->column('id')->sortable()->width(50);
             $grid->column('title');
             // $grid->column('thumb')->image();
             $grid->user('作者')->display(function($user){
                 return $user->name;
-            });
+            })->width(80);
             $grid->news_category('新闻分类')->display(function($news_category){
                 return $news_category->name;
-            });
-            $grid->column('reply_count');
-            $grid->column('view_count');
+            })->width(120);
+            $grid->column('reply_count')->width(60);
+            $grid->column('view_count')->width(60);
             // $grid->column('last_reply_user_id');
-            $grid->column('order');
-            $grid->column('created_at')->toDateString();
-            $grid->column('updated_at')->toDateString()->sortable();
+            $grid->column('order')->width(50);
+            $grid->column('created_at')->toDateString()->width(120);
+            $grid->column('updated_at')->toDateString()->sortable()->width(120);
 
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
@@ -55,15 +55,15 @@ class NewsController extends AdminController
         return Show::make($id, new News(), function (Show $show) {
             $show->field('id');
             $show->field('title');
-            $show->field('thumb');
-            $show->field('body');
+            $show->thumb()->image();
+            $show->field('excerpt');
             $show->field('user_id');
             $show->field('news_category_id');
             $show->field('reply_count');
             $show->field('view_count');
             $show->field('last_reply_user_id');
             $show->field('order');
-            $show->field('excerpt');
+            $show->field('body');
             $show->field('slug');
             $show->field('created_at');
             $show->field('updated_at');
@@ -89,7 +89,7 @@ class NewsController extends AdminController
                  ->accept('jpg,png,gif,jpeg', 'image/*');
             $form->textarea('excerpt');
             $form->select('user_id')->options(User::pluck('name', 'id'));
-            $form->select('news_category_id')->options(Category::pluck('name', 'id'));
+            $form->select('news_category_id')->options(Category::orderBy('id')->pluck('name', 'id'));
             $form->text('order')->default(0);
             $form->editor('body');
 

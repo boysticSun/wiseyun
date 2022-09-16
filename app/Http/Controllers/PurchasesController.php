@@ -20,8 +20,8 @@ class PurchasesController extends Controller
 		$topgoodstypes = GoodsType::orderBy('purchase_count','desc')->limit(4)->get();
         foreach($topgoodstypes as $key=>$value)
         {
-            $topgoodstypes[$key]->purchases = Purchase::where('goods_type_id', $value->id)->limit(10)->get();
-            $topgoodstypes[$key]->isnewlist = Purchase::where('goods_type_id', $value->id)->orderBy('created_at', 'desc')->limit(10)->get();
+            $topgoodstypes[$key]->purchases = GoodsType::find($value->id)->purchases()->limit(10)->get();
+            $topgoodstypes[$key]->isnewlist = GoodsType::find($value->id)->purchases()->orderBy('created_at', 'desc')->limit(10)->get();
         }
 		return view('purchases.index', compact('topgoodstypes'));
 	}
@@ -29,6 +29,10 @@ class PurchasesController extends Controller
     public function show(Purchase $purchase)
     {
         $purchase->increment('view_count', 1);
+
+        $purchase->user->user_authentication->legal_representative = substr_replace($purchase->user->user_authentication->legal_representative, '*', 3, 3);
+        $purchase->user->mobile = substr_replace($purchase->user->mobile, '****', 3, 4);
+
         return view('purchases.show', compact('purchase'));
     }
 

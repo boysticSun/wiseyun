@@ -7,6 +7,8 @@ use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Show;
 use Dcat\Admin\Http\Controllers\AdminController;
+use App\Models\User;
+use App\Models\GoodsType as Type;
 
 class SupplyController extends AdminController
 {
@@ -17,18 +19,23 @@ class SupplyController extends AdminController
      */
     protected function grid()
     {
-        return Grid::make(new Supply(['goods_type']), function (Grid $grid) {
-            $grid->column('id')->sortable();
+        return Grid::make(new Supply(['goods_types']), function (Grid $grid) {
+            $grid->column('id')->sortable()->width(50);
             $grid->column('title');
-            $grid->goods_type('分类')->display(function($goods_type){
-                return $goods_type->name;
-            });
-            $grid->column('reply_count');
-            $grid->column('view_count');
-            $grid->column('order');
-            $grid->column('thumb');
-            $grid->column('created_at')->toDateString();
-            $grid->column('updated_at')->toDateString()->sortable();
+            $grid->goods_types('分类')->display(function($goods_types){
+                $types = "";
+                foreach($goods_types as $key => $val)
+                {
+                    $types .= $key == count($goods_types)-1 ? $val->name : $val->name . " | ";
+                }
+                return $types;
+            })->width(200);
+            $grid->column('reply_count')->width(60);
+            $grid->column('view_count')->width(60);
+            $grid->column('order')->width(50);
+            $grid->column('thumb')->width(150);
+            $grid->column('created_at')->toDateString()->width(120);
+            $grid->column('updated_at')->toDateString()->sortable()->width(120);
 
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
@@ -79,30 +86,22 @@ class SupplyController extends AdminController
         return Form::make(new Supply(), function (Form $form) {
             $form->display('id');
             $form->text('title');
-            $form->textarea('body');
-            $form->select('user_id');
-            $form->text('goods_type_id');
+            $form->textarea('excerpt');
+            $form->select('user_id')->options(User::pluck('name', 'id'));
+            $form->checkbox('goods_type_id')->options(Type::pluck('name', 'id'));
             $form->text('order');
             $form->text('price');
             $form->select('price_unit')
                  ->options(['年','月','日','次']);
-            $form->radio('is_negotiable')
-                 ->options([
-                    1   =>  '是',
-                    0   =>  '否'
-                 ])
+            $form->switch('is_negotiable')
                  ->default(1);
             $form->image('thumb');
             $form->date('validity');
-            $form->radio('is_indefinitely')
-                 ->options([
-                    1   =>  '是',
-                    0   =>  '否'
-                 ])
+            $form->switch('is_indefinitely')
                  ->default(1);
-            $form->textarea('excerpt');
-            $form->text('slug');
 
+            // $form->text('slug');
+            $form->editor('body');
             $form->display('created_at');
             $form->display('updated_at');
         });
