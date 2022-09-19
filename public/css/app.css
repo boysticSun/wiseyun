@@ -23991,6 +23991,11 @@ body {
   float: left;
 }
 
+.supplies-add-edit {
+  border: 0;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
+}
+
 @media (max-width: 1500px) {
   .banner-item, .market-banner {
     height: 400px;

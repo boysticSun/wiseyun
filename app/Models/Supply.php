@@ -8,7 +8,7 @@ class Supply extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'body', 'price', 'price_unit', 'is_negotiable', 'thumb', 'validity', 'is_indefinitely', 'order', 'slug', 'view_count'];
+    protected $fillable = ['title', 'body', 'excerpt', 'price', 'price_unit', 'is_negotiable', 'thumb', 'validity', 'is_indefinitely', 'order', 'slug', 'view_count'];
 
     public function goods_types()
     {

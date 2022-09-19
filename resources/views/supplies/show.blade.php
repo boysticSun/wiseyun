@@ -11,7 +11,7 @@
           <h1>{{ $supply->title }}</h1>
           <div class="float-start">
             @if($supply->thumb)
-            <img class="mt-3 mb-3" src="{{ $supply->thumb }}">
+            <img class="mt-3 mb-3" src="{{ $supply->thumb }}" style="max-width: 100%">
             @else
             <i class="fa-regular fa-image" style="font-size: 200px; color: #ffffff;"></i>
             @endif
@@ -57,7 +57,7 @@
 
       <div class="card-body">
         <p>
-          {{ $supply->body }}
+          {!! $supply->body !!}
         </p>
       </div>
     </div>
