@@ -29,88 +29,88 @@
 
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-                <div class="mb-3">
-                  <label for="title-field">标题</label>
-                  <div class="p-1"></div>
-                	<input class="form-control" type="text" name="title" id="title-field" value="{{ old('title', $supply->title ) }}" placeholder="请填写标题" />
-                </div>
-                <div class="mb-3">
-                  <label for="thumb-field">图片</label>
-                  <div class="p-1"></div>
-                  <input type="file" name="thumb" class="form-control">
-                  @if($supply->thumb)
-                    <br>
-                    <img class="thumbnail img-responsive" src="{{ $supply->thumb }}" width="200" />
-                  @endif
-                </div>
-                <div class="mb-3">
-                  <label for="excerpt-field">简介</label>
-                  <div class="p-1"></div>
-                	<textarea name="excerpt" id="excerpt-field" class="form-control" rows="3" placeholder="简介">{{ old('excerpt', $supply->excerpt ) }}</textarea>
-                </div>
-                <div class="mb-3">
-                  <label for="typeids-field">分类</label>
-                  <div class="p-1"></div>
-                  <div class="row m-0">
-                    @foreach($types as $type)
-                    <div class="form-check col-md-2">
-                      <input class="form-check-input" type="checkbox" name="typeids[]" value="{{ $type->id }}" id="flexCheckDefault-{{ $type->id }}"{{ $type->checked }}>
-                      <label class="form-check-label" for="flexCheckDefault-{{ $type->id }}">
-                        {{ $type->name }}
-                      </label>
-                    </div>
-                    @endforeach
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <label for="price-field">商品价格</label>
-                  <div class="p-1"></div>
-                  <input class="form-control" type="text" name="price" id="price-field" value="@if($supply->id){{ old('order', $supply->price ) }}@else 0.00 @endif" placeholder="商品价格" />
-                </div>
-                <div class="mb-3">
-                  <label for="price_unit-field">价格单位</label>
-                  <div class="p-1"></div>
-                  <select class="form-select" name="price_unit" id="price_unit-field" aria-label="价格单位">
-                    <option value="年">年</option>
-                    <option value="月">月</option>
-                    <option value="日">日</option>
-                    <option value="次">次</option>
-                  </select>
-                </div>
-                <div class="mb-3">
-                  <label for="is_negotiable-field">是否面议</label>
-                  <div class="p-1"></div>
-                  <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" name="is_negotiable" id="" checked>
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <label for="validity-field">有效期至</label>
-                  <div class="p-1"></div>
-                  <div class="input-group date form_date row m-0" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input" data-link-format="yyyy-mm-dd">
-                    <input class="form-control col-md-3" size="16" type="text" value="" readonly>
-                    <span class="input-group-addon col-md-1 text-center border"><span class="glyphicon glyphicon-calendar"><i class="fa-solid fa-calendar-days mt-2 fs-5 text-muted"></i></span></span>
-                    <span class="col-md-8"></span>
-                  </div>
-                  <input type="hidden" id="dtp_input" name="validity" value="" />
-                </div>
-                <div class="mb-3">
-                  <label for="is_indefinitely-field">是否长期</label>
-                  <div class="p-1"></div>
-                  <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" name="is_indefinitely" id="" checked>
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <label for="order-field">排序</label>
-                  <div class="p-1"></div>
-                  <input class="form-control" type="text" name="order" id="order-field" value="@if($supply->id){{ old('order', $supply->order ) }}@else 0 @endif" placeholder="排序" />
-                </div>
-                <div class="mb-3">
-                	<label for="body-field">详情</label>
-                  <div class="p-1"></div>
-                	<textarea name="body" id="editor" class="form-control" rows="3" placeholder="详情">{{ old('body', $supply->body ) }}</textarea>
-                </div>
+          <div class="mb-3">
+            <label for="title-field">标题</label>
+            <div class="p-1"></div>
+            <input class="form-control" type="text" name="title" id="title-field" value="{{ old('title', $supply->title ) }}" placeholder="请填写标题" />
+          </div>
+          <div class="mb-3">
+            <label for="thumb-field">图片</label>
+            <div class="p-1"></div>
+            <input type="file" name="thumb" class="form-control">
+            @if($supply->thumb)
+              <br>
+              <img class="thumbnail img-responsive" src="{{ $supply->thumb }}" width="200" />
+            @endif
+          </div>
+          <div class="mb-3">
+            <label for="excerpt-field">简介</label>
+            <div class="p-1"></div>
+            <textarea name="excerpt" id="excerpt-field" class="form-control" rows="3" placeholder="简介">{{ old('excerpt', $supply->excerpt ) }}</textarea>
+          </div>
+          <div class="mb-3">
+            <label for="typeids-field">分类</label>
+            <div class="p-1"></div>
+            <div class="row m-0">
+              @foreach($types as $type)
+              <div class="form-check col-md-2">
+                <input class="form-check-input" type="checkbox" name="typeids[]" value="{{ $type->id }}" id="flexCheckDefault-{{ $type->id }}"{{ $type->checked }}>
+                <label class="form-check-label" for="flexCheckDefault-{{ $type->id }}">
+                  {{ $type->name }}
+                </label>
+              </div>
+              @endforeach
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="price-field">商品价格</label>
+            <div class="p-1"></div>
+            <input class="form-control" type="text" name="price" id="price-field" value="@if($supply->id){{ old('order', $supply->price ) }}@else 0.00 @endif" placeholder="商品价格" />
+          </div>
+          <div class="mb-3">
+            <label for="price_unit-field">价格单位</label>
+            <div class="p-1"></div>
+            <select class="form-select" name="price_unit" id="price_unit-field" aria-label="价格单位">
+              <option value="年">年</option>
+              <option value="月">月</option>
+              <option value="日">日</option>
+              <option value="次">次</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="is_negotiable-field">是否面议</label>
+            <div class="p-1"></div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" name="is_negotiable" id="" checked>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="validity-field">有效期至</label>
+            <div class="p-1"></div>
+            <div class="input-group date form_date row m-0" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input" data-link-format="yyyy-mm-dd">
+              <input class="form-control col-md-3" size="16" type="text" value="{{ old('validity', $supply->validity ) }}" readonly>
+              <span class="input-group-addon col-md-1 text-center border"><span class="glyphicon glyphicon-calendar"><i class="fa-solid fa-calendar-days mt-2 fs-5 text-muted"></i></span></span>
+              <span class="col-md-8"></span>
+            </div>
+            <input type="hidden" id="dtp_input" name="validity" value="{{ old('validity', $supply->validity ) }}" />
+          </div>
+          <div class="mb-3">
+            <label for="is_indefinitely-field">是否长期</label>
+            <div class="p-1"></div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" name="is_indefinitely" id="" checked>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="order-field">排序</label>
+            <div class="p-1"></div>
+            <input class="form-control" type="text" name="order" id="order-field" value="@if($supply->id){{ old('order', $supply->order ) }}@else 0 @endif" placeholder="排序" />
+          </div>
+          <div class="mb-3">
+            <label for="body-field">详情</label>
+            <div class="p-1"></div>
+            <textarea name="body" id="editor" class="form-control" rows="3" placeholder="详情">{{ old('body', $supply->body ) }}</textarea>
+          </div>
 
           <div class="well well-sm">
             <button type="submit" class="btn btn-primary">{{ __('Add') }}</button>

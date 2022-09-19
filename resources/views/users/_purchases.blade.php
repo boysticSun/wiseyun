@@ -11,6 +11,22 @@
           <span> ⋅ </span> --}}
           {{ $list->created_at->diffForHumans() }}
         </span>
+        @if (Auth::user()->id == $user->id)
+        <div class="float-end">
+          <a href="{{ route('purchases.edit', $list->id) }}" class="btn btn-outline-secondary btn-sm" role="button">
+            <i class="far fa-edit"></i> 编辑
+          </a>
+          <form action="{{ route('purchases.destroy', $list->id) }}" method="post"
+            style="display: inline-block;"
+            onsubmit="return confirm('您确定要删除吗？');">
+            {{ csrf_field() }}
+            {{ method_field('DELETE') }}
+            <button type="submit" class="btn btn-outline-secondary btn-sm">
+              <i class="far fa-trash-alt"></i> 删除
+            </button>
+          </form>
+        </div>
+        @endif
       </li>
     @endforeach
   </ul>

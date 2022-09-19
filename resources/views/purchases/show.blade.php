@@ -43,7 +43,7 @@
         <img src="/images/purchase-info.png">
       </div>
       <div class="body p-4">
-        {{ $purchase->body }}
+        {!! $purchase->body !!}
       </div>
       <div class="head">
         <img src="/images/purchase-log.png">

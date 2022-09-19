@@ -23993,7 +23993,7 @@ body {
   float: left;
 }
 
-.supplies-add-edit {
+.supplies-add-edit, .purchases-add-edit {
   border: 0;
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
 }

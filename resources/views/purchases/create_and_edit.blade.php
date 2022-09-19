@@ -3,89 +3,97 @@
 @section('content')
 
 <div class="container">
-  <div class="col-md-10 offset-md-1">
-    <div class="card ">
+  <div class="col-md-10 offset-md-1 mt-5">
+    <div class="card purchases-add-edit px-5 py-3">
 
-      <div class="card-header">
-        <h1>
-          Purchase /
+      <div class="card-header bg-white">
+        <h4>
+          采购
           @if($purchase->id)
-            Edit #{{ $purchase->id }}
+            编辑
           @else
-            Create
+            添加
           @endif
-        </h1>
+        </h4>
       </div>
 
       <div class="card-body">
         @if($purchase->id)
-          <form action="{{ route('purchases.update', $purchase->id) }}" method="POST" accept-charset="UTF-8">
+          <form action="{{ route('purchases.update', $purchase->id) }}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
           <input type="hidden" name="_method" value="PUT">
         @else
-          <form action="{{ route('purchases.store') }}" method="POST" accept-charset="UTF-8">
+          <form action="{{ route('purchases.store') }}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
         @endif
 
           @include('common.error')
 
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-          
-                <div class="mb-3">
-                	<label for="title-field">Title</label>
-                	<input class="form-control" type="text" name="title" id="title-field" value="{{ old('title', $purchase->title ) }}" />
-                </div> 
-                <div class="mb-3">
-                	<label for="body-field">Body</label>
-                	<textarea name="body" id="body-field" class="form-control" rows="3">{{ old('body', $purchase->body ) }}</textarea>
-                </div> 
-                <div class="mb-3">
-                    <label for="user_id-field">User_id</label>
-                    <input class="form-control" type="text" name="user_id" id="user_id-field" value="{{ old('user_id', $purchase->user_id ) }}" />
-                </div> 
-                <div class="mb-3">
-                    <label for="goods_type_id-field">Goods_type_id</label>
-                    <input class="form-control" type="text" name="goods_type_id" id="goods_type_id-field" value="{{ old('goods_type_id', $purchase->goods_type_id ) }}" />
-                </div> 
-                <div class="mb-3">
-                    <label for="reply_count-field">Reply_count</label>
-                    <input class="form-control" type="text" name="reply_count" id="reply_count-field" value="{{ old('reply_count', $purchase->reply_count ) }}" />
-                </div> 
-                <div class="mb-3">
-                    <label for="view_count-field">View_count</label>
-                    <input class="form-control" type="text" name="view_count" id="view_count-field" value="{{ old('view_count', $purchase->view_count ) }}" />
-                </div> 
-                <div class="mb-3">
-                    <label for="last_reply_user_id-field">Last_reply_user_id</label>
-                    <input class="form-control" type="text" name="last_reply_user_id" id="last_reply_user_id-field" value="{{ old('last_reply_user_id', $purchase->last_reply_user_id ) }}" />
-                </div> 
-                <div class="mb-3">
-                    <label for="order-field">Order</label>
-                    <input class="form-control" type="text" name="order" id="order-field" value="{{ old('order', $purchase->order ) }}" />
-                </div> 
-                <div class="mb-3">
-                	<label for="thumb-field">Thumb</label>
-                	<input class="form-control" type="text" name="thumb" id="thumb-field" value="{{ old('thumb', $purchase->thumb ) }}" />
-                </div> 
-                <div class="mb-3">
-                	<label for="validity-field">Validity</label>
-                	<input class="form-control" type="text" name="validity" id="validity-field" value="{{ old('validity', $purchase->validity ) }}" />
-                </div> 
-                <div class="mb-3">
-                    <label for="is_indefinitely-field">Is_indefinitely</label>
-                    <input class="form-control" type="text" name="is_indefinitely" id="is_indefinitely-field" value="{{ old('is_indefinitely', $purchase->is_indefinitely ) }}" />
-                </div> 
-                <div class="mb-3">
-                	<label for="excerpt-field">Excerpt</label>
-                	<textarea name="excerpt" id="excerpt-field" class="form-control" rows="3">{{ old('excerpt', $purchase->excerpt ) }}</textarea>
-                </div> 
-                <div class="mb-3">
-                	<label for="slug-field">Slug</label>
-                	<input class="form-control" type="text" name="slug" id="slug-field" value="{{ old('slug', $purchase->slug ) }}" />
-                </div>
+
+          <div class="mb-3">
+            <label for="title-field">标题</label>
+            <div class="p-1"></div>
+            <input class="form-control" type="text" name="title" id="title-field" value="{{ old('title', $purchase->title ) }}" placeholder="请填写标题" />
+          </div>
+          <div class="mb-3">
+            <label for="thumb-field">图片</label>
+            <div class="p-1"></div>
+            <input type="file" name="thumb" class="form-control">
+            @if($purchase->thumb)
+              <br>
+              <img class="thumbnail img-responsive" src="{{ $purchase->thumb }}" width="200" />
+            @endif
+          </div>
+          <div class="mb-3">
+            <label for="excerpt-field">简介</label>
+            <div class="p-1"></div>
+            <textarea name="excerpt" id="excerpt-field" class="form-control" rows="3" placeholder="简介">{{ old('excerpt', $purchase->excerpt ) }}</textarea>
+          </div>
+          <div class="mb-3">
+            <label for="typeids-field">分类</label>
+            <div class="p-1"></div>
+            <div class="row m-0">
+              @foreach($types as $type)
+              <div class="form-check col-md-2">
+                <input class="form-check-input" type="checkbox" name="typeids[]" value="{{ $type->id }}" id="flexCheckDefault-{{ $type->id }}"{{ $type->checked }}>
+                <label class="form-check-label" for="flexCheckDefault-{{ $type->id }}">
+                  {{ $type->name }}
+                </label>
+              </div>
+              @endforeach
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="validity-field">有效期至</label>
+            <div class="p-1"></div>
+            <div class="input-group date form_date row m-0" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input" data-link-format="yyyy-mm-dd">
+              <input class="form-control col-md-3" size="16" type="text" value="{{ old('validity', $purchase->validity ) }}" readonly>
+              <span class="input-group-addon col-md-1 text-center border"><span class="glyphicon glyphicon-calendar"><i class="fa-solid fa-calendar-days mt-2 fs-5 text-muted"></i></span></span>
+              <span class="col-md-8"></span>
+            </div>
+            <input type="hidden" id="dtp_input" name="validity" value="{{ old('validity', $purchase->validity ) }}" />
+          </div>
+          <div class="mb-3">
+            <label for="is_indefinitely-field">是否长期</label>
+            <div class="p-1"></div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" name="is_indefinitely" id="" checked>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="order-field">排序</label>
+            <div class="p-1"></div>
+            <input class="form-control" type="text" name="order" id="order-field" value="@if($purchase->id){{ old('order', $purchase->order ) }}@else 0 @endif" placeholder="排序" />
+          </div>
+          <div class="mb-3">
+            <label for="body-field">详情</label>
+            <div class="p-1"></div>
+            <textarea name="body" id="editor" class="form-control" rows="3" placeholder="详情">{{ old('body', $purchase->body ) }}</textarea>
+          </div>
 
           <div class="well well-sm">
-            <button type="submit" class="btn btn-primary">Save</button>
-            <a class="btn btn-link float-xs-right" href="{{ route('purchases.index') }}"> <- Back</a>
+            <button type="submit" class="btn btn-primary">{{ __('Add') }}</button>
+            <a class="btn btn-link float-xs-right" href="{{ route('purchases.index') }}">{{ __('Go back') }}</a>
           </div>
         </form>
       </div>
@@ -94,3 +102,46 @@
 </div>
 
 @endsection
+
+@section('styles')
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/simditor.css') }}">
+  <link rel="stylesheet" media="screen" href="{{ asset('css/bootstrap-datetimepicker.min.css') }}">
+@stop
+
+@section('scripts')
+  <script type="text/javascript" src="{{ asset('js/module.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/hotkeys.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/uploader.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/simditor.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/bootstrap-datetimepicker.js') }}" charset="UTF-8"></script>
+  <script type="text/javascript" src="{{ asset('js/locales/bootstrap-datetimepicker.zh-CN.js') }}" charset="UTF-8"></script>
+
+  <script>
+    $(document).ready(function() {
+      var editor = new Simditor({
+        textarea: $('#editor'),
+        upload: {
+          url: '{{ route('purchases.upload_image') }}',
+          params: {
+            _token: '{{ csrf_token() }}'
+          },
+          fileKey: 'upload_file',
+          connectionCount: 3,
+          leaveConfirm: '文件上传中，关闭此页面将取消上传。'
+        },
+        pasteImage: true,
+      });
+
+      $('.form_date').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+      });
+    });
+  </script>
+@stop
