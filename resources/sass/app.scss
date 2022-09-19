@@ -1701,6 +1701,7 @@ body {
 
         .slide-item {
           width: calc((100% - 40px)/5);
+          height: 305px;
           margin-right: 10px;
           margin-bottom: 10px;
           background: #ffffff;
@@ -1709,6 +1710,7 @@ body {
 
           img {
             width: 70%;
+            max-height: 88px;
             margin: 0 auto;
             margin-bottom: 10px;
           }

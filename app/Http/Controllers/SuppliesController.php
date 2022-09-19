@@ -46,7 +46,8 @@ class SuppliesController extends Controller
 
 	public function store(SupplyRequest $request, ImageUploadHandler $uploader, Supply $supply)
 	{
-        $supply->fill($request->all());
+        $data = $request->all();
+        $supply->fill($data);
         $supply->user_id = Auth::id();
 
         if(isset($supply->is_negotiable) && $supply->is_negotiable == 'on')
@@ -75,29 +76,76 @@ class SuppliesController extends Controller
         }
 
 		$supply->save();
-		return redirect()->route('supplies.show', $supply->id)->with('message', 'Created successfully.');
+        $supply->goods_types()->sync($data['typeids']);
+		return redirect()->route('supplies.show', $supply->id)->with('message', '添加成功！');
 	}
 
 	public function edit(Supply $supply)
 	{
         $this->authorize('update', $supply);
-		return view('supplies.create_and_edit', compact('supply'));
+
+        $typeids = [];
+        foreach($supply->goods_types as $val)
+        {
+            $typeids[] = $val->id;
+        }
+        $supply->typeids = $typeids;
+
+        $types = GoodsType::all();
+
+        foreach($types as $key => $item)
+        {
+            $types[$key]->checked = '';
+            if(in_array($item->id, $typeids))
+            {
+                $types[$key]->checked = ' checked';
+            }
+        }
+
+		return view('supplies.create_and_edit', compact('supply', 'types'));
 	}
 
-	public function update(SupplyRequest $request, Supply $supply)
+	public function update(SupplyRequest $request, ImageUploadHandler $uploader, Supply $supply)
 	{
 		$this->authorize('update', $supply);
-		$supply->update($request->all());
+        $data = $request->all();
+        $supply->fill($data);
+        if(isset($supply->is_negotiable) && $supply->is_negotiable == 'on')
+        {
+            $supply->is_negotiable = 1;
+        }
+        else
+        {
+            $supply->is_negotiable = 0;
+        }
 
-		return redirect()->route('supplies.show', $supply->id)->with('message', 'Updated successfully.');
+        if(isset($supply->is_indefinitely) && $supply->is_indefinitely == 'on')
+        {
+            $supply->is_indefinitely = 1;
+        }
+        else
+        {
+            $supply->is_indefinitely = 0;
+        }
+
+        if ($request->thumb) {
+            $result = $uploader->save($request->thumb, 'thumbs', $supply->user_id);
+            if ($result) {
+                $supply->thumb = $result['path'];
+            }
+        }
+		$supply->update();
+        $supply->goods_types()->sync($data['typeids']);
+		return redirect()->route('supplies.show', $supply->id)->with('message', '修改成功！');
 	}
 
 	public function destroy(Supply $supply)
 	{
 		$this->authorize('destroy', $supply);
 		$supply->delete();
+        $supply->goods_types()->detach();
 
-		return redirect()->route('supplies.index')->with('message', 'Deleted successfully.');
+		return redirect()->back()->with('message', '删除成功！');
 	}
 
     // 上传图片

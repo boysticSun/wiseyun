@@ -23021,6 +23021,7 @@ body {
 }
 .market-page .butt-content .supplySwiper .slide-row .slide-item {
   width: calc((100% - 40px) / 5);
+  height: 305px;
   margin-right: 10px;
   margin-bottom: 10px;
   background: #ffffff;
@@ -23029,6 +23030,7 @@ body {
 }
 .market-page .butt-content .supplySwiper .slide-row .slide-item img {
   width: 70%;
+  max-height: 88px;
   margin: 0 auto;
   margin-bottom: 10px;
 }

@@ -8,7 +8,7 @@
 
       <div class="card-header bg-white">
         <h4>
-          采购
+          供应
           @if($supply->id)
             编辑
           @else
@@ -54,7 +54,7 @@
                   <div class="row m-0">
                     @foreach($types as $type)
                     <div class="form-check col-md-2">
-                      <input class="form-check-input" type="checkbox" name="typeids" value="" id="flexCheckDefault-{{ $type->id }}">
+                      <input class="form-check-input" type="checkbox" name="typeids[]" value="{{ $type->id }}" id="flexCheckDefault-{{ $type->id }}"{{ $type->checked }}>
                       <label class="form-check-label" for="flexCheckDefault-{{ $type->id }}">
                         {{ $type->name }}
                       </label>
@@ -65,7 +65,7 @@
                 <div class="mb-3">
                   <label for="price-field">商品价格</label>
                   <div class="p-1"></div>
-                  <input class="form-control" type="text" name="price" id="price-field" value="{{ old('order', $supply->price ) }}" placeholder="商品价格" />
+                  <input class="form-control" type="text" name="price" id="price-field" value="@if($supply->id){{ old('order', $supply->price ) }}@else 0.00 @endif" placeholder="商品价格" />
                 </div>
                 <div class="mb-3">
                   <label for="price_unit-field">价格单位</label>
@@ -104,7 +104,7 @@
                 <div class="mb-3">
                   <label for="order-field">排序</label>
                   <div class="p-1"></div>
-                  <input class="form-control" type="text" name="order" id="order-field" value="{{ old('order', $supply->order ) }}" placeholder="排序" />
+                  <input class="form-control" type="text" name="order" id="order-field" value="@if($supply->id){{ old('order', $supply->order ) }}@else 0 @endif" placeholder="排序" />
                 </div>
                 <div class="mb-3">
                 	<label for="body-field">详情</label>

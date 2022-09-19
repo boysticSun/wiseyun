@@ -25,7 +25,7 @@
         <div class="card-body">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link text-muted px-0" href="{{ route('users.supplies', $user->id) }}">
+              <a class="nav-link text-muted px-0" href="{{ route('users.purchases', $user->id) }}">
                 <div class="row m-0">
                   <div class="col-md-1 p-0 text-center"><i class="fa-solid fa-bag-shopping"></i></div>
                   <div class="col-md-11">我的采购</div>
@@ -33,7 +33,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-muted px-0" href="{{ route('supplies.create') }}">
+              <a class="nav-link text-muted px-0" href="{{ route('purchases.create') }}">
                 <div class="row m-0">
                   <div class="col-md-1 p-0 text-center"><i class="fa-solid fa-cart-plus"></i></div>
                   <div class="col-md-11">添加采购</div>
@@ -41,7 +41,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-muted px-0" href="{{ route('users.purchases', $user->id) }}">
+              <a class="nav-link text-muted px-0" href="{{ route('users.supplies', $user->id) }}">
                 <div class="row m-0">
                   <div class="col-md-1 p-0 text-center"><i class="fa-solid fa-truck"></i></div>
                   <div class="col-md-11">我的供应</div>
@@ -49,7 +49,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-muted px-0" href="{{ route('purchases.create') }}">
+              <a class="nav-link text-muted px-0" href="{{ route('supplies.create') }}">
                 <div class="row m-0">
                   <div class="col-md-1 p-0 text-center"><i class="fa-solid fa-cart-plus"></i></div>
                   <div class="col-md-11">添加供应</div>
@@ -89,8 +89,8 @@
       <div class="card ">
         <div class="card-body user-news-list">
           <ul class="nav nav-tabs">
-            <li class="nav-item"><a class="nav-link active bg-transparent" data-bs-toggle="pill" data-bs-target="#purchase" href="javascript:;">发布的采购</a></li>
-            <li class="nav-item"><a class="nav-link bg-transparent" data-bs-toggle="pill" data-bs-target="#supply" href="javascript:;">发布的供应</a></li>
+            <li class="nav-item"><a class="nav-link active bg-transparent text-dark" data-bs-toggle="pill" data-bs-target="#purchase" href="javascript:;">发布的采购</a></li>
+            <li class="nav-item"><a class="nav-link bg-transparent text-dark" data-bs-toggle="pill" data-bs-target="#supply" href="javascript:;">发布的供应</a></li>
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="purchase">

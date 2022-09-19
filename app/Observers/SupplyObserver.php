@@ -19,6 +19,11 @@ class SupplyObserver
         //
     }
 
+    public function saving(Supply $supply)
+    {
+        $supply->body = clean($supply->body, 'user_supply_body');
+    }
+
     public function created(Supply $supply)
     {
 

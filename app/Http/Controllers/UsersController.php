@@ -44,25 +44,25 @@ class UsersController extends Controller
 
     public function supplies(User $user)
     {
-
+        $this->authorize('list', $user);
         return view('users.supplies', compact('user'));
     }
 
     public function purchases(User $user)
     {
-
+        $this->authorize('list', $user);
         return view('users.purchases', compact('user'));
     }
 
     public function supplyorders(User $user)
     {
-
+        $this->authorize('list', $user);
         return view('users.supplyorders', compact('user'));
     }
 
     public function purchaseorders(User $user)
     {
-
+        $this->authorize('list', $user);
         return view('users.purchaseorders', compact('user'));
     }
 }

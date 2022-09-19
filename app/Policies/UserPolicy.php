@@ -23,4 +23,9 @@ class UserPolicy
     {
         return $currentUser->id === $user->id;
     }
+
+    public function list(User $currentUser, User $user)
+    {
+        return $currentUser->id === $user->id;
+    }
 }
