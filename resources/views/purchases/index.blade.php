@@ -122,7 +122,7 @@
                       <div class="time-title">距离结束</div>
                       <div class="time-progress row">
                         <div class="progress col-md-7">
-                          <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                          <div class="progress-bar" role="progressbar" style="width: {{ last_days($purchases->created_at, $purchases->validity) }}%" aria-valuenow="{{ last_days($purchases->created_at, $purchases->validity) }}" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <div class="col-md-1 p-0">&nbsp;</div>
                         <div class="time-word col-md-4">@if($purchases->is_indefinitely == 1) 长期有效 @else {{ $purchases->validity }} @endif</div>
@@ -178,7 +178,7 @@
                       <div class="time-title">距离结束</div>
                       <div class="time-progress row">
                         <div class="progress col-md-7">
-                          <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                          <div class="progress-bar" role="progressbar" style="width: {{ last_days($purchases->created_at, $purchases->validity) }}%" aria-valuenow="{{ last_days($purchases->created_at, $purchases->validity) }}" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <div class="col-md-1 p-0">&nbsp;</div>
                         <div class="time-word col-md-4">@if($new->is_indefinitely == 1) 长期有效 @else {{ $new->validity }} @endif</div>
