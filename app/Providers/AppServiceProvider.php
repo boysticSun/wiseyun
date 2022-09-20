@@ -25,6 +25,10 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         \App\Models\User::observe(\App\Observers\UserObserver::class);
+		\App\Models\SupplyOrderAction::observe(\App\Observers\SupplyOrderActionObserver::class);
+		\App\Models\PurchaseOrderAction::observe(\App\Observers\PurchaseOrderActionObserver::class);
+		\App\Models\SupplyOrder::observe(\App\Observers\SupplyOrderObserver::class);
+		\App\Models\PurchaseOrder::observe(\App\Observers\PurchaseOrderObserver::class);
 		// \App\Models\Purchase::observe(\App\Observers\PurchaseObserver::class);
 		// \App\Models\Supply::observe(\App\Observers\SupplyObserver::class);
         \App\Models\GoodsTypePurchase::observe(\App\Observers\GoodsTypePurchaseObserver::class);

@@ -78,3 +78,8 @@ Route::resource('purchases', 'PurchasesController', ['only' => ['index', 'show',
 Route::get('purchasetypes/list', 'GoodsTypesController@allpurchasetypes')->name('goodstypes.allpurchasetypes');
 Route::get('purchasetypes/{goodstype}', 'GoodsTypesController@purchasetypes')->name('goodstypes.purchasetypes');
 Route::post('upload_purchase_image', 'PurchasesController@uploadImage')->name('purchases.upload_image');
+
+Route::resource('purchase_orders', 'PurchaseOrdersController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::resource('supply_orders', 'SupplyOrdersController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::resource('purchase_order_actions', 'PurchaseOrderActionsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::resource('supply_order_actions', 'SupplyOrderActionsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
