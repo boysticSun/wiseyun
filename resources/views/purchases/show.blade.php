@@ -30,7 +30,7 @@
           </div>
           <div class="border-top border-bottom mt-4 py-2">
             <span class="text-muted pe-5">{{ __('Created At') }}：{{ $purchase->created_at->toDateString() }}</span>
-            <span class="text-info pe-5">@if($purchase->is_indefinitely == 1) {{ __('Is Indefinitely') }} @else {{ __('Validity') }}：{{ $purchase->validity->toDateString() }} @endif</span>
+            <span class="text-info pe-5">@if($purchase->is_indefinitely == 1) {{ __('Is Indefinitely') }} @else {{ __('Validity') }}：{{ $purchase->validity }} @endif</span>
             <span class="text-muted">{{ __('View Count') }}：{{ $purchase->view_count }}</span>
           </div>
           <div class="purchase-info-buttons mt-4">
