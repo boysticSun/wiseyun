@@ -79,7 +79,18 @@ Route::get('purchasetypes/list', 'GoodsTypesController@allpurchasetypes')->name(
 Route::get('purchasetypes/{goodstype}', 'GoodsTypesController@purchasetypes')->name('goodstypes.purchasetypes');
 Route::post('upload_purchase_image', 'PurchasesController@uploadImage')->name('purchases.upload_image');
 
-Route::resource('purchase_orders', 'PurchaseOrdersController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
-Route::resource('supply_orders', 'SupplyOrdersController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+// 采购订单
+Route::resource('purchase_orders', 'PurchaseOrdersController', ['only' => ['show', 'store', 'update', 'edit', 'destroy']]);
+Route::get('purchase_orders/index/{user}', 'PurchaseOrdersController@index')->name('purchase_orders.index');
+Route::get('purchase_orders/create/{purchase}', 'PurchaseOrdersController@create')->name('purchase_orders.create');
+
+// 供应订单
+Route::resource('supply_orders', 'SupplyOrdersController', ['only' => ['show', 'store', 'update', 'edit', 'destroy']]);
+Route::get('supply_orders/index/{user}', 'SupplyOrdersController@index')->name('supply_orders.index');
+Route::get('supply_orders/create/{supply}', 'SupplyOrdersController@create')->name('supply_orders.create');
+
+// 采购订单操作记录
 Route::resource('purchase_order_actions', 'PurchaseOrderActionsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+
+// 供应订单操作记录
 Route::resource('supply_order_actions', 'SupplyOrderActionsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);

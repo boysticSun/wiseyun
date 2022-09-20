@@ -6,12 +6,13 @@ use App\Models\SupplyOrder;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SupplyOrderRequest;
+use App\Models\Supply;
 
 class SupplyOrdersController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['index', 'show']]);
+        $this->middleware('auth');
     }
 
 	public function index()
@@ -25,9 +26,9 @@ class SupplyOrdersController extends Controller
         return view('supply_orders.show', compact('supply_order'));
     }
 
-	public function create(SupplyOrder $supply_order)
+	public function create(SupplyOrder $supply_order, Supply $supply)
 	{
-		return view('supply_orders.create_and_edit', compact('supply_order'));
+		return view('supply_orders.create_and_edit', compact('supply_order', 'supply'));
 	}
 
 	public function store(SupplyOrderRequest $request)

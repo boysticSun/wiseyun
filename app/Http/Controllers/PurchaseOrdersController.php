@@ -6,12 +6,13 @@ use App\Models\PurchaseOrder;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PurchaseOrderRequest;
+use App\Models\Purchase;
 
 class PurchaseOrdersController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['index', 'show']]);
+        $this->middleware('auth');
     }
 
 	public function index()
@@ -25,9 +26,10 @@ class PurchaseOrdersController extends Controller
         return view('purchase_orders.show', compact('purchase_order'));
     }
 
-	public function create(PurchaseOrder $purchase_order)
+	public function create(PurchaseOrder $purchase_order, Purchase $purchase)
 	{
-		return view('purchase_orders.create_and_edit', compact('purchase_order'));
+
+		return view('purchase_orders.create_and_edit', compact('purchase_order', 'purchase'));
 	}
 
 	public function store(PurchaseOrderRequest $request)

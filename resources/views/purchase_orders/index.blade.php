@@ -7,7 +7,6 @@
       <div class="card-header">
         <h1>
           PurchaseOrder
-          <a class="btn btn-success float-xs-right" href="{{ route('purchase_orders.create') }}">Create</a>
         </h1>
       </div>
 

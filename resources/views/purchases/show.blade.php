@@ -34,8 +34,8 @@
             <span class="text-muted">{{ __('View Count') }}：{{ $purchase->view_count }}</span>
           </div>
           <div class="purchase-info-buttons mt-4">
-            <a href="#" class="text-decoration-none py-2 px-4 me-3">查看联系人</a>
-            <a href="#" class="text-decoration-none py-2 px-5">报名</a>
+            <a href="javascript:;" class="text-decoration-none py-2 px-4 me-3">查看联系人</a>
+            <a href="{{ route('purchase_orders.create', $purchase->id) }}" class="text-decoration-none py-2 px-5">报名</a>
           </div>
         </div>
       </div>
