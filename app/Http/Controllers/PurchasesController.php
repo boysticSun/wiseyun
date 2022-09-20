@@ -67,8 +67,12 @@ class PurchasesController extends Controller
         }
 
 		$purchase->save();
-        $purchase->goods_types()->sync($data['typeids']);
-		return redirect()->route('purchases.show', $purchase->id)->with('message', '添加成功');
+        if(isset($data['typeids']))
+        {
+            $purchase->goods_types()->sync($data['typeids']);
+        }
+
+		return redirect()->route('purchases.show', $purchase->id)->with('success', '添加成功');
 	}
 
 	public function edit(Purchase $purchase)
@@ -91,7 +95,7 @@ class PurchasesController extends Controller
                 $types[$key]->checked = ' checked';
             }
         }
-		return view('purchases.create_and_edit', compact('purchase', 'types'));
+		return view('purchases.create_and_edit', compact('success', 'types'));
 	}
 
 	public function update(PurchaseRequest $request, ImageUploadHandler $uploader, Purchase $purchase)
@@ -127,7 +131,7 @@ class PurchasesController extends Controller
 		$purchase->delete();
         $purchase->goods_types()->detach();
 
-		return redirect()->back()->with('message', '删除成功！');
+		return redirect()->back()->with('success', '删除成功！');
 	}
 
     // 上传图片

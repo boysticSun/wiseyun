@@ -71,7 +71,7 @@
               </div>
               <div class="col-md-6">
                 <div class="date-title">{{ __('Validity') }}</div>
-                <div class="date-data">@if($list->is_indefinitely == 1) 长期有效 @else {{ $list->validity->toDateString() }} @endif</div>
+                <div class="date-data">@if($list->is_indefinitely == 1) 长期有效 @else {{ $list->validity }} @endif</div>
               </div>
             </div>
             <div class="time">
@@ -81,7 +81,7 @@
                   <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <div class="col-md-1 p-0">&nbsp;</div>
-                <div class="time-word col-md-4">@if($list->is_indefinitely == 1) 长期有效 @else {{ $list->validity->toDateString() }} @endif</div>
+                <div class="time-word col-md-4">@if($list->is_indefinitely == 1) 长期有效 @else {{ $list->validity }} @endif</div>
               </div>
             </div>
           </div>

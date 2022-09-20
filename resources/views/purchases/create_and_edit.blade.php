@@ -31,7 +31,7 @@
 
 
           <div class="mb-3">
-            <label for="title-field">标题</label>
+            <label for="title-field">标题 <span class="text-danger">*</span></label>
             <div class="p-1"></div>
             <input class="form-control" type="text" name="title" id="title-field" value="{{ old('title', $purchase->title ) }}" placeholder="请填写标题" />
           </div>
@@ -50,7 +50,7 @@
             <textarea name="excerpt" id="excerpt-field" class="form-control" rows="3" placeholder="简介">{{ old('excerpt', $purchase->excerpt ) }}</textarea>
           </div>
           <div class="mb-3">
-            <label for="typeids-field">分类</label>
+            <label for="typeids-field">分类 <span class="text-danger">*</span></label>
             <div class="p-1"></div>
             <div class="row m-0">
               @foreach($types as $type)
@@ -77,7 +77,7 @@
             <label for="is_indefinitely-field">是否长期</label>
             <div class="p-1"></div>
             <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" name="is_indefinitely" id="" checked>
+              <input class="form-check-input" type="checkbox" role="switch" name="is_indefinitely" id="" @checked(old('is_indefinitely', $purchase->is_indefinitely))>
             </div>
           </div>
           <div class="mb-3">
@@ -86,7 +86,7 @@
             <input class="form-control" type="text" name="order" id="order-field" value="@if($purchase->id){{ old('order', $purchase->order ) }}@else 0 @endif" placeholder="排序" />
           </div>
           <div class="mb-3">
-            <label for="body-field">详情</label>
+            <label for="body-field">详情 <span class="text-danger">*</span></label>
             <div class="p-1"></div>
             <textarea name="body" id="editor" class="form-control" rows="3" placeholder="详情">{{ old('body', $purchase->body ) }}</textarea>
           </div>

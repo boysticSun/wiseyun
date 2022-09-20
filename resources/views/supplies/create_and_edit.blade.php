@@ -30,14 +30,14 @@
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
           <div class="mb-3">
-            <label for="title-field">标题</label>
+            <label for="title-field">标题 <span class="text-danger">*</span></label>
             <div class="p-1"></div>
             <input class="form-control" type="text" name="title" id="title-field" value="{{ old('title', $supply->title ) }}" placeholder="请填写标题" />
           </div>
           <div class="mb-3">
             <label for="thumb-field">图片</label>
             <div class="p-1"></div>
-            <input type="file" name="thumb" class="form-control">
+            <input type="file" name="thumb" class="form-control" value="">
             @if($supply->thumb)
               <br>
               <img class="thumbnail img-responsive" src="{{ $supply->thumb }}" width="200" />
@@ -49,7 +49,7 @@
             <textarea name="excerpt" id="excerpt-field" class="form-control" rows="3" placeholder="简介">{{ old('excerpt', $supply->excerpt ) }}</textarea>
           </div>
           <div class="mb-3">
-            <label for="typeids-field">分类</label>
+            <label for="typeids-field">分类 <span class="text-danger">*</span></label>
             <div class="p-1"></div>
             <div class="row m-0">
               @foreach($types as $type)
@@ -71,17 +71,17 @@
             <label for="price_unit-field">价格单位</label>
             <div class="p-1"></div>
             <select class="form-select" name="price_unit" id="price_unit-field" aria-label="价格单位">
-              <option value="年">年</option>
-              <option value="月">月</option>
-              <option value="日">日</option>
-              <option value="次">次</option>
+              <option value="年" @selected(old('price_unit', $supply->price_unit) == '年')>年</option>
+              <option value="月" @selected(old('price_unit', $supply->price_unit) == '月')>月</option>
+              <option value="日" @selected(old('price_unit', $supply->price_unit) == '日')>日</option>
+              <option value="次" @selected(old('price_unit', $supply->price_unit) == '次')>次</option>
             </select>
           </div>
           <div class="mb-3">
             <label for="is_negotiable-field">是否面议</label>
             <div class="p-1"></div>
             <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" name="is_negotiable" id="" checked>
+              <input class="form-check-input" type="checkbox" role="switch" name="is_negotiable" id="" @checked(old('is_negotiable', $supply->is_negotiable))>
             </div>
           </div>
           <div class="mb-3">
@@ -98,7 +98,7 @@
             <label for="is_indefinitely-field">是否长期</label>
             <div class="p-1"></div>
             <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" name="is_indefinitely" id="" checked>
+              <input class="form-check-input" type="checkbox" role="switch" name="is_indefinitely" id="" @checked(old('is_indefinitely', $supply->is_indefinitely))>
             </div>
           </div>
           <div class="mb-3">
@@ -107,13 +107,17 @@
             <input class="form-control" type="text" name="order" id="order-field" value="@if($supply->id){{ old('order', $supply->order ) }}@else 0 @endif" placeholder="排序" />
           </div>
           <div class="mb-3">
-            <label for="body-field">详情</label>
+            <label for="body-field">详情 <span class="text-danger">*</span></label>
             <div class="p-1"></div>
             <textarea name="body" id="editor" class="form-control" rows="3" placeholder="详情">{{ old('body', $supply->body ) }}</textarea>
           </div>
 
           <div class="well well-sm">
+            @if($supply->id)
+            <button type="submit" class="btn btn-primary">{{ __('Edit') }}</button>
+            @else
             <button type="submit" class="btn btn-primary">{{ __('Add') }}</button>
+            @endif
             <a class="btn btn-link float-xs-right" href="{{ route('supplies.index') }}">{{ __('Go back') }}</a>
           </div>
         </form>

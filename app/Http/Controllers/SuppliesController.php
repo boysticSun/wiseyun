@@ -77,7 +77,7 @@ class SuppliesController extends Controller
 
 		$supply->save();
         $supply->goods_types()->sync($data['typeids']);
-		return redirect()->route('supplies.show', $supply->id)->with('message', '添加成功！');
+		return redirect()->route('supplies.show', $supply->id)->with('success', '添加成功！');
 	}
 
 	public function edit(Supply $supply)
@@ -136,7 +136,7 @@ class SuppliesController extends Controller
         }
 		$supply->update();
         $supply->goods_types()->sync($data['typeids']);
-		return redirect()->route('supplies.show', $supply->id)->with('message', '修改成功！');
+		return redirect()->route('supplies.show', $supply->id)->with('success', '修改成功！');
 	}
 
 	public function destroy(Supply $supply)
@@ -145,7 +145,7 @@ class SuppliesController extends Controller
 		$supply->delete();
         $supply->goods_types()->detach();
 
-		return redirect()->back()->with('message', '删除成功！');
+		return redirect()->back()->with('success', '删除成功！');
 	}
 
     // 上传图片
