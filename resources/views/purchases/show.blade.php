@@ -68,7 +68,7 @@
         <p class="company-p"><span class="company-label"><i>公司简介</i></span>：{{ $purchase->user->user_authentication->brief }}</p>
       </div>
     </div>
-    <a href="#" class="mt-3" style="display: block;">
+    <a href="javascript:;" class="mt-3" style="display: block;">
       <img src="/images/purchase-talk.png">
     </a>
   </div>

@@ -118,15 +118,16 @@ class PurchasesController extends Controller
 		$purchase->update();
         $purchase->goods_types()->sync($data['typeids']);
 
-		return redirect()->route('purchases.show', $purchase->id)->with('message', '修改成功');
+		return redirect()->route('purchases.show', $purchase->id)->with('message', '修改成功！');
 	}
 
 	public function destroy(Purchase $purchase)
 	{
 		$this->authorize('destroy', $purchase);
 		$purchase->delete();
+        $purchase->goods_types()->detach();
 
-		return redirect()->route('purchases.index')->with('message', 'Deleted successfully.');
+		return redirect()->back()->with('message', '删除成功！');
 	}
 
     // 上传图片
