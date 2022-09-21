@@ -28,6 +28,11 @@
               <p>发布时间：{{ $supply->created_at->toDateTimeString() }}</p>
               <p>有效期至：@if($supply->is_indefinitely == 1) 长期有效 @else {{ $supply->validity }} @endif</p>
             </div>
+            <div class="mt-3">
+              <a href="{{ route('supply_orders.create', $supply->id) }}">
+                <button class="btn btn-outline-primary px-5">立即购买</button>
+              </a>
+            </div>
           </div>
         </div>
         <div class="col-md-3">

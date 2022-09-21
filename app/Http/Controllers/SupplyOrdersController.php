@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SupplyOrderRequest;
 use App\Models\Supply;
+use Illuminate\Support\Facades\Auth;
 
 class SupplyOrdersController extends Controller
 {
@@ -31,10 +32,14 @@ class SupplyOrdersController extends Controller
 		return view('supply_orders.create_and_edit', compact('supply_order', 'supply'));
 	}
 
-	public function store(SupplyOrderRequest $request)
+	public function store(SupplyOrderRequest $request, SupplyOrder $supply_order)
 	{
-		$supply_order = SupplyOrder::create($request->all());
-		return redirect()->route('supply_orders.show', $supply_order->id)->with('message', 'Created successfully.');
+        $data = $request->all();
+        $supply_order->fill($data);
+        $supply_order->user_id = Auth::id();
+        dd($supply_order);
+		$supply_order->save();
+		return redirect()->route('supply_orders.show', $supply_order->id)->with('message', '提交成功！');
 	}
 
 	public function edit(SupplyOrder $supply_order)
@@ -48,7 +53,7 @@ class SupplyOrdersController extends Controller
 		$this->authorize('update', $supply_order);
 		$supply_order->update($request->all());
 
-		return redirect()->route('supply_orders.show', $supply_order->id)->with('message', 'Updated successfully.');
+		return redirect()->route('supply_orders.show', $supply_order->id)->with('message', '修改成功！');
 	}
 
 	public function destroy(SupplyOrder $supply_order)
@@ -56,6 +61,6 @@ class SupplyOrdersController extends Controller
 		$this->authorize('destroy', $supply_order);
 		$supply_order->delete();
 
-		return redirect()->route('supply_orders.index')->with('message', 'Deleted successfully.');
+		return redirect()->route('supply_orders.index')->with('message', '删除成功！');
 	}
 }

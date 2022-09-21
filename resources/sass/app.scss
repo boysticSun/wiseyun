@@ -2832,6 +2832,12 @@ body {
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
 }
 
+.order-card {
+  border: 0;
+  padding: 0 60px;
+  box-shadow: 0px 2px 16px rgb(0, 0, 0, 0.1);
+}
+
 @media (max-width: 1500px) {
   .banner-item, .market-banner {
     height: 400px;
