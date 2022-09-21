@@ -95,7 +95,7 @@ class PurchasesController extends Controller
                 $types[$key]->checked = ' checked';
             }
         }
-		return view('purchases.create_and_edit', compact('success', 'types'));
+		return view('purchases.create_and_edit', compact('purchase', 'types'));
 	}
 
 	public function update(PurchaseRequest $request, ImageUploadHandler $uploader, Purchase $purchase)
