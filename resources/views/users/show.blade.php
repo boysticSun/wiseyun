@@ -57,7 +57,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-muted px-0" href="{{ route('users.purchaseorders', $user->id) }}">
+              <a class="nav-link text-muted px-0" href="{{ route('users.supplyorders', $user->id) }}">
                 <div class="row m-0">
                   <div class="col-md-1 p-0 text-center"><i class="fa-solid fa-clipboard-list"></i></div>
                   <div class="col-md-11">售出订单</div>
@@ -65,10 +65,18 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-muted px-0" href="{{ route('users.supplyorders', $user->id) }}">
+              <a class="nav-link text-muted px-0" href="{{ route('users.purchaseorders', $user->id) }}">
                 <div class="row m-0">
                   <div class="col-md-1 p-0 text-center"><i class="fa-solid fa-clipboard-list"></i></div>
                   <div class="col-md-11">采购订单</div>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-muted px-0" href="{{ route('users.orders', $user->id) }}">
+                <div class="row m-0">
+                  <div class="col-md-1 p-0 text-center"><i class="fa-solid fa-clipboard-list"></i></div>
+                  <div class="col-md-11">我的订单</div>
                 </div>
               </a>
             </li>

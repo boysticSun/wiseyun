@@ -23823,7 +23823,7 @@ body {
 .supplies-show-page .show-top-banner {
   width: 100%;
   height: 400px;
-  background-size: auto 100% !important;
+  background-size: 100% auto !important;
 }
 .supplies-show-page .show-top-banner h1, .supplies-show-page .show-top-banner .h1 {
   color: #ffffff;

@@ -47,3 +47,9 @@ function last_days($start, $end)
     }
 
 }
+
+function create_order_sn()
+{
+    $sn = date('YmdHis').random_int(100000,999999).substr(microtime(true),-4);
+    return $sn;
+}

@@ -74,6 +74,7 @@
               <div class="input-group-btn-vertical pt-2 px-5 border">
                 <div>{{ $supply->price_unit }}</div>
               </div>
+              <div class="input-group-btn-vertical px-5">&nbsp;</div>
             </div>
           </div>
           @endif

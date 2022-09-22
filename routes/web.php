@@ -56,6 +56,7 @@ Route::get('users/supplies/{user}', 'UsersController@supplies')->name('users.sup
 Route::get('users/purchases/{user}', 'UsersController@purchases')->name('users.purchases');
 Route::get('users/supplyorders/{user}', 'UsersController@supplyorders')->name('users.supplyorders');
 Route::get('users/purchaseorders/{user}', 'UsersController@purchaseorders')->name('users.purchaseorders');
+Route::get('users/orders/{user}', 'UsersController@orders')->name('users.orders');
 
 // 新闻资讯相关路由
 Route::resource('news', 'NewsController', ['only' => ['show', 'create', 'store', 'update', 'edit', 'destroy']]);
@@ -88,6 +89,7 @@ Route::get('purchase_orders/create/{purchase}', 'PurchaseOrdersController@create
 Route::resource('supply_orders', 'SupplyOrdersController', ['only' => ['show', 'store', 'update', 'edit', 'destroy']]);
 Route::get('supply_orders/index/{user}', 'SupplyOrdersController@index')->name('supply_orders.index');
 Route::get('supply_orders/create/{supply}', 'SupplyOrdersController@create')->name('supply_orders.create');
+Route::get('supply_orders/pay/{supply_order}', 'SupplyOrdersController@pay')->name('supply_orders.pay');
 
 // 采购订单操作记录
 Route::resource('purchase_order_actions', 'PurchaseOrderActionsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);

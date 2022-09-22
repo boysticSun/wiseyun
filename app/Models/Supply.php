@@ -19,4 +19,9 @@ class Supply extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function supply_orders()
+    {
+        return $this->hasMany(SupplyOrder::class);
+    }
 }

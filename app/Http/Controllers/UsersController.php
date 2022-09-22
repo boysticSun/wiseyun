@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Http\Requests\UserRequest;
 use App\Handlers\ImageUploadHandler;
+use App\Models\SupplyOrder;
+use App\Models\PurchaseOrder;
+use App\Models\Purchase;
+use App\Models\Supply;
 
 class UsersController extends Controller
 {
@@ -57,12 +61,30 @@ class UsersController extends Controller
     public function supplyorders(User $user)
     {
         $this->authorize('list', $user);
-        return view('users.supplyorders', compact('user'));
+
+        $supply = Supply::where('user_id', $user->id)->pluck('id');
+        $orders = SupplyOrder::whereIn('supply_id', $supply)->paginate();
+
+        return view('users.supplyorders', compact('user', 'orders'));
     }
 
     public function purchaseorders(User $user)
     {
         $this->authorize('list', $user);
-        return view('users.purchaseorders', compact('user'));
+
+        $purchase = Purchase::where('user_id', $user->id)->pluck('id');
+        $orders = PurchaseOrder::whereIn('purchase_id', $purchase)->paginate();
+
+        return view('users.purchaseorders', compact('user', 'orders'));
+    }
+
+    public function orders(User $user)
+    {
+        $this->authorize('list', $user);
+
+        $purchase_orders = PurchaseOrder::with('purchase')->where('user_id', $user->id)->paginate();
+        $supply_orders = SupplyOrder::with('supply')->where('user_id', $user->id)->paginate();
+
+        return view('users.orders', compact('user', 'purchase_orders', 'supply_orders'));
     }
 }

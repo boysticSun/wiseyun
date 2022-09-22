@@ -4,7 +4,7 @@
 @section('description', $supply->excerpt)
 
 @section('banner')
-  <div class="show-top-banner" style="background: url('/images/show-banner-t.jpg');">
+  <div class="show-top-banner" style="background: url('/images/show-banner-t.jpg') no-repeat;">
     <div class="container pt-5">
       <div class="row">
         <div class="col-md-9">
