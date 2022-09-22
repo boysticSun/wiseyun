@@ -60,11 +60,45 @@ class NewsCategoryController extends AdminController
     protected function form()
     {
         return Form::make(new NewsCategory(), function (Form $form) {
+            $pidopts = $this->catetree(0, '|-');
             $form->display('id');
             $form->text('name');
             $form->textarea('description');
             $form->text('post_count')->default(0)->readOnly();
-            $form->select('pid')->options(Category::orderBy('id')->pluck('name', 'id'));
+            $form->select('pid')->options($pidopts);
+            $form->text('order')->default(10);
         });
+    }
+
+    /**
+     * 分类树形数据
+     * 仅查询2级
+     */
+    protected function catetree($pid, $str)
+    {
+        if($pid == 0)
+        {
+            $pidopts[0] = '顶级分类';
+        }
+        $category = Category::where('pid', $pid)->orderBy('id')->pluck('name', 'id');
+        if(!empty($category))
+        {
+            foreach($category as $key=>$val)
+            {
+                $pidopts[$key] = $val;
+
+                $child = Category::where('pid', $key)->orderBy('id')->pluck('name', 'id');
+                if(!empty($child))
+                {
+                    foreach($child as $k=>$v)
+                    {
+                        $pidopts[$k] = $str.$v;
+                    }
+                }
+            }
+        }
+
+        return $pidopts;
+
     }
 }

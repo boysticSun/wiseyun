@@ -74,7 +74,7 @@
             订单状态：{{ $order_status[$supply_order->order_status] }}
             @if( $supply_order->order_status == 0 && Auth::user()->id == $supply_order->supply->user->id)
               <input type="hidden" name="order_status" value="1">
-              <button type="submit" class="btn btn-sm btn-outline-warning ms-2" onclick="return confirm('确认订单吗？');">
+              <button type="submit" class="btn btn-sm btn-outline-warning ms-2" onclick="return confirm('确认接单吗？');">
                 确认订单
               </button>
             @endif
