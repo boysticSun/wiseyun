@@ -90,4 +90,10 @@ class PagesController extends Controller
 
         return view('pages.repositoryshow', compact('company'));
     }
+
+    // 关于我们
+    public function about(NewsCategory $category)
+    {
+        return view('pages.about', compact('category'));
+    }
 }

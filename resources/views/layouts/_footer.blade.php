@@ -12,16 +12,16 @@
         </div>
 
         <div class="footer-nav-snd">
-          <a href="#">平台介绍</a>
+          <a href="{{ route('about', 8) }}">平台介绍</a>
         </div>
         <div class="footer-nav-snd">
-          <a href="#">平台安全</a>
+          <a href="{{ route('about', 9) }}">平台安全</a>
         </div>
         <div class="footer-nav-snd">
-          <a href="#">发展历程</a>
+          <a href="{{ route('about', 10) }}">发展历程</a>
         </div>
         <div class="footer-nav-snd">
-          <a href="#">资质荣誉</a>
+          <a href="{{ route('about', 11) }}">资质荣誉</a>
         </div>
       </div>
       <div class="footer-list col-md-2">

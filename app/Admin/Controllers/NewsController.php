@@ -26,15 +26,15 @@ class NewsController extends AdminController
             // $grid->column('thumb')->image();
             $grid->user('作者')->display(function($user){
                 return $user->name;
-            })->width(80);
+            })->width(100);
             $grid->news_category('新闻分类')->display(function($news_category){
                 return $news_category->name;
             })->width(120);
             $grid->column('reply_count')->width(60);
             $grid->column('view_count')->width(60);
             // $grid->column('last_reply_user_id');
-            $grid->column('order')->width(50);
-            $grid->column('created_at')->toDateString()->width(120);
+            $grid->column('order')->sortable()->width(60);
+            $grid->column('created_at')->toDateString()->sortable()->width(120);
             $grid->column('updated_at')->toDateString()->sortable()->width(120);
 
             $grid->filter(function (Grid\Filter $filter) {
@@ -78,6 +78,7 @@ class NewsController extends AdminController
     protected function form()
     {
         return Form::make(new News(), function (Form $form) {
+            $pidopts = $this->catetree(0, '|-');
             $form->display('id');
             $form->text('title');
             $form->image('thumb')
@@ -89,12 +90,44 @@ class NewsController extends AdminController
                  ->accept('jpg,png,gif,jpeg', 'image/*');
             $form->textarea('excerpt');
             $form->select('user_id')->options(User::pluck('name', 'id'));
-            $form->select('news_category_id')->options(Category::orderBy('id')->pluck('name', 'id'));
+            $form->select('news_category_id')->options($pidopts);
             $form->text('order')->default(0);
             $form->editor('body');
 
             $form->display('created_at');
             $form->display('updated_at');
         });
+    }
+
+    /**
+     * 分类树形数据
+     * 仅查询2级
+     */
+    protected function catetree($pid, $str)
+    {
+        if($pid == 0)
+        {
+            $pidopts[0] = '顶级分类';
+        }
+        $category = Category::where('pid', $pid)->orderBy('id')->pluck('name', 'id');
+        if(!empty($category))
+        {
+            foreach($category as $key=>$val)
+            {
+                $pidopts[$key] = $val;
+
+                $child = Category::where('pid', $key)->orderBy('id')->pluck('name', 'id');
+                if(!empty($child))
+                {
+                    foreach($child as $k=>$v)
+                    {
+                        $pidopts[$k] = $str.$v;
+                    }
+                }
+            }
+        }
+
+        return $pidopts;
+
     }
 }

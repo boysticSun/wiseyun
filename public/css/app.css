@@ -24004,6 +24004,27 @@ body {
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
 }
 
+.about-page .about-banner {
+  height: 400px;
+  background: url("/images/about-banner.jpg") top center #020305 no-repeat;
+}
+.about-page .about-banner .nav-item {
+  width: 200px;
+  text-align: center;
+}
+.about-page .about-banner .nav-item .nav-link {
+  height: 50px;
+  line-height: 36px;
+  font-size: 18px;
+  color: #ffffff;
+}
+.about-page .about-banner .nav-item .nav-link.active {
+  background: #0195d7;
+}
+.about-page .about-banner .nav-item .nav-link:hover {
+  background: #0195d7;
+}
+
 @media (max-width: 1500px) {
   .banner-item, .market-banner {
     height: 400px;
